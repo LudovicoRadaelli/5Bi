@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>
+        
+    <h3 class="yellow">Derivata della funzione \(\boldsymbol{f(x) = \left|x\right|}\)</h3>
+    <div class="esempi-container">
+        Consideriamo la funzione 
+        \[
+            f(x)= \left|x\right|
+        \]
+        Calcoliamone la derivata. Per farlo ricordiamo la definizione dell'operazione modulo:
+        \[
+            \left|x\right| = 
+            \begin{cases}
+                x \quad &se\,\,\, x \geq 0
+                \\\\
+                -x \quad &se\,\,\, x \lt 0
+            \end{cases}
+        \]
+        Per calcolare la derivata distinguiamo i casi:
+        <br>
+        <br>
+        <ul>
+            <li>
+                se \(\,x \gt 0\,\) la funzione \(\left|x\right| = x\), quindi 
+                \[
+                    \left|x\right|' = (x)' = 1
+                \]
+            </li>
+            <br>
+            <li>
+                se \(\,x \lt 0\,\) la funzione \(\left|x\right| = -x\), quindi 
+                \[
+                    \left|x\right|' = (-x)' = -1
+                \]
+            </li>
+        </ul>
+        <br>        
+        Quindi la derivata della funzione \(f(x)= \left|x\right|\) è
+        \[
+            f'(x) =  
+            \begin{cases}
+            -1 \,\, &se\,\,x \lt 0 
+            \\\\
+            1 \,\, &se\,\,x \gt 0 
+            \end{cases}
+        \]        
+        Osserviamo che esistono due modi più compatti di scrivere la derivata del modulo.
+        \[
+            f'(x) = \dfrac{\left|x\right|}{x}  \qquad \text{oppure} \qquad f'(x) = \dfrac{x}{\left|x\right|}
+        \]
+        
+    </div>
+    
+    <br>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <div>
+        Rappresentare il grafico della funzione
+        \[
+            g(x) = e^x + \dfrac{\left|x\right|}{x}
+        \]
+    </div>
+
+    <br>
+
+    <div class="gray">
+        <b>Suggerimento</b>:
+        <br>
+        Per rappresentare il grafico non è necessario effettuare lo studio di funzione,
+        basta ricordare 
+        <br>
+        <br>
+        <ul>
+            <li>
+                la definizione di modulo
+            </li>
+            <br>
+            <li>
+                la traslazione verticale del grafico di una funzione
+            </li>
+        </ul>
+        <br>
+        Se avete perso gli appunti a riguardo potete contattare il dottor ...Rakes. 👀
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <div>
+        Studiare la derivabilità della funzione 
+        \[
+            f(x) = \dfrac{x}{\left|x\right| - 1}
+        \]
+    </div>        
+
+    <br>
+
+    <div class="gray">
+        <b>Svolgimento</b>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/WGILEYdp8Vs?si=_ojjVgEWtM6kwUZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <div>   
+        Calcolare la derivata della funzione composta
+        \[
+            f(x) = ln\left(\dfrac{x}{x - 1}\right)
+        \]
+    </div>
+
+    <div class="gray">
+        Per rispolverare la derivata di una funzione composta potete consultare la scheda di esercizi 
+        disponibile <a class="gray" href="7.html">QUI</a>
+    </div>
+    
+    <br>
+    <br>
+    
+    
+
+    <script>            
+        function showHint(i) {
+            for(let j = 1; j <= document.getElementsByClassName("hint").length; j++) {
+                document.getElementById("hint"+j+"-button").style.display = "block";
+                document.getElementById("hint"+j).style.display = "none";    
+            }
+            document.getElementById("hint"+i+"-button").style.display = "none";
+            document.getElementById("hint"+i).style.display = "block";
+            document.location.href = `#hint${i}`
+        }  
+
+    </script>
+    <script>
+        let slideIndex = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+        inizialize(1);
+
+
+        //funzione per passare alla slide successiva
+        function nextSlide(n) {
+            
+            //ogni volta che il bottone viene premuto scrollo in modo da centrare le slide
+            document.location.href=`#slide-container${n}`
+
+            //nascondo tutte le slide
+            let slide = document.getElementsByClassName(`slide${n}`)
+            for(let i = 0; i < slide.length; i++) {
+                slide[i].style.display = "none";
+            }
+
+            //aggiorno l'indice
+            slideIndex[n]++;
+
+            if(slideIndex[n] !== 0 ) {
+                //pulsante previous abiliatato
+                document.getElementById(`previousSlide-button${n}`).disabled = false;
+            }
+
+            //se ci sono ancora slide da mostrare passo alla successiva
+            if(slideIndex[n] < slide.length) {
+                slide[slideIndex[n]].style.display = "block";
+            }
+
+            //le slide da mostrare sono finite. rendo nuovamente visibile l'ultima slide (altimenti sparisce)
+            //e scrollo la vista al riquadro conclusiovo
+            if(slideIndex[n]  === slide.length -1) {
+                slide[slide.length-1].style.display = "block";
+                document.getElementById(`nextSlide-button${n}`).disabled = true;  
+            }
+
+        }
+            
+        //funzione per passare alla slide successiva
+        function previousSlide(n) {
+
+            
+            //ogni volta che il bottone viene premuto scrollo in modo da centrare le slide
+            document.location.href=`#slide-container${n}`
+
+            //nascondo tutte le slide
+            let slide = document.getElementsByClassName(`slide${n}`)
+            for(let i = 0; i < slide.length; i++) {
+                slide[i].style.display = "none";
+            }
+
+            //aggiorno l'indice
+            slideIndex[n]--;
+
+
+            //passo alla precedente. se è la prima slide disattivo il tasto previous
+            slide[slideIndex[n]].style.display = "block";
+            //slide[slideIndex[n]].style.fontSize = "1.1rem";
+            if(slideIndex[n] === 0) {
+                document.getElementById(`previousSlide-button${n}`).disabled = true;
+            } 
+
+            //nel caso in cui il pulsante next sia disabilitato lo riattivo
+            if(document.getElementById(`nextSlide-button${n}`).disabled === true) {
+                document.getElementById(`nextSlide-button${n}`).disabled = false;  
+            }
+        }
+
+
+        function inizialize(n) {
+
+            slideIndex[n] = 0
+
+            let slide = document.getElementsByClassName(`slide${n}`)
+
+            for(let i = 0; i < slide.length; i++) {
+                slide[i].style.display = "none"
+            }
+
+            //rendo visibile la prima slide
+            slide[0].style.display = "block"
+
+            //pulsante next disabled
+            document.getElementById(`nextSlide-button${n}`).disabled = false;
+
+            //pulsante previous disabled
+            document.getElementById(`previousSlide-button${n}`).disabled = true;
+
+        }
+    </script>
+</body>
