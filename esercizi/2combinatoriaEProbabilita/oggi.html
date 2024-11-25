@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <div id="slide-container1" class="slide-container grayBorder">
+        <div class="slide1">
+            Sappiamo che possiamo produrre \(4 \cdot 3 \cdot 2 \cdot 1 = 24\) anagrammi etichettati.         
+            Scriviamoli tutti:
+            <div style="font-size: 1rem;">            
+                
+                \[
+                \begin{align*}
+                        \,A_{_1}A_{_2}SC \qquad A_{_2}A_{_1}SC\,  &\qquad \,A_{_1}A_{_2}CS\, \qquad \,A_{_2}A_{_1}CS\,
+                        \\\\
+                        \,CA_{_1}A_{_2}S \qquad CA_{_2}A_{_1}S\, &\qquad \,SA_{_2}A_{_1}C\, \qquad \,SA_{_1}A_{_2}C\,
+                        \\\\
+                        \,CSA_{_1}A_{_2} \qquad CSA_{_2}A_{_1}\, &\qquad \,SCA_{_1}A_{_2}\, \qquad \,SCA_{_2}A_{_1}\,
+                        \\\\
+                        \,CA_{_1}SA_{_2} \qquad CA_{_2}SA_{_1}\,&\qquad \,SA_{_1}CA_{_2}\, \qquad \,SA_{_2}CA_{_1}\,
+                        \\\\
+                        \,A_{_1}CA_{_2}S \qquad A_{_2}CA_{_1}S\, &\qquad \,A_{_1}SA_{_2}A\, \qquad \,A_{_1}CA_{_2}A\, 
+                        \\\\
+                        \,A_{_1}CSA_{_2}\, \qquad \,A_{_2}CSA_{_1}\, &\qquad \,A_{_1}SCA_{_2}\, \qquad \,A_{_2}SCA_{_1}\,
+                \end{align*}
+                \]
+            </div>            
+            <span style="color: transparent;">Osserviamo che coppie di anagrammi etichettati corrispondono ad uno stesso anagramma non etichettato.</span>
+        </div>  
+        <div class="slide1">
+            Sappiamo che possiamo produrre \(4 \cdot 3 \cdot 2 \cdot 1 = 24\) anagrammi etichettati.         
+            Scriviamoli tutti:
+            <div style="font-size: 1rem;">            
+                \[
+                \begin{align*}
+                    \color{transparent}{}\boxed{\color{black}{}\,A_{_1}A_{_2}SC \qquad A_{_2}A_{_1}SC\,}  &\qquad \color{transparent}{}\boxed{\color{black}{}\,A_{_1}A_{_2}CS\, \qquad \,A_{_2}A_{_1}CS\,}
+                    \\\\
+                    \color{transparent}{}\boxed{\color{black}{}\,CA_{_1}A_{_2}S \qquad CA_{_2}A_{_1}S\,} &\qquad \color{transparent}{}\boxed{\color{black}{}\,SA_{_2}A_{_1}C\, \qquad \,SA_{_1}A_{_2}C\,}
+                    \\\\
+                    \color{transparent}{}\boxed{\color{black}{}\,CSA_{_1}A_{_2} \qquad CSA_{_2}A_{_1}\,} &\qquad \color{transparent}{}\boxed{\color{black}{}\,SCA_{_1}A_{_2}\, \qquad \,SCA_{_2}A_{_1}\,}
+                    \\\\
+                    \color{transparent}{}\boxed{\color{black}{}\,CA_{_1}SA_{_2} \qquad CA_{_2}SA_{_1}\,}&\qquad \color{transparent}{}\boxed{\color{black}{}\,SA_{_1}CA_{_2}\, \qquad \,SA_{_2}CA_{_1}\,}
+                    \\\\
+                    \color{transparent}{}\boxed{\color{black}{}\,A_{_1}CA_{_2}S \qquad A_{_2}CA_{_1}S\,} &\qquad \color{transparent}{}\boxed{\color{black}{}\,A_{_1}SA_{_2}A\, \qquad \,A_{_1}CA_{_2}A\, }
+                    \\\\
+                    \color{transparent}{}\boxed{\color{black}{}\,A_{_1}CSA_{_2}\, \qquad \,A_{_2}CSA_{_1}}\, &\qquad \color{transparent}{}\boxed{\color{black}{}\,A_{_1}SCA_{_2}\, \qquad \,A_{_2}SCA_{_1}\,}
+                \end{align*}
+                \]                 
+            </div>          
+            Osserviamo che coppie di anagrammi etichettati corrispondono ad uno stesso anagramma 
+            non etichettato.
+        </div>   
+        <div class="slide1">
+            Sappiamo che possiamo produrre \(4 \cdot 3 \cdot 2 \cdot 1 = 24\) anagrammi etichettati.         
+            Scriviamoli tutti:
+            <div style="font-size: 1rem;">            
+                \[
+                \begin{align*}
+                    \boxed{\,A_{_1}A_{_2}SC \qquad A_{_2}A_{_1}SC\,}  &\qquad \boxed{\,A_{_1}A_{_2}CS\, \qquad \,A_{_2}A_{_1}CS\,}
+                    \\\\
+                    \boxed{\,CA_{_1}A_{_2}S \qquad CA_{_2}A_{_1}S\,} &\qquad \boxed{\,SA_{_2}A_{_1}C\, \qquad \,SA_{_1}A_{_2}C\,}
+                    \\\\
+                    \boxed{\,CSA_{_1}A_{_2} \qquad CSA_{_2}A_{_1}\,} &\qquad \boxed{\,SCA_{_1}A_{_2}\, \qquad \,SCA_{_2}A_{_1}\,}
+                    \\\\
+                    \boxed{\,CA_{_1}SA_{_2} \qquad CA_{_2}SA_{_1}\,}&\qquad \boxed{\,SA_{_1}CA_{_2}\, \qquad \,SA_{_2}CA_{_1}\,}
+                    \\\\
+                    \boxed{\,A_{_1}CA_{_2}S \qquad A_{_2}CA_{_1}S\,} &\qquad \boxed{\,A_{_1}SA_{_2}A\, \qquad \,A_{_1}CA_{_2}A\, }
+                    \\\\
+                    \boxed{\,A_{_1}CSA_{_2}\, \qquad \,A_{_2}CSA_{_1}}\, &\qquad \boxed{\,A_{_1}SCA_{_2}\, \qquad \,A_{_2}SCA_{_1}\,}
+                \end{align*}
+                \]                 
+            </div>            
+            Osserviamo che coppie di anagrammi etichettati corrispondono ad uno stesso anagramma 
+            non etichettato.
+        </div> 
+        <div class="slide1">
+            Sappiamo che possiamo produrre \(4 \cdot 3 \cdot 2 \cdot 1 = 24\) anagrammi etichettati.         
+            Scriviamoli tutti:
+            <div style="font-size: 1rem;">            
+                \[
+                \begin{align*}
+                    \boxed{\,A_{_{\color{transparent}{}1}}A_{_{\color{transparent}{}2}}SC \qquad A_{_{\color{transparent}{}2}}A_{_{\color{transparent}{}1}}SC\,}  &\qquad \boxed{\,A_{_{\color{transparent}{}1}}A_{_{\color{transparent}{}2}}CS\, \qquad \,A_{_2}A_{_1}CS\,}
+                    \\\\
+                    \boxed{\,CA_{_{\color{transparent}{}1}}A_{_{\color{transparent}{}2}}S \qquad CA_{_{\color{transparent}{}2}}A_{_{\color{transparent}{}1}}S\,} &\qquad \boxed{\,SA_{_{\color{transparent}{}2}}A_{_{\color{transparent}{}1}}C\, \qquad \,SA_{_{\color{transparent}{}1}}A_{_{\color{transparent}{}2}}C\,}
+                    \\\\
+                    \boxed{\,CSA_{_{\color{transparent}{}1}}A_{_{\color{transparent}{}2}} \qquad CSA_{_{\color{transparent}{}2}}A_{_{\color{transparent}{}1}}\,} &\qquad \boxed{\,SCA_{_{\color{transparent}{}1}}A_{_{\color{transparent}{}2}}\, \qquad \,SCA_{_{\color{transparent}{}2}}A_{_{\color{transparent}{}1}}\,}
+                    \\\\
+                    \boxed{\,CA_{_{\color{transparent}{}1}}SA_{_{\color{transparent}{}2}} \qquad CA_{_{\color{transparent}{}2}}SA_{_{\color{transparent}{}1}}\,}&\qquad \boxed{\,SA_{_{\color{transparent}{}1}}CA_{_{\color{transparent}{}2}}\, \qquad \,SA_{_{\color{transparent}{}2}}CA_{_{\color{transparent}{}1}}\,}
+                    \\\\
+                    \boxed{\,A_{_{\color{transparent}{}1}}CA_{_{\color{transparent}{}2}}S \qquad A_{_{\color{transparent}{}2}}CA_{_{\color{transparent}{}1}}S\,} &\qquad \boxed{\,A_{_{\color{transparent}{}1}}SA_{_{\color{transparent}{}2}}A\, \qquad \,A_{_{\color{transparent}{}1}}CA_{_{\color{transparent}{}2}}A\, }
+                    \\\\
+                    \boxed{\,A_{_{\color{transparent}{}1}}CSA_{_{\color{transparent}{}2}}\, \qquad \,A_{_{\color{transparent}{}2}}CSA_{_{\color{transparent}{}1}}}\, &\qquad \boxed{\,A_{_{\color{transparent}{}1}}SCA_{_{\color{transparent}{}2}}\, \qquad \,A_{_{\color{transparent}{}2}}SCA_{_{\color{transparent}{}1}}\,}
+                \end{align*}
+                \]                 
+            </div>            
+            Osserviamo che coppie di anagrammi etichettati corrispondono ad uno stesso anagramma 
+            non etichettato.
+        </div>      
+        <div class="slide1">
+            Sappiamo che possiamo produrre \(4 \cdot 3 \cdot 2 \cdot 1 = 24\) anagrammi etichettati.         
+            Scriviamoli tutti:
+            <div style="font-size: 1rem;">            
+                \[
+                \begin{align*}
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad AASC\qquad\quad}  &\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad AACS\qquad\quad}
+                    \\\\
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad CAAS\qquad\quad} &\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad SAAC\qquad\quad}
+                    \\\\
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad CSAA\qquad\quad} &\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad SCAA\qquad\quad}
+                    \\\\
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad CASA\qquad\quad}&\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad SACA\qquad\quad}
+                    \\\\
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad ACAS\qquad\quad} &\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad ASAC\qquad\quad}
+                    \\\\
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad ACSA\qquad\quad} &\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad ASCA\qquad\quad}
+                \end{align*}
+                \]                  
+            </div>            
+            Osserviamo che coppie di anagrammi etichettati corrispondono ad uno stesso anagramma 
+            non etichettato.
+        </div>  
+        <div class="slide1">
+            Sappiamo che possiamo produrre \(4 \cdot 3 \cdot 2 \cdot 1 = 24\) anagrammi etichettati.         
+            Scriviamoli tutti:
+            <div style="font-size: 1rem;">            
+                \[
+                \begin{align*}
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad AASC\qquad\quad}  &\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad AACS\qquad\quad}
+                    \\\\
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad CAAS\qquad\quad} &\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad SAAC\qquad\quad}
+                    \\\\
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad CSAA\qquad\quad} &\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad SCAA\qquad\quad}
+                    \\\\
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad CASA\qquad\quad}&\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad SACA\qquad\quad}
+                    \\\\
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad ACAS\qquad\quad} &\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad ASAC\qquad\quad}
+                    \\\\
+                    \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad ACSA\qquad\quad} &\qquad \boxed{\color{transparent}{}A_{_12}\color{black}{}\qquad ASCA\qquad\quad}
+                \end{align*}
+                \]                  
+            </div>            
+            Osserviamo che coppie di anagrammi etichettati corrispondono ad uno stesso anagramma 
+            non etichettato.
+            <br>
+            In totale abbiamo 
+            \[
+                \dfrac{24}{2} = 12
+            \]
+            anagrammi non etichettati. 
+            <br>
+            Al numeratore abbiamo il numero totale degli anagrammi non etichettati.
+            <br>
+            AL denominatore il numero degli anagrammi etichettati che indicano lo stesso anagramma non etichettato.
+        </div>        
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+        <button id="previousSlide-button1" onclick="previousSlide(1)">Indietro</button>
+        <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+    </div>
+    
+    
+
+    <br>
+    <br>
+    
+    <script src="../../js/hintAndSlide.js"></script>
+</body>
