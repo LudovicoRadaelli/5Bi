@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>        
+
+    Studiare e memorizzare le seguenti regole di integrazione. 
+
+    <br>
+    <br>
+
+    <h3 class="yellow">Regole di integrazione</h3>
+    <div class="esempi-container">
+        <ul>
+            <li>
+                <div style="width: fit-content;">
+                    \[
+                        \int x^{\alpha} \,\,dx = \dfrac{x^{\alpha + 1}}{\alpha + 1} + c \quad \text{con} \quad \alpha \neq -1
+                    \]
+                </div>
+            </li>
+            <br>
+            <li>
+                <div style="width: fit-content;">
+                    \[
+                        \int \dfrac{1}{x} \,\, dx = ln\left(x\right) + c \quad \text{con} \quad x \gt 0
+                    \]
+                </div>
+            </li>
+            <br>            
+            <li>
+                <div style="width: fit-content;">
+                    \[
+                        \int e^{x} \,\, dx = e^{x} + c
+                    \]
+                </div>
+            </li>
+            <br>
+            <li>
+                <div style="width: fit-content;">
+                    \[
+                        \int sin(x) \,\, dx = -cos(x) + c
+                    \]
+                </div>
+            </li>
+            <br>
+            <li>
+                <div style="width: fit-content;">
+                    \[
+                        \int cos(x) \,\, dx = sin(x) + c
+                    \]
+                </div>
+            </li>            
+        </ul>
+    </div>
+
+    <br>
+    <br>    
+
+    <h3 class="green">Esercizio guida 1</h3>
+    <br>
+    <div class="grayBorder">
+        Svolgiamo il  seguente integrale 
+        <br>
+        <br>
+        <div id="slide-container1" class="slide-container grayBorder">
+            
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \int \dfrac{4}{x^2} \, dx  = 
+                    \]                    
+                </div>
+                <span class="gray">
+                    \(\)
+                </span>
+            </div>
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \int \dfrac{4}{x^2} \, dx  = 
+                    \]                    
+                </div>
+                <span class="gray">
+                    Usiamo la linearità per far uscire la costante moltiplicativa \(4\) dal segno di integrale
+                </span>
+            </div>
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \int \dfrac{\color{red}{}4}{x^2} \, dx  = 
+                    \]
+                </div>
+                <span class="gray">
+                    Usiamo la linearità per far uscire la costante moltiplicativa \(4\) dal segno di integrale
+                </span>
+            </div>
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        \color{red}{}4\color{black}{} \,\int \dfrac{1}{x^2} \, dx  = 
+                    \]
+                </div>
+                <span class="gray">
+                    Usiamo la linearità per far uscire la costante moltiplicativa \(4\) dal segno di integrale
+                </span>
+            </div>
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        4\color{black}{} \,\int \dfrac{1}{x^2} \, dx  = 
+                    \]
+                </div>
+            </div>            
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        4\,\int \dfrac{1}{x^{\color{red}{}2}} \, dx  = 
+                    \]
+                </div>
+            </div>
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        4\,\int x^{\color{red}{}-2} \, dx  = 
+                    \]
+                </div>
+            </div>          
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        4\,\int x^{\color{blue}{}-2} \, dx  = 
+                    \]
+                </div>
+                <span class="gray">
+                    Usiamo la regola 
+                    \[
+                        \int x^{\color{blue}{}\alpha} \,dx = \dfrac{x^{\color{blue}{}\alpha\color{gray}{} + 1}}{\color{blue}{}\alpha\color{gray}{} + 1} + c
+                    \]
+                </span>
+            </div>  
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        4\,\color{red}{}\int \color{black}{} x^{\color{blue}{}-2} \, \color{red}{}dx\color{black}{}  = <!-- 4\,\dfrac{x^{\color{blue}{}-2\color{black}{}+ 1}}{\color{red}{}-2\color{black}{}+ 1} + c -->
+                    \]
+                </div>
+                <span class="gray">
+                    Usiamo la regola 
+                    \[
+                        \int x^{\color{blue}{}\alpha} \,dx = \dfrac{x^{\color{blue}{}\alpha\color{gray}{} + 1}}{\color{blue}{}\alpha\color{gray}{} + 1} + c
+                    \]
+                </span>
+            </div>     
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        4\,\dfrac{x^{\color{blue}{}-2\color{black}{} + 1}}{\color{blue}-2 \color{black}{}+ 1}\color{black}{}  = <!-- 4\,\dfrac{x^{\color{blue}{}-2\color{black}{}+ 1}}{\color{red}{}-2\color{black}{}+ 1} + c -->
+                    \]
+                </div>
+                <span class="gray">
+                    Usiamo la regola 
+                    \[
+                        \int x^{\color{blue}{}\alpha} \,dx = \dfrac{x^{\color{blue}{}\alpha\color{gray}{} + 1}}{\color{blue}{}\alpha\color{gray}{} + 1} 
+                    \]
+                </span>
+            </div>    
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        4\,\dfrac{x^{-2 + 1}}{-2 + 1}  = 
+                    \]
+                </div>
+                <span class="gray">
+                    Aggiungiamo la costante additiva \(c\)
+                </span>
+            </div>     
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        4\,\dfrac{x^{-2 + 1}}{-2 + 1} \color{red}{} + c \color{black}{} = 
+                    \]
+                </div>
+                <span class="gray">
+                    Aggiungiamo la costante additiva \(c\)
+                </span>
+            </div>     
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        4\,\dfrac{x^{-1}}{-1} + c = 
+                    \]
+                </div>                
+            </div>            
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        -4\,x^{-1} + c = 
+                    \]
+                </div>                
+            </div>            
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        -4\,x^{\color{red}{}-1} + c = 
+                    \]
+                </div>                
+            </div>            
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        -4\,\dfrac{1}{x} + c = 
+                    \]
+                </div>                
+            </div>            
+            <div class="slide1">
+                <div class="formula" style="width: fit-content">
+                    \[
+                        -\dfrac{4}{x} + c
+                    \]
+                </div>                
+            </div>            
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-button1" onclick="previousSlide(1)">Indietro</button>
+            <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+        </div>      
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+
+
+    <h3 class="green">Esercizio guida 2</h3>
+    <br>
+    <div class="grayBorder">
+        Svolgiamo il  seguente integrale 
+        <br>
+        <br>
+        <div id="slide-container2" class="slide-container grayBorder">
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \int \dfrac{2}{5}\,\sqrt[3]{x^2}\,dx = 
+                    \]
+                </div>
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \int \dfrac{2}{5}\,\sqrt[3]{x^2}\,dx = 
+                    \]
+                </div>
+                <span class="gray">
+                    Usiamo la linearità dell'integrale per portare la costante moltiplicativa \(\frac{2}{5}\)
+                    fuori dal segno di integrazione.
+                </span>
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \int \color{red}{}\dfrac{2}{5}\color{black}{}\,\sqrt[3]{x^2}\,dx = 
+                    \]
+                </div>
+                <span class="gray">
+                    Usiamo la linearità dell'integrale per portare la costante moltiplicativa \(\frac{2}{5}\)
+                    fuori dal segno di integrazione.
+                </span>
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \color{red}{}\dfrac{2}{5}\color{black}{} \, \int \sqrt[3]{x^2}\,dx = 
+                    \]
+                </div>
+                <span class="gray">
+                    Usiamo la linearità dell'integrale per portare la costante moltiplicativa \(\frac{2}{5}\)
+                    fuori dal segno di integrazione.
+                </span>
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \int \sqrt[3]{x^2}\,dx = 
+                    \]
+                </div>                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \int \sqrt[\color{red}{}3]{x^{\color{blue}{}2}}\,dx = 
+                    \]
+                </div>                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \int x^{\frac{\color{blue}{}2}{\color{red}{}3}}\,dx = 
+                    \]
+                </div>                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \int x^{\color{blue}{}\frac{2}{3}}\,dx = 
+                    \]
+                </div>                
+                <span class="gray">
+                    Applichiamo la regola 
+                    \[                
+                        \int x^{\color{blue}{}\alpha} \,dx = \dfrac{x^{\color{blue}{}\alpha\color{gray}{} + 1}}{\color{blue}{}\alpha\color{gray}{} + 1} + c
+                    \]
+                </span>
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \color{red}{}\int\color{black}{} x^{\color{blue}{}\frac{2}{3}}\,\color{red}{}dx\color{black}{} = 
+                    \]
+                </div>                
+                <span class="gray">
+                    Applichiamo la regola 
+                    \[                
+                        \int x^{\color{blue}{}\alpha} \,dx = \dfrac{x^{\color{blue}{}\alpha\color{gray}{} + 1}}{\color{blue}{}\alpha\color{gray}{} + 1} + c
+                    \]
+                </span>
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \dfrac{x^{\color{blue}{}\frac{2}{3}\color{black}{} + 1}}{\color{blue}{}\frac{2}{3}\color{black}{} + 1}  =
+                    \]
+                </div>                
+                <span class="gray">
+                    Applichiamo la regola 
+                    \[                
+                        \int x^{\color{blue}{}\alpha} \,dx = \dfrac{x^{\color{blue}{}\alpha\color{gray}{} + 1}}{\color{blue}{}\alpha\color{gray}{} + 1} + c
+                    \]
+                </span>
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \dfrac{x^{\frac{2}{3} + 1}}{\frac{2}{3} + 1} =
+                    \]
+                </div>                                
+                <span class="gray">
+                    Aggiungiamo la costante additiva \(c\)
+                </span>
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \dfrac{x^{\frac{2}{3} + 1}}{\frac{2}{3} + 1} \color{red}{} + c \color{black}{} =
+                    \]
+                </div>                                
+                <span class="gray">
+                    Aggiungiamo la costante additiva \(c\)
+                </span>
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \dfrac{x^{\frac{2}{3} + 1}}{\frac{2}{3} + 1} + c =
+                    \]
+                </div>                                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \dfrac{x^{\frac{2 + 3}{3} }}{\frac{2 + 3}{3}} + c =
+                    \]
+                </div>                                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \dfrac{x^{\frac{5}{3} }}{\frac{5}{3}} + c =
+                    \]
+                </div>                                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \dfrac{x^{\frac{5}{3} }}{\frac{\color{red}{}5}{\color{blue}{}3}} + c =
+                    \]
+                </div>                                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{2}{5} \, \dfrac{\color{blue}{}3}{\color{red}{}5} \, x^{\frac{5}{3} } + c =
+                    \]
+                </div>                                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{\color{blue}{}2}{\color{red}{}5} \, \dfrac{\color{blue}{}3}{\color{red}{}5} \, x^{\frac{5}{3} } + c =
+                    \]
+                </div>                                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{\color{blue}{}6}{\color{red}{}25}  \, x^{\frac{5}{3} } + c =
+                    \]
+                </div>                                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{6}{25}  \, x^{\frac{\color{blue}{}5}{\color{red}{}3} } + c =
+                    \]
+                </div>                                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{6}{25}  \, \sqrt[\color{red}{}3]{x^{\color{blue}{}5}} + c =
+                    \]
+                </div>                                
+            </div>  
+            <div class="slide2">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \dfrac{6}{25}  \, \sqrt[3]{x^{5}} + c
+                    \]
+                </div>                                
+            </div>  
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-button2" onclick="previousSlide(2)">Indietro</button>
+            <button id="nextSlide-button2" onclick="nextSlide(2)">Avanti</button>
+        </div>  
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    
+
+
+    <h3 class="green">Esercizio guida 3</h3>
+    <br>
+    <div class="grayBorder" >
+        <div id="slide-container3" class="slide-container grayBorder">
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \int \big[3sin(x) - \dfrac{2}{3}cos(x)\big] \, dx =
+                    \]
+                </div>
+            </div>          
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \int \big[3sin(x) - \dfrac{2}{3}cos(x)\big] \, dx =
+                    \]
+                </div>
+                <span class="gray">
+                    Utilizziamo la linearità dell'integrale.
+                </span>
+            </div>                      
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \int \big[\color{red}{}3sin(x)\color{black}{} - \color{blue}{}\dfrac{2}{3}cos(x)\color{black}{}\big] \, dx =
+                    \]
+                </div>
+                <span class="gray">
+                    Utilizziamo la linearità dell'integrale.
+                </span>
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \int \color{red}{}3sin(x)\color{black}{}\,dx  - \int \color{blue}{}\dfrac{2}{3}cos(x)\color{black}{} \, dx =
+                    \]
+                </div>
+                <span class="gray">
+                    Utilizziamo la linearità dell'integrale.
+                </span>
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \int \color{red}{}3\color{black}{}sin(x)\,dx  - \int \color{red}{}\dfrac{2}{3}\color{black}{}cos(x) \, dx =
+                    \]
+                </div>
+                <span class="gray">
+                    Utilizziamo la linearità dell'integrale.
+                </span>
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        \color{red}{}3\color{black}{} \int sin(x)\,dx  - \color{red}{}\dfrac{2}{3}\color{black}{} \, \int cos(x) \, dx =
+                    \]
+                </div>
+                <span class="gray">
+                    Utilizziamo la linearità dell'integrale.
+                </span>
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        3 \int sin(x)\,dx  - \dfrac{2}{3}  \int cos(x) \, dx =
+                    \]
+                </div>
+                <span class="gray">
+                    
+                </span>
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        3 \int sin(x)\,dx  - \dfrac{2}{3}  \int cos(x) \, dx =
+                    \]
+                </div>
+                <span class="gray">
+                    Risolviamo gli integrali fondamentali attraverso la tabella.
+                </span>
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        3 \color{red}{}\int sin(x)\,dx\color{black}{}  - \dfrac{2}{3}  \int cos(x) \, dx =
+                    \]
+                </div>
+                <span class="gray">
+                    Risolviamo gli integrali fondamentali attraverso la tabella.
+                </span>
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        3 \color{red}{}(-cos(x))\color{black}{}  - \dfrac{2}{3}  \int cos(x) \, dx =
+                    \]
+                </div>
+                <span class="gray">
+                    Risolviamo gli integrali fondamentali attraverso la tabella.
+                </span>
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        3 (-cos(x)) - \dfrac{2}{3}  \color{red}{}\int cos(x) \, dx\color{black}{} =
+                    \]
+                </div>
+                <span class="gray">
+                    Risolviamo gli integrali fondamentali attraverso la tabella.
+                </span>
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        3 (-cos(x)) - \dfrac{2}{3}  \color{red}{}sin(x)\color{black}{} =
+                    \]
+                </div>
+                <span class="gray">
+                    Risolviamo gli integrali fondamentali attraverso la tabella.
+                </span>
+            </div>              
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        3 (-cos(x)) - \dfrac{2}{3}  sin(x) =
+                    \]
+                </div>
+                <span class="gray">
+                    Aggiungiamo la costante additiva \(c\) in coda alle primitive appena trovate.
+                </span>
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        3 (-cos(x)) - \dfrac{2}{3}  sin(x) \color{red}{} + c \color{black}{} =
+                    \]
+                </div>
+                <span class="gray">
+                    Aggiungiamo la costante additiva \(c\) in coda alle primitive appena trovate.
+                </span>
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        3 (-cos(x)) - \dfrac{2}{3}  sin(x) + c  =
+                    \]
+                </div>                
+            </div>  
+            <div class="slide3">
+                <div class="formula" style="width: fit-content;">
+                    \[
+                        -3cos(x) - \dfrac{2}{3} \, sin(x) + c 
+                    \]
+                </div>
+            </div>                               
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-button3" onclick="previousSlide(3)">Indietro</button>
+            <button id="nextSlide-button3" onclick="nextSlide(3)">Avanti</button>
+        </div>  
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 4</h3>
+    <br>
+    <div>
+        Svolgere i seguenti integrali
+    </div>    
+    <br>
+    <ul>
+        <li>
+            <div style="width: fit-content;">
+                \[
+                    \int\left(\dfrac{4}{3}x^2 - \sqrt[5]{x^{2}}\right) dx
+                \]
+            </div>
+        </li>
+        <br>
+        <div class="gray">
+            <b>Soluzione:</b> 
+            \[
+                \dfrac{4}{9}x^3 - \dfrac{5}{7}\sqrt[5]{x^{7}} + c
+            \]
+        </div>
+        <br>
+
+        <li>
+            <div style="width: fit-content;">
+                \[
+                    \int \left(5\,sin(x) - 3\,cos(x)\right) dx
+                \]
+            </div>
+        </li>
+        <br>
+        <div class="gray">
+            <b>Soluzione:</b> 
+            \[
+                -5\,cos(x) -3\,sin(x)+ c
+            \]
+        </div>
+        <br>
+        
+        <li>
+            <div style="width: fit-content;">
+                \[
+                    \int \left(\dfrac{3x - 4x^2 + 5x^3}{2x^2}\right) dx
+                \]
+            </div>
+        </li>
+        <br>
+        <div class="gray">
+            <b>Suggerimento:</b> 
+            <br>
+            Prima di tutto distribuite la frazione sugli addendi del numeratore, poi semplificate ciascuna frazione:
+            \[
+                \begin{align*}
+                    \int \left(\dfrac{3x - 4x^2 + 5x^3}{\color{red}{}2x^2}\right) dx =
+                    \\\\
+                    \int \left(\dfrac{3x}{\color{red}{}2x^2} - \dfrac{4x^2}{\color{red}{}2x^2} + \dfrac{5x^3}{\color{red}{}2x^2}\right) dx =
+                    \\\\
+                    \int \left(\dfrac{3\cancel{x}}{2x^{\cancel{2}}} - \dfrac{4\cancel{x^2}}{{}2\cancel{x^2}} + \dfrac{5x^{\cancel{3}}}{2\cancel{x^2}}\right) dx =
+                    \\\\
+                    \int \left(\dfrac{3}{2x} - \dfrac{4}{2} + \dfrac{5x}{2}\right) dx =
+
+                \end{align*}
+            \]
+            Ed ora vai di linearità!
+        </div>  
+        <br>
+        <div class="gray">
+            <b>Soluzione:</b> 
+            \[
+                \dfrac{3}{2}\,ln(x) -2x + \dfrac{5}{4}x^2 + c
+            \]
+        </div>        
+    </ul>
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+    
+</body>
