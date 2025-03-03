@@ -13,382 +13,356 @@
 <body>
     <h1>Compiti per casa</h1>
     
-    <br>        
+    <br>                
 
-    <div style="width: 100%; text-align: center;">
-        <b style="color: black; font-size: 1.5rem;">
-            PARTE PRIMA
+    <div class="gray">
+        Ricapitoliamo quanto visto fino ad ora.
+        
+        <br>
+        <br>
+
+        <div style="width: 100%; text-align: center;">
+            <b style="color: black; font-size: 1.5rem;">PARTE PRIMA</b>
+        </div>        
+        <br>
+
+        Come prima cosa abbiamo studiato le formule degli <b>integrali fondamentali</b>.
+        Sono regole che discendono da quelle delle derivate.
+        <br>
+        Ad esempio, poiché dalla regola di derivazione
+        \[
+            \left(\color{red}{}sin(x)\color{gray}{}\right)' = \color{blue}{}cos(x)
+        \]
+        possiamo scrivere la regola d'integrazione
+        \[
+            \int \,\color{blue}{}cos(x)\color{gray}{} \,\,dx = \color{red}{}sin(x)\color{gray}{} + c
+        \]
+    </div>
+    
+
+    <h3 class="yellow">Integrali fondamentali</h3>
+    <div class="esempi-container">
+        <ul>
+            <li>
+                <div style="width: fit-content;">
+                    \[
+                        \int x^{\alpha} \,\,dx = \dfrac{x^{\alpha + 1}}{\alpha + 1} + c \quad \text{con} \quad \alpha \neq -1
+                    \]
+                </div>
+            </li>
             <br>
-            Integrali fondamentali e linearità</b>
-    </div>
-
-    <br>
-
-    <h3 class="green">Esercizio 1 A</h3>
-    <br>
-    <div>
-        \[
-            \int \, x^2 + 2x - 3 + \dfrac{4}{x} \,\, dx         
-        \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/2EWmj0wNw58?si=eeeAgoP5NdmjNpcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 1 B</h3>
-    <br>
-    <div>
-        \[
-            \int \, \dfrac{3}{x^4} - \sqrt[3]{x^2} \,\, dx 
-        \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/Iu2e2jfhjR8?si=jDcPxXK20ASB4op5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
-
-    
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-    <h3 class="green">Esercizio 1 C</h3>
-    <br>
-    <div>
-        \[
-            \int \, 5\,sin(x) + \dfrac{1}{2}cos(x) + 1 \,\, dx 
-        \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/8O4mNkzn0Kc?si=wvuvKdNxVg5U02i5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 1 D</h3>
-    <br>
-    <div>
-        \[
-            \int \, \dfrac{3x^4 + x^3 - 8x^{2} + 4x}{x^3}\,\, dx 
-        \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/XUkHiB7O034?si=pgwqlmDsICy_hgS0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <div style="width: 100%; text-align: center;">
-        <b style="color: black; font-size: 1.5rem;">
-            PARTE SECONDA
+            <li>
+                <div style="width: fit-content;">
+                    \[
+                        \int \dfrac{1}{x} \,\, dx = ln\left(x\right) + c \quad \text{con} \quad x \gt 0
+                    \]
+                </div>
+            </li>
+            <br>            
+            <li>
+                <div style="width: fit-content;">
+                    \[
+                        \int e^{x} \,\, dx = e^{x} + c
+                    \]
+                </div>
+            </li>
             <br>
-            Integrali fondamentali generalizzati</b>
+            <li>
+                <div style="width: fit-content;">
+                    \[
+                        \int sin(x) \,\, dx = -cos(x) + c
+                    \]
+                </div>
+            </li>
+            <br>
+            <li>
+                <div style="width: fit-content;">
+                    \[
+                        \int cos(x) \,\, dx = sin(x) + c
+                    \]
+                </div>
+            </li>            
+        </ul>
+    </div>
+    
+    <br>    
+
+    <div class="gray">
+        Subito dopo abbiamo visto le due proprietà di <b>linearità</b> dell'integrale
     </div>
 
-    <br>
-    
-    <h3 class="green">Esercizio 2 A</h3>
-    <br>
-    <div>
+    <br>    
+
+    <h3 class="yellow">Linearità dell'integrale</h3>
+    <div class="esempi-container">    
+        <div class="formula" style="width: fit-content;">
             \[
-                \int \, \dfrac{7x}{x^2 + 1}\,\, dx
-            \]        
+                \int \big[f(x) + g(x)\big] \,\,dx = \int f(x) \,\,dx + \int g(x) \,\,dx 
+            \]
+            
+            &Eacute; possibile distribuire l'integrale su una somma di funzioni.
+            
+        </div>
+
+        <div class="formula" style="width: fit-content;">
+            \[
+                \int \big[a \,f(x) \big] \,\,dx = a \, \int f(x) \,\,dx  
+            \]
+            
+            &Eacute; possibile portare le costanti moltiplicative fuori dal segno di integrazione.
+            
+        </div>
     </div>
 
     <br>
-    <br>
 
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/m5VREcIqy7M?si=sUc2V7N0lzAqi23Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="gray">
+        Conoscendo gli integrali fondamentali e sfruttando la linearità dell'integrale 
+        è possibile calcolare l'integrale di un'ampia classe di funzioni.
+        <br>
+        Di seguito le schede dove potete trovare esercizi a riguardo.
 
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
+        <br>
+        <br>
 
-    <h3 class="green">Esercizio 2 B</h3>
-    <br>
-    <div>
+        <ul>
+            <li>
+                <a class="gray" href="3.html">Scheda 3</a>
+            </li>
+            <br>
+            <li>
+                <a class="gray" href="4.html">Scheda 4</a>
+            </li>
+            <br>
+            <li>
+                <a class="gray" href="5.html">Scheda 5</a>
+            </li>
+        </ul>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>       
+        
+        <div style="width: 100%; text-align: center;">
+            <b style="color: black; font-size: 1.5rem;">PARTE SECONDA</b>
+        </div>        
+        <br>
+
+        Dalla formula di derivazione di una funzione composta discendondo le <b>formule generalizzate 
+            degli integrali fondamentali</b>.
+        <br>
+        Consideriamo ad esempio la derivata
         \[
-            \int \, \left(8x + 3e^{x}\right) \, \left(4x^2 + 3e^{x}\right)^4\,\, dx
+            \left[sin(\color{blue}x^2 - 1\color{gray}{})\right]' = cos(\color{blue}x^2 - 1\color{gray}{}) \cdot \color{black}{}2x
         \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/H8D7orpgkys?si=_AW9yKJJGOrDTG_d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 2 C</h3>
-    <br>
-    <div>
+        poiché
+        <div class="formula">
+            \[
+                \begin{align*}
+                    &g(x) = sin(x) \,\,\Rightarrow\,\, g'(x) = cos(x) \,\,\Rightarrow\,\, g'\Big(f(x)\Big) = cos(x^2 - 1)
+                    \\\\
+                    &f(x) = x^2 - 1 \,\,\Rightarrow\,\, f'(x) = 2x 
+                \end{align*}
+            \]
+        </div>
+        Osserviamo che la struttura di questa derivata appena svolta è         
         \[
-            \int \, (1 + x) \, e^{x} \, sin\left(x\,e^{x}\right) \,\, dx
+            \Big[sin\left(\color{blue}{}f(x)\color{gray}{}\right)\Big]' = cos\left(\color{blue}{}f(x)\color{gray}{}\right) \cdot \color{black}{}f'(x)
         \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/OGuWDtdqDMM?si=T64hRjxjMNdFGBxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 2 D</h3>
-    <br>
-    <div>
+        Da ciò deriva la regola d'integrazione
         \[
-            \int \, \dfrac{1}{x\,ln(x)} \,\, dx
+            \int  cos\left(\color{blue}{}f(x)\color{gray}{}\right) \cdot \color{black}{}f'(x)\color{gray}{} \,\, x = sin\left(\color{blue}{}f(x)\color{gray}{}\right) + c
         \]
+        che generalizza l'integrale 
+        \[
+            \int cos(x) \,\,dx = sin(x) + c
+        \]        
+    </div>
+    
+
+    <h3 class="yellow">Integrali fondamentali generalizzati</h3>
+    <div class="esempi-container">  
+        <ul>
+            <li>
+                \[
+                    \int f(x)^{\alpha} f'(x) \,\,dx = \dfrac{f(x)^{\alpha + 1}}{\alpha + 1} + c \quad \text{con} \quad \alpha \neq -1
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int \dfrac{f'(x)}{f(x)} \,\, dx = ln\left(|f(x)|\right) + c
+                \]
+            </li>
+            <br>            
+            <li>
+                \[
+                    \int e^{f(x)}f'(x) \,\, dx = e^{f(x)} + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int sin(f(x))f'(x) \,\, dx = -cos(f(x)) + c
+                \]
+            </li>
+            <br>
+            <li>
+                \[
+                    \int cos(f(x))f'(x) \,\, dx = sin(f(x)) + c
+                \]
+            </li>            
+        </ul>
     </div>
 
-    <br>
+
     <br>
 
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/Yni90LRFliQ?si=rsSblDV6VGpa3UUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="gray">
+
+        Di seguito trovate una scheda di esercizi riguardo questo argomento. Oltre ad essa abbiamo 
+        svolto diverse esercitazioni in classe.
+        <br>
+        <br>
+        <ul>
+            <li>
+                <a class="gray" href="8.html">Scheda 8</a>
+            </li>            
+        </ul>        
+    </div>
 
     <br>
     <br>
     <hr>
     <br>
     <br>
+
+    
+    <div style="width: 100%; text-align: center;">
+        <b style="color: black; font-size: 1.5rem;">PARTE TERZA</b>
+    </div>        
+    
+    <br>
+
+    <h3 class="yellow">Integrazione per parti</h3>        
+    <div class="esempi-container"> 
+        Scrivo di seguito la formula di integrazione per parti
+        
+        <div class="formula" style="font-size: 1rem;">
+            \[
+                \int \, f'(x) \cdot g(x) \,\, dx = f(x) \cdot g(x) - \int \, f(x) \cdot g'(x) \,\,dx
+            \]
+        </div>        
+
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/_MggheFzp7Q?si=P7uvpdcZU_X415u6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                
+    </div>
+
+    <br>
+    <br>
+
+    <div class="gray">
+        La tecnica di <b>integrazione per parti</b> discende dalla regola di Leibniz. 
+        <br>
+        Dimostriamolo:
+
+        <div class="formula">
+            \[
+                \begin{align*}
+                    \Big[f(x)g(x)\Big]' &= f'(x)g(x) + f(x)g'(x)
+                    \\\\
+                    \color{blue}{}\int\color{gray} \Big[f(x)g(x)\Big]' \,\,\color{blue}{}dx\color{gray} &= \color{blue}{}\int\color{gray} f'(x)g(x) + f(x)g'(x) \,\,\color{blue}{}dx\color{gray}
+                    \\\\
+                    \cancel{\int } \Big[f(x)g(x)\Big]^{\cancel{'}} \,\, dx &= \int f'(x)g(x) \,\, dx + \int f(x)g'(x) \,\, dx
+                    \\\\
+                    f(x)g(x) &= \int f'(x)g(x) \,\, dx + \int f(x)g'(x) \,\, dx
+                    \\\\
+                    \int f'(x)g(x) \,\, dx &= f(x)g(x) - \int f(x)g'(x) \,\, dx
+                \end{align*}
+            \]
+        </div>
+
+        <br>
+
+
+        Di seguito trovate le schede di esercizio riguardanti l'integrazione per parti
+        <br>
+        <br>
+        <ul>
+            <li>
+                <a href="6.html" class="gray">Scheda 6</a>
+            </li>
+            <br>
+            <li>
+                <a href="7.html" class="gray">Scheda 7</a>
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
 
     <div style="width: 100%; text-align: center;">
-        <b style="color: black; font-size: 1.5rem;">
-            PARTE TERZA
+        <b style="color: black; font-size: 1.5rem;">PARTE QUARTA</b>
+    </div>        
+    
+    <br>
+
+    <h3 class="yellow">Teorema fondamentale del calcolo integrale</h3>
+    <div class="esempi-container">        
+        L'enunciato del teorema è il seguente 
+        
+        <br>
+        <br>
+
+        <div class="grayBorder">
+            Data una funzione \(f\) continua in \([a\,;\,\,b]\) e detta \(F\) una <u>qualsiasi</u> primitiva di \(f\) si ha
+            \[
+                \int_{a}^{b} f(x) \,\, dx = F(b) -F(a)
+            \] 
+        </div>        
+
+        <br>
+
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/L5nfo0ts2G0?si=fdGjl3n7sU4DdNwq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/Q1Fyk0JnXhM?si=bk16WMFeFJjLi-41" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="gray">
+        Di seguito sono riportate le schede di esercizio che abbiamo affrontato a riguardo
+
+        <br>
+        <br>
+
+        <ul>
+            <li>
+                <a href="9.html" class="gray">Scheda 9</a>   
+            </li>
             <br>
-            Integrazione per parti</b>
-    </div>
-
-    <br>
-    
-    <h3 class="green">Esercizio 3 A</h3>
-    <br>
-    <div>
-        \[
-            \int \, 3x \, sin(x) \,\, dx
-        \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/LcH43651lQY?si=k30hGoyvRPUNt26k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 3 B</h3>
-    <br>
-    <div>
-        \[
-            \int \, ln(x) \,\, dx
-        \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/9qFd5ZSHzoo?si=OevXf0Qd5QMd7wKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 3 C</h3>
-    <br>
-    <div>
-        \[
-            \int \, \dfrac{ln(x)}{x^5}\,\, dx
-        \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/maYXTRM_nZk?si=Gm7NKirBhajw69bb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 3 D</h3>
-    <br>
-    <div>
-        \[
-            \int \, e^x\,cos(x) \,\, dx
-        \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/0jT467GXs0Y?si=9uGNmQa6QaVsGgDD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <div style="width: 100%; text-align: center;">
-        <b style="color: black; font-size: 1.5rem;">
-            PARTE QUARTA
+            <li>
+                <a href="10.html" class="gray">Scheda 10</a>
+            </li>
             <br>
-            Integrali definiti    
-        </b>
+            <li>
+                <a href="11.html" class="gray">Scheda 11</a>
+            </li>
+            <br>
+            <li>
+                <a href="12.html" class="gray">Scheda 12</a>
+            </li>
+        </ul>
     </div>
-
-    <br>
-    
-    <h3 class="green">Esercizio 4 A</h3>
-    <br>
-    <div>
-        \[
-            \int_{-2}^{4} \, \dfrac{x^2 + x}{3}\,\, dx
-        \]
-    </div>
-
     <br>
     <br>
 
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/Y6BDIId_9Vg?si=L-jnQiI8CuB9bLIm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 4 B</h3>
-    <br>
-    <div>
-        \[
-            \int_{-1}^{1} \, sin(x)\,cos^2(x) \,\, dx
-        \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/mTSxTD0aK4A?si=wE5aeG57zsIEHkx-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 4 C</h3>
-    <br>
-    <div>
-        \[
-            \int_{1}^{3} \dfrac{2 + x}{1 + 4x + x^2} \, \,\, dx
-        \]
-    </div>
-
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/bcIeLtCRWW4?si=6vqdv-HdVh-bnqAX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-
-    <h3 class="green">Esercizio 4 D</h3>
-    <br>
-    <div>
-        \[
-            \int_{0}^{1} (4x^3 - 1)e^{3x^4 - 3x}\, \,\, dx
-        \]
-    </div>
-    
-    <br>
-    <br>
-
-    <b class="gray">Svolgiemento:</b>
-    <br>
-    <iframe style="width: 100%" src="https://www.youtube.com/embed/WIXX9Bgfsak?si=_7BjFFCAeAEqiKoN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <br>
-    <br>
-
-    <script src="../../js/hintAndSlide.js"></script>
     
 </body>
