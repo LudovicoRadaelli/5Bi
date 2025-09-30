@@ -18,6 +18,177 @@
 
     <br>
 
+    <h3 class="yellow">Limiti notevoli</h3>
+    <div class="esempi-container">
+        Nelle scorse lezioni abbiamo visto che per valori molto grandi della \(x\), ovvero per \(x \to +\infty\),
+        possiamo apporossimare un polinomio con il suo termine dominante. Ad esempio
+        \[
+        8x^2 - 3x^2 + 1 \approx 8x^2
+        \]
+        In questo paragrafo estenderemo questo discorso ad altre funzioni, considerando di volta
+        in volta i valori per i quali l'approssimazione è opportuna.
+
+        <br>
+        <br>
+
+        <b>Funzione seno</b>
+        <br>
+        Consideriamo la funzione 
+        \[
+            f(x) = sin(x)
+        \] 
+        per valori della \(x\) prossimi a \(0\), ovvero \(x \to 0\).
+        <br>
+        Nel seguente video è possibile vedere che più zoomiamo attorno a \(x = 0\) più il grafico di \(f(x) = sin(x)\)
+        è simile a quello della retta bisettrice di primo e terzo quadrante, \(g(x) = x\).
+        <br>
+        <br>
+        <iframe style="width: 100% border: 0.01rem solid lightgray" src="https://www.youtube.com/embed/8TSWjRL_kqg?si=gLr_qBZDcU9GsWD6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>
+        <br>
+        Questo significa che per valori della \(x\) tendenti a \(0\) la funzione \(f(x) = sin(x)\) può essere
+        approssimata con la funzione \(g(x) = x\).
+        \[
+        sin(x) \approx x \qquad \text{per }\, x \to 0
+        \]
+        Questo implica che
+        \[
+        \lim_{x \to 0} \dfrac{sin(x)}{x} = 1
+        \]
+        Infatti per \(x \to 0\) il numeratore assomiglia sempre più ad \(x\) e quindi la frazione
+        assume valore sempre più vicino a \(1\).
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <b>Tangente</b>
+        <br>
+        Analogamente a prima si ha
+        \[
+        tan(x) \approx x \qquad \text{per}\,\, x \to 0
+        \]
+        ovvero per valori sempre più vicini a \(0\) la funzione assume valore sempre più simile ad \(x\).
+        <br>
+        <br>
+        Questo limite notevole si può dimostrare direttamente da quello prima illustrato. Infatti
+        \[
+        \begin{align*}
+        \lim_{x \to 0} \dfrac{tan(x)}{x}
+        &= \lim_{x \to 0} \dfrac{\frac{sin(x)}{cos(x)}}{x} =
+        \\\\
+        &= \lim_{x \to 0} \dfrac{sin(x)}{x \cdot cos(x)} =
+        \\\\
+        &= \lim_{x \to 0} {\dfrac{sin(x)}{x}}\,\dfrac{1}{cos(x)} =
+        \\\\
+        &= 1 \cdot 1 = 1
+        \end{align*}
+        \]
+
+        <iframe style="width: 100% border: 0.01rem solid lightgray" src="https://www.youtube.com/embed/9ugNy7UvqeI?si=hyhrv_GfP2kgFLf6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <b>Coseno</b>
+        <br>
+        Il prossimo limite notevole riguarda la funzione coseno. Si ha
+        \[
+        \lim_{x \to 0} \dfrac{1 - cos(x)}{x^2} = \dfrac{1}{2}
+        \]
+        Cerchiamo di interpretare questa informazione direttamente in termini del coseno.
+        <br>
+        Il limite ci dice che per valori della \(x\) molto vicini a \(0\) si ha
+        \[
+        \dfrac{1 - cos(x)}{x^2} \approx \dfrac{1}{2}
+        \]
+        Isoliamo il coseno in questa quasi-equazione
+        
+        <br>
+        <br>        
+        
+        <div id="slide-containerBAAAAAA(1)" class="slide-container BAAAAAA(1) grayBorder">
+            <div class="slideBAAAAAA(1)">
+                \[
+                \dfrac{1 - cos(x)}{x^2} \approx \dfrac{1}{2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                \dfrac{1 - cos(x)}{\color{red}{}x^2} \approx \dfrac{1}{\color{blue}{}2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                \color{blue}{}2\color{black}{} \cdot (1 - cos(x)) \approx 1 \cdot \color{red}{}x^2
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    2 - 2cos(x) \approx x^2 
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    - 2cos(x) \approx x^2 - 2
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    \dfrac{- 2cos(x)}{-2} \approx \dfrac{x^2 - 2}{-2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    cos(x) \approx \dfrac{x^2 - 2}{-2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    cos(x) \approx \dfrac{1}{-2}x^2 - \dfrac{2}{-2}
+                \]
+            </div>
+            <div class="slideBAAAAAA(1)">
+                \[
+                    cos(x) \approx -\dfrac{1}{2}x^2 + 1
+                \]
+            </div>
+            
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-buttonBAAAAAA(1)" onclick="previousSlide(`BAAAAAA(1)`)">Indietro</button>
+            <button onclick="toggleFullscreen('BAAAAAA(1)')">⛶</button>
+            <button id="nextSlide-buttonBAAAAAA(1)" onclick="nextSlide(`BAAAAAA(1)`)">Avanti</button>
+        </div>
+
+        <br>
+
+        Quindi si ha
+        \[
+
+            cos(x) \approx -\dfrac{1}{2}x^2 + 1 \qquad \text{per} \,\, x \to 0
+        \]
+
+        Ovvero la funzione \(f(x) = cos(x)\) per valori della \(x\) molto vicini a \(0\) 
+        si può approssimare con \(g(x) = -\dfrac{1}{2}x^2 + 1\), come anche confermato dal loro grafico.
+        
+        <br>
+        <br>
+        <iframe style="width: 100% border: 0.01rem solid lightgray" src="https://www.youtube.com/embed/qoOW9hlIm5A?si=QrSbI4AVUKlwpjPp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
 
     <h3 class="green">Esercizio</h3>
     <br>
@@ -60,7 +231,7 @@
             <b class="gray">Soluzione</b>
             <br>
             \[
-                \lim_{x \to 0} \dfrac{tan(x) + 3\,sin(x)}{4x} = 1
+            \lim_{x \to 0} \dfrac{tan(x) + 3\,sin(x)}{4x} = 1
             \]
         </div>
 
@@ -69,7 +240,7 @@
         <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Svolgimento</button>
         <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">
             <b class="gray">Svolgimento</b>
-            <br>            
+            <br>
             Per calcolare questo limite è necessario sfruttare la conoscenza del
             <b>limite notevole</b>
             <br>
@@ -261,6 +432,7 @@
     <hr>
     <br>
     <br>
+
 
 
     <h3 class="green">Esercizio</h3>
