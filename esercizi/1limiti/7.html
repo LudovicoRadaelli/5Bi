@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="yellow">Limiti notevoli</h3>
+    <div class="esempi-container">
+        Nella seguente tabella sono riassuti alcuni dei principali limiti notevoli
+
+        <div class="grayBackground">
+            <ul>
+                <li>
+                    <div style="width: fit-content;">\[
+                        \lim_{x \to 0} \dfrac{sin(x)}{x} = 1
+                        \]</div>
+                </li>
+                <br>
+                <li>
+                    <div style="width: fit-content;">\[
+                        \lim_{x \to 0} \dfrac{tan(x)}{x} = 1
+                        \]</div>
+                </li>
+                <br>
+                <li>
+                    <div style="width: fit-content;">\[
+                        \lim_{x \to 0} \dfrac{1 - cos(x)}{x} = 0
+                        \]</div>
+                </li>
+                <br>
+                <li>
+                    <div style="width: fit-content;">\[
+                        \lim_{x \to 0} \dfrac{1 - cos(x)}{x^2} = \dfrac{1}{2}
+                        \]</div>
+                </li>
+                <br>
+                <li>
+                    <div style="width: fit-content;">\[
+                        \lim_{x \to 0} \dfrac{ln(1 + x)}{x} = 1
+                        \]</div>
+                </li>
+                <br>
+                <li>
+                    <div style="width: fit-content;">
+                        \[
+                        \lim_{x \to 0} \dfrac{e^x - 1}{x} = 1
+                        \]</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h3 class="yellow">Generalizzazione dei limiti notevoli</h3>
+    <div class="esempi-container">
+        <div id="slide-containerAAAAAAA(1)" class="slide-container AAAAAAA(1) grayBorder">
+            <div class="slideAAAAAAA(1)">
+                Consieriamo il limite notevole
+                \[
+                \lim_{x \to 0} \dfrac{sin\left(x\right)}{x} = 1
+                \]
+            </div>
+            <div class="slideAAAAAAA(1)">
+                Consieriamo il limite notevole
+                \[
+                \lim_{x \to 0} \dfrac{sin\left(x\right)}{x} = 1
+                \]
+                Questo limite ci dice che se come argomento del seno e denominatore della frazione c'è una stessa
+                quantità \(x\)
+                che si sta contraendo a \(0\), allora il limite della frazione tende ad \(1\).
+            </div>
+            <div class="slideAAAAAAA(1)">
+                Consieriamo il limite notevole
+                \[
+                \lim_{x \to 0} \dfrac{sin\left(\color{red}{}x\color{black}{}\right)}{\color{red}{}x\color{black}{}} = 1
+                \]
+                Questo limite ci dice che se come <span style="color: red">argomento del seno</span> e <span
+                    style="color: red">denominatore</span> della frazione c'è una <span style="color: red">stessa
+                    quantità \(x\)</span>
+                che si sta contraendo a \(0\), allora il limite della frazione tende ad \(1\).
+            </div>
+            <div class="slideAAAAAAA(1)">
+                Consieriamo il limite notevole
+                \[
+                \lim_{\color{red}{}x \to 0} \dfrac{sin\left(x\right)}{x} = 1
+                \]
+                Questo limite ci dice che se come argomento del seno e denominatore della frazione c'è una stessa
+                quantità \(x\)
+                <span style="color: red">che si sta contraendo a \(0\)</span>, allora il limite della frazione tende ad
+                \(1\).
+            </div>
+            <div class="slideAAAAAAA(1)">
+                \[
+                \lim_{x \to a} \dfrac{sin\left(x\right)}{x} = 1
+                \]
+                Generalizziamo questa affermazione.
+            </div>
+            <div class="slideAAAAAAA(1)">
+                \[
+                \color{transparent}{}\lim_{x \to a}\color{black}{} \dfrac{sin\left(x\right)}{x} \color{transparent}{}= 1
+                \]
+                Generalizziamo questa affermazione.
+                <br>
+                Immaginiamo che come argomento del seno ed al denominatore ci sia una stessa quantità \(f(x)\).
+            </div>
+            <div class="slideAAAAAAA(1)">
+                \[
+                \color{transparent}{}\lim_{x \to a}\color{black}{}
+                \dfrac{sin\left(\color{red}{}x\color{black}{}\right)}{\color{red}{}x\color{black}{}}
+                \color{transparent}{}= 1
+                \]
+                Generalizziamo questa affermazione.
+                <br>
+                Immaginiamo che come argomento del seno ed al denominatore ci sia una stessa quantità \(f(x)\).
+            </div>
+            <div class="slideAAAAAAA(1)">
+                \[
+                \color{transparent}{}\lim_{x \to a}\color{black}{}
+                \dfrac{sin\left(\color{red}{}f(x)\color{black}{}\right)}{\color{red}{}f(x)\color{black}{}}
+                \color{transparent}{}= 1
+                \]
+                Generalizziamo questa affermazione.
+                <br>
+                Immaginiamo che come argomento del seno ed al denominatore ci sia una stessa quantità \(f(x)\).
+            </div>
+            <div class="slideAAAAAAA(1)">
+                \[
+                \color{transparent}{}\lim_{x \to a}\color{black}{} \dfrac{sin\left(f(x)\right)}{f(x)}
+                \color{transparent}{}= 1
+                \]
+                Generalizziamo questa affermazione.
+                <br>
+                Immaginiamo che come argomento del seno ed al denominatore ci sia una stessa quantità \(f(x)\).
+                <br>
+                Se <span style="color: red">la quantità \(f(x)\) si contrae a \(0\) per \(x\) che tende ad un certo
+                    valore \(a\)</span>, allora
+                la frazione tende ad \(1\).
+            </div>
+            <div class="slideAAAAAAA(1)">
+                \[
+                \color{red}{}\lim_{x \to a} f(x) = 0 \color{black}{} \,\,\Longrightarrow\,\,
+                \color{transparent}{}\lim_{x \to a}\color{black}{} \dfrac{sin\left(f(x)\right)}{f(x)}
+                \color{transparent}{}= 1
+                \]
+                Generalizziamo questa affermazione.
+                <br>
+                Immaginiamo che come argomento del seno ed al denominatore ci sia una stessa quantità \(f(x)\).
+                <br>
+                Se la quantità \(f(x)\) si contrae a \(0\) per \(x\) che tende ad un certo valore \(a\), allora
+                la frazione tende ad \(1\).
+            </div>
+            <div class="slideAAAAAAA(1)">
+                \[
+                \lim_{x \to a} f(x) = 0 \,\,\Longrightarrow\,\,
+                \color{transparent}{}\lim_{x \to a}\color{black}{} \dfrac{sin\left(f(x)\right)}{f(x)}
+                \color{transparent}{}= 1
+                \]
+                Generalizziamo questa affermazione.
+                <br>
+                Immaginiamo che come argomento del seno ed al denominatore ci sia una stessa quantità \(f(x)\).
+                <br>
+                Se la quantità \(f(x)\) si contrae a \(0\) per \(x\) che tende ad un certo valore \(a\), <span
+                    style="color: red">allora</span>
+                la frazione tende ad \(1\).
+            </div>
+            <div class="slideAAAAAAA(1)">
+                \[
+                \lim_{x \to a} f(x) = 0 \,\,\color{red}{}\Longrightarrow\color{black}{}\,\,
+                \color{transparent}{}\lim_{x \to a}\color{black}{} \dfrac{sin\left(f(x)\right)}{f(x)}
+                \color{transparent}{}= 1
+                \]
+                Generalizziamo questa affermazione.
+                <br>
+                Immaginiamo che come argomento del seno ed al denominatore ci sia una stessa quantità \(f(x)\).
+                <br>
+                Se la quantità \(f(x)\) si contrae a \(0\) per \(x\) che tende ad un certo valore \(a\), allora
+                la frazione tende ad \(1\).
+            </div>
+            <div class="slideAAAAAAA(1)">
+                \[
+                \lim_{x \to a} f(x) = 0 \,\,\Longrightarrow\,\,
+                \color{transparent}{}\lim_{x \to a}\color{black}{} \dfrac{sin\left(f(x)\right)}{f(x)}
+                \color{transparent}{}= 1
+                \]
+                Generalizziamo questa affermazione.
+                <br>
+                Immaginiamo che come argomento del seno ed al denominatore ci sia una stessa quantità \(f(x)\).
+                <br>
+                Se la quantità \(f(x)\) si contrae a \(0\) per \(x\) che tende ad un certo valore \(a\), allora
+                la <span style="color: red">frazione tende ad \(1\)</span>.
+            </div>
+            <div class="slideAAAAAAA(1)">
+                \[
+                \lim_{x \to a} f(x) = 0 \,\,\Longrightarrow\,\,
+                \color{red}{}\lim_{x \to a} \dfrac{sin\left(f(x)\right)}{f(x)}= 1
+                \]
+                Generalizziamo questa affermazione.
+                <br>
+                Immaginiamo che come argomento del seno ed al denominatore ci sia una stessa quantità \(f(x)\).
+                <br>
+                Se la quantità \(f(x)\) si contrae a \(0\) per \(x\) che tende ad un certo valore \(a\), allora
+                la frazione tende ad \(1\).
+            </div>
+            <div class="slideAAAAAAA(1)">
+                \[
+                \lim_{x \to a} f(x) = 0 \,\,\Longrightarrow\,\,
+                \lim_{x \to a} \dfrac{sin\left(f(x)\right)}{f(x)}= 1
+                \]
+                Generalizziamo questa affermazione.
+                <br>
+                Immaginiamo che come argomento del seno ed al denominatore ci sia una stessa quantità \(f(x)\).
+                <br>
+                Se la quantità \(f(x)\) si contrae a \(0\) per \(x\) che tende ad un certo valore \(a\), allora
+                la frazione tende ad \(1\).
+            </div>
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-buttonAAAAAAA(1)" onclick="previousSlide(`AAAAAAA(1)`)">Indietro</button>
+            <button onclick="toggleFullscreen('AAAAAAA(1)')">⛶</button>
+            <button id="nextSlide-buttonAAAAAAA(1)" onclick="nextSlide(`AAAAAAA(1)`)">Avanti</button>
+        </div>
+        <br>
+        <br>
+
+        Attraverso il ragionamento appena illustrato è possibile generalizzare i limiti notevoli
+        sopra elencati.
+
+        <br>
+        <br>
+
+        <div class="grayBackground">
+            Se
+            \[
+            \lim_{x \to a}f(x) = 0
+            \]
+            allora
+            <ul>
+                <li>
+                    \[
+                    \lim_{x \to a} \dfrac{sin(f(x))}{f(x)} = 1
+                    \]
+                </li>
+                <br>
+                <li>
+                    \[
+                    \lim_{x \to a} \dfrac{tan(f(x))}{f(x)} = 1
+                    \]
+                </li>
+                <br>
+                <li>
+                    \[
+                    \lim_{x \to a} \dfrac{1 - cos(f(x))}{f(x)} = 0
+                    \]
+                </li>
+                <br>
+                <li>
+                    \[
+                    \lim_{x \to a} \dfrac{1 - cos(f(x))}{f(x)^2} = \dfrac{1}{2}
+                    \]
+                </li>
+                <br>
+                <li>
+                    \[
+                    \lim_{x \to a} \dfrac{ln(1 + f(x))}{f(x)} = 1
+                    \]
+                </li>
+                <br>
+                <li>
+                    \[
+                    \lim_{x \to a} \dfrac{e^{f(x)} - 1}{f(x)} = 1
+                    \]
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[\lim_{x \to +\infty}\left(\sqrt{x^2 -2} - \sqrt{x^2 + 9}\right)\]
+    </div>
+
+    <br>
+
+    <button id="hintWjQIuIOGlv-button" onclick="showHint(`WjQIuIOGlv`)">Svolgimento</button>
+    <div id="hintWjQIuIOGlv" class="hint" style="display: none;">
+        <b class="gray">Svolgimento</b>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/qHkaUNl-hg4?si=Cr56RJYBhT_BX53f"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Consideriamo la funzione
+        \[
+        f:\qquad y = \dfrac{\sqrt{x + 1}}{x^2 - 3}
+        \]
+        <ul>
+            <li>
+                individuare <b>dominio</b> della funzione;
+            </li>
+            <br>
+            <li>
+                studiare il segno che assume la funzione al variare del valor di \(x\);
+            </li>
+            <br>
+            <li>
+                calcolare i limiti della funzione per \(x\) che tende agli estremi <u>non inclusi</u> negli intervalli
+                che
+                formano il dominio.
+            </li>
+
+        </ul>
+        <br>
+        <br>
+        <div class="gray grayBorder">
+            <b>Esempio</b>
+            <br>
+            Immaginiamo che il dominio di \(f\) sia
+            \[
+            D = (-\infty \,;\,\, 2) \cup (4\,;\,\,9]
+            \]
+            Gli estremi <u>non inclusi</u> sono
+            \(-\infty\), \(2\), \(4\), ma non \(9\), che invece è incluso nel dominio.
+            Andrebbero quindi calcolati i seguenti limiti:
+            \[
+            \lim_{x \to -\infty} f(x) \qquad \lim_{x \to 2^{-}} f(x) \qquad \lim_{x \to 4^{+}} f(x)
+            \]
+        </div>
+
+        <br>
+        <br>
+
+        <button id="hinthUsgZrvqlB-button" onclick="showHint(`hUsgZrvqlB`)">Soluzione</button>
+        <div id="hinthUsgZrvqlB" class="hint" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            <div class="gray grayBorder">
+                <ul>
+                    <li>
+                        <b>Dominio:</b>
+                        \[
+                        D = [-1\,;\,\,\sqrt{3}) \cup (\sqrt{3}\,;\,\,+\infty)
+                        \]
+                    </li>
+                    <li>
+                        <b>Segno:</b>
+                        <br>
+                        <br>
+                        <div style="width: 90%; margin: auto;">
+                            \(f(x) \gt 0\,\,\,\) se \(\,\,\, x \in (\sqrt{3}\,;\,\,+\infty)\)
+                            <br>
+                            <br>
+                            \(f(x) \lt 0\,\,\,\) se \(\,\,\, x \in (-1\,;\,\,\sqrt{3})\)
+                            <br>
+                            <br>
+                            \(f(x) = 0\,\,\,\) se \(\,\,\, x = -1\)
+                        </div>
+                        <br>
+                        <br>
+                    </li>
+                    <br>
+                    <li>
+                        <b>Limiti:</b>
+                        \[
+                        \lim_{x \to (\sqrt{3})^{-}} f(x) = -\infty
+                        \]
+                        \[
+                        \lim_{x \to (\sqrt{3})^{+}} f(x) = +\infty
+                        \]
+                        \[
+                        \lim_{x \to +\infty} f(x) = 0
+                        \]
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to +\infty} \dfrac{-3x}{\sqrt{2x + 1} + \sqrt{x + 2}}
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintwHvglySUoz-button" onclick="showHint(`wHvglySUoz`)">Svolgimento</button>
+    <div id="hintwHvglySUoz" class="hint" style="display: none;">
+        <b class="gray">Svolgimento</b>
+        <br>
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/Q4XQ5yv1MMM?si=NoTce9t2l3ynJvYB"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""></iframe><br><iframe style="width: 100%"
+            src="https://www.youtube.com/embed/w4ZbxSB3Q58?si=Xg8VXZ7EJ_4PfRKg" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""></iframe>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        \[
+        \lim_{x \to -2} \dfrac{\sqrt[3]{x^3 + 8}}{\sqrt[3]{x^2 - 4}}
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintvvUrAkXGJB-button" onclick="showHint(`vvUrAkXGJB`)">Svolgimento</button>
+    <div id="hintvvUrAkXGJB" class="hint" style="display: none;">
+        <b class="gray">Svolgimento</b>
+        <br>
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/b3GBIv8BOxc?si=B66jNKYZgRJW4vSu"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""></iframe>
+    </div>
+    
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
