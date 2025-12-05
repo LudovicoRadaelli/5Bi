@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+    <h3 class="yellow">Definizione di derivata</h3>
+    <div class="esempi-container">
+        <div id="slide-containerpWNNXdUwYK" class="slide-container pWNNXdUwYK grayBorder">
+            <div class="slidepWNNXdUwYK formula">
+                Data una funzione \(f\) si ha
+                \[
+                f'(x) = \lim_{h \to 0} \dfrac{f(x + h) - f(x)}{h}
+                \]
+                ovvero, la derivata di \(f\) in \(x\) è il limite del rapporto incrementale per \(h\)
+                che tende \(0\).
+            </div>
+            <div class="slidepWNNXdUwYK formula">
+                Data una funzione \(f\) si ha
+                \[
+                \color{blue}{}f'(x)\color{black}{} = \lim_{h \to 0} \dfrac{f(x + h) - f(x)}{h}
+                \]
+                ovvero, la <span style="color: blue;">derivata di \(f\) in \(x\)</span> è il limite del rapporto
+                incrementale per \(h\)
+                che tende \(0\).
+            </div>
+            <div class="slidepWNNXdUwYK formula">
+                Data una funzione \(f\) si ha
+                \[
+                f'(x) \color{blue}{}=\color{black}{} \lim_{h \to 0} \dfrac{f(x + h) - f(x)}{h}
+                \]
+                ovvero, la derivata di \(f\) in \(x\) <span style="color: blue;">è</span> il limite del rapporto
+                incrementale per \(h\)
+                che tende \(0\).
+            </div>
+            <div class="slidepWNNXdUwYK formula">
+                Data una funzione \(f\) si ha
+                \[
+                f'(x) = \color{blue}{}\lim_{h \to 0}\color{black}{} \dfrac{f(x + h) - f(x)}{h}
+                \]
+                ovvero, la derivata di \(f\) in \(x\) è <span style="color: blue;">il limite</span> del rapporto
+                incrementale
+                <span style="color: blue;">per \(h\) che tende \(0\).</span>
+            </div>
+            <div class="slidepWNNXdUwYK formula">
+                Data una funzione \(f\) si ha
+                \[
+                f'(x) = \lim_{h \to 0} \color{blue}{}\dfrac{f(x + h) - f(x)}{h}
+                \]
+                ovvero, la derivata di \(f\) in \(x\) è il limite <span style="color: blue;">del rapporto
+                    incrementale</span>
+                per \(h\) che tende \(0\).
+            </div>
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: center; align-items: center;">
+            <button id="previousSlide-buttonpWNNXdUwYK" onclick="previousSlide(`pWNNXdUwYK`)">Indietro</button>
+            <button id="nextSlide-buttonpWNNXdUwYK" onclick="nextSlide(`pWNNXdUwYK`)">Avanti</button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="yellow">Interpretazione grafica della derivata</h3>
+    <div class="esempi-container">
+        <div id="slide-containerAAAAAAAAAA" class="slide-container AAAAAAAAAA grayBorder">
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(1).png" alt="">
+                <br>
+                Consideriamo il grafico della funzione \(f\).
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(1).png" alt="">
+                <br>
+                Rappresentiamo il punto \((x\,,\,f(x))\).
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(2).png" alt="">
+                <br>
+                Rappresentiamo il punto \((x\,,\,f(x))\).
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(2).png" alt="">
+                <br>
+                Rappresentiamo il punto \((x\,,\,f(x))\).
+                <br>
+                Scelto un incremento \(h\) positivo, rappresentiamo anche il punto \((x + h\,,\,f(x + h))\).
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(3).png" alt="">
+                <br>
+                Rappresentiamo il punto \((x\,,\,f(x))\).
+                <br>
+                Scelto un incremento \(h\) positivo, rappresentiamo anche il punto \((x + h\,,\,f(x + h))\).
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(3).png" alt="">
+                <br>
+                Rappresentiamo la retta passante per i punti appena tracciati.
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(4).png" alt="">
+                <br>
+                Rappresentiamo la retta passante per i punti appena tracciati.
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(5).png" alt="">
+                <br>
+                Rappresentiamo la retta passante per i punti appena tracciati.
+                <br>
+                Il coefficiente angolare di questa retta è
+                \[
+                \dfrac{\color{#009900}\text{spost. verticale}}{\color{#ff6600}{}\text{spost. orizzontale}}
+                \]
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(5).png" alt="">
+                <br>
+                Rappresentiamo la retta passante per i punti appena tracciati.
+                <br>
+                Il coefficiente angolare di questa retta è
+                \[
+                \dfrac{\color{#009900}f(x + h) - f(x)}{\color{#ff6600}{}h}
+                \]
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(4).png" alt="">
+                <br>
+                Rappresentiamo la retta passante per i punti appena tracciati.
+                <br>
+                Il coefficiente angolare di questa retta è
+                \[
+                \dfrac{f(x + h) - f(x)}{h}
+                \]
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(4).png" alt="">
+                <br>
+                Pian piano che facciamo tendere l'incremento \(h\) a \(0\), la retta che otteniamo è
+                sempre più simile alla retta <b>tangente</b> al grafico di \(f\) nel punto \((x\,,\,f(x))\).
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <video src="img/3(6).mp4" alt="" controls autoplay></video>
+                <br>
+                Pian piano che facciamo tendere l'incremento \(h\) a \(0\), la retta che otteniamo è
+                sempre più simile alla retta <b>tangente</b> al grafico di \(f\) nel punto \((x\,,\,f(x))\).
+            </div>
+            <div class="slideAAAAAAAAAA" style="max-width: 500px; margin: auto; ">
+                <img src="img/3(6).png"></img>
+                <br>
+                Quindi per \(h\) che tende a \(0\) il termine
+                \[
+                \dfrac{f(x + h)}{h}
+                \]
+                tende al coefficiente angolare della retta <b>tangente</b>
+                al grafico di \(f\) nel punto \((x\,,\,f(x))\).
+            </div>
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-buttonAAAAAAAAAA" onclick="previousSlide(`AAAAAAAAAA`)">Indietro</button>
+            <button onclick="toggleFullscreen('AAAAAAAAAA')">⛶</button>
+            <button id="nextSlide-buttonAAAAAAAAAA" onclick="nextSlide(`AAAAAAAAAA`)">Avanti</button>
+        </div>
+
+        <br>
+        <br>
+
+        Possiamo concludere che
+        <br>
+
+        <div class="grayBackground">
+            La derivata \(f'(x)\) di una funzione si interpreta graficamente come il coefficiente angolare
+            della retta tangente al grafico di \(f\) in \((x\,,\,f(x))\)
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+    <h3 class="yellow">Significato intuitivo della derivata</h3>
+    <div class="esempi-container">
+        La derivata di una funzione \(f\) in \(x\) indica quanto la funzione sia sensibile a variazioni
+        per piccolissime variazioni dell'input \(x\).
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+    <h3 class="yellow">Derivate fondamentali</h3>
+    <div class="esempi-container">
+        Di seguito riporto una lista che aggiorneremo volta per volta. Nuovi elementi della lista saranno
+        contraddistinti dal simbolo 🔥.
+        <b>É necessario imparare queste informazioni a memoria. </b>
+        <br>
+        <br>
+        <ul>                                    
+    
+            <li>
+                \(\left(c\right)' = 0\,\,\,\,\,\)🔥
+            </li>
+            <br>
+            <li>
+                \(\left(x^{\alpha}\right)' = \alpha\,x^{\alpha - 1}\,\,\,\) con \(\alpha \in
+                \mathbb{R}\,\,\,\,\,\)🔥
+            </li>            
+        </ul>
+    </div>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Esercitatevi ad esporre la <b></b>, la sua <b>intepretazione grafica</b> ed a spiegare 
+        il suo <b>significato intuitivo</b>.
+    </div>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Calcolare le derivate delle seguenti funzioni:
+
+        <br><br>
+        <ul>
+            <li>
+                \(f(x) = x^{10}\)
+            </li>
+            <br>
+            <li>
+                \(f(x) = x^{3}\)
+            </li>
+            <br>
+            <li>
+                \(f(x) = \dfrac{1}{x^5}\)
+            </li>
+            <br>
+            <li>
+                \(f(x) = \dfrac{1}{x^2}\)
+            </li>
+            <br>
+            <li>
+                \(f(x) = \sqrt{x}\)
+            </li>
+            <br>
+            <li>
+                \(f(x) = \sqrt[7]{x^2}\)
+            </li>            
+            <br>
+            <li>
+                \(f(x) = \dfrac{1}{\sqrt{x^2}}\)
+            </li>            
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
