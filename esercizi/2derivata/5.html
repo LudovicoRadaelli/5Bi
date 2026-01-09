@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+
+    <h3 class="yellow">Derivate fondamentali</h3>
+    <div class="esempi-container">
+        Di seguito riporto una lista che aggiorneremo volta per volta. Nuovi elementi della lista saranno
+        contraddistinti dal simbolo 🔥.
+        <b>É necessario imparare queste informazioni a memoria. </b>
+        <br>
+        <br>
+        <ul>
+            <li>
+                \(\left(ln(x)\right)' = \dfrac{1}{x}\,\,\,\,\)
+            </li>
+            <br>
+            <li>
+                \(\left(sin(x)\right)' = cos(x)\,\,\,\,\)
+            </li>
+            <br>
+            <li>
+                \(\left(cos(x)\right)' = -sin(x)\,\,\,\,\)
+            </li>
+            <br>
+            <li>
+                \(\left(e^x\right)' = e^x\,\,\,\,\)
+            </li>
+            <br>
+            <li>
+                \(\left(c\right)' = 0\,\,\,\text{con} \,\, c \in \mathbb{R}\,\,\,\,\,\)
+            </li>
+            <br>
+            <li>
+                \(\left(x^{\alpha}\right)' = \alpha\,x^{\alpha - 1}\,\,\,\) con \(\alpha \in
+                \mathbb{R}\,\,\,\,\,\)
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+
+    <h3 class="yellow">Regole di derivazione</h3>
+    <div class="esempi-container">
+        <ul>
+            <li>
+                <b>Derivata del prodotto di una costante per una funzione</b>
+                <br>
+                <br>
+                \(\left(c\,f(x)\right)' = c\,f'(x)\)
+            </li>
+            <br>
+            <li>
+                <b>Derivata delle somma di due funzioni</b>
+                <br>
+                <br>
+                \(\left(f(x) + g(x)\right)' = f'(x) + g'(x)\)
+            </li>
+            <br>
+            <li>
+                <b>Regola di Leibniz</b>
+                <br>
+                <br>
+                \(\left(f(x) \cdot g(x)\right)' = f'(x)\,g(x) + f(x)\,g'(x)\)🔥
+            </li>
+            <br>
+            <li>
+                <b>Derivata del rapporto di due funzioni</b>
+                <br>
+                <br>
+                \(\left(\dfrac{f(x)}{g(x)}\right)' = \dfrac{f'(x)\,g(x) - f(x)\,g'(x)}{\big[g(x)\big]^2}\)🔥
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <div>
+        <div id="slide-containerpyFcRDIJuU" class="slide-container pyFcRDIJuU grayBorder">
+            <div class="slidepyFcRDIJuU">
+                \[\left(x^2 \cdot e^x\right)'\]
+            </div>            
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = \)
+                <br>
+                <br>
+                <div class="gray">
+                    Scriviamo la derivata del primo fattore.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(\color{blue}{x^2}\color{black}{} \cdot e^x\right)' = \)
+                <br>
+                <br>
+                <div class="gray">
+                    Scriviamo la derivata del primo fattore.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = \color{blue}{(x^2)'} \)
+                <br>
+                <br>
+                <div class="gray">
+                    Scriviamo la derivata del primo fattore.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = \color{blue}{2x} \)
+                <br>
+                <br>
+                <div class="gray">
+                    Scriviamo la derivata del primo fattore.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = 2x \)
+                <br>
+                <br>
+                <div class="gray">
+                    Moltiplichiamolo per il secondo fattore.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot \color{blue}{e^x}\color{black}{}\right)' = 2x \)
+                <br>
+                <br>
+                <div class="gray">
+                    Moltiplichiamolo per il secondo fattore.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = 2x \, \cdot \, \color{blue}{e^x} \)
+                <br>
+                <br>
+                <div class="gray">
+                    Moltiplichiamolo per il secondo fattore.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = 2x \, \cdot \, e^x\)
+                <br>
+                <br>
+                <div class="gray">
+                    Scriviamo il simbolo di addizione.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = 2x \, \cdot \, e^x \,\color{blue}{+}\,\)
+                <br>
+                <br>
+                <div class="gray">
+                    Scriviamo il simbolo di addizione.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = 2x \, \cdot \, e^x \,+\,\)
+                <br>
+                <br>
+                <div class="gray">
+                    Trascriviamo il primo fattore così come è.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(\color{blue}{x^2}\color{black}{} \cdot e^x\right)' = 2x \, \cdot \, e^x \,+\,\)
+                <br>
+                <br>
+                <div class="gray">
+                    Trascriviamo il primo fattore così come è.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = 2x \, \cdot \, e^x \,+\, \color{blue}{x^2}\)
+                <br>
+                <br>
+                <div class="gray">
+                    Trascriviamo il primo fattore così come è.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = 2x \, \cdot \, e^x \,+\, x^2\)
+                <br>
+                <br>
+                <div class="gray">
+                    Moltiplichiamo per la derivata del secondo fattore.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot \color{blue}{e^x}\color{black}{}\right)' = 2x \, \cdot \, e^x \,+\, x^2\)
+                <br>
+                <br>
+                <div class="gray">
+                    Moltiplichiamo per la derivata del secondo fattore.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = 2x \, \cdot \, e^x \,+\, x^2 \cdot \color{blue}{(e^x)'}\)
+                <br>
+                <br>
+                <div class="gray">
+                    Moltiplichiamo per la derivata del secondo fattore.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = 2x \, \cdot \, e^x \,+\, x^2 \cdot \color{blue}{e^x}\)
+                <br>
+                <br>
+                <div class="gray">
+                    Moltiplichiamo per la derivata del secondo fattore.
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = 2x \, \cdot \, e^x \,+\, x^2 \cdot e^x\)
+                <br>
+                <br>
+                <div class="gray">
+                    Osserviamo che è possibile raccogliere a fattor comune il termine \(xe^x\)
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = 2\color{red}{x}\color{black}{} \, \cdot \,
+                \color{red}{e^x}\color{black}{} \,+\, \color{red}{x}\color{black}{}^2 \cdot \color{red}{}e^x\)
+                <br>
+                <br>
+                <div class="gray">
+                    Osserviamo che è possibile raccogliere a fattor comune il termine \(xe^x\)
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = \color{red}{x\,e^x}\color{black}{}\left(2 + x\right)\)
+                <br>
+                <br>
+                <div class="gray">
+                    Osserviamo che è possibile raccogliere a fattor comune il termine \(xe^x\)
+                </div>
+            </div>
+            <div class="slidepyFcRDIJuU">
+                \(\left(x^2 \cdot e^x\right)' = x\,e^x\,\left(2 + x\right)\)
+                <br>
+                <br>
+                <div class="gray">
+                    \(\)
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-buttonpyFcRDIJuU" onclick="previousSlide(`pyFcRDIJuU`)">Indietro</button>
+            <button onclick="toggleFullscreen('pyFcRDIJuU')">⛶</button>
+            <button id="nextSlide-buttonpyFcRDIJuU" onclick="nextSlide(`pyFcRDIJuU`)">Avanti</button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>    
+
+    <h3 class="green">Esercizio</h3>
+    <div>
+        \[
+        \left(2\,sin(x)\,cos(x)\right)'
+        \]
+
+        <br>
+        
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">     
+            <b class="gray">Soluzione</b>: \(\,\,\, 2cos^2(x) - 2sin^2(x)\)
+        </div>
+    </div>   
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <div id="slide-containerFsadFDQqjO" class="slide-container FsadFDQqjO grayBorder">
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' =
+            \]
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{\color{transparent}{}cos(x)\cdot x^2 - sin(x)\cdot
+            2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                \(\,\)
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{\color{transparent}{}cos(x)\cdot x^2 - sin(x)\cdot
+            2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Derivo il numeratore.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{\color{blue}{}sin(x)}{x^2}\right]' = \dfrac{\color{transparent}{}cos(x)\cdot x^2 -
+            sin(x)\cdot 2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Derivo il numeratore.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{\color{blue}{}(sin(x))'\color{transparent}{}\cdot x^2 -
+            sin(x)\cdot 2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Derivo il numeratore.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{\color{blue}{}cos(x)\color{transparent}{}\cdot x^2 -
+            sin(x)\cdot 2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Derivo il numeratore.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\color{transparent}{}\cdot x^2 - sin(x)\cdot
+            2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Moltiplico per il denominatore.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{\color{blue}{}x^2}\right]' = \dfrac{cos(x)\color{transparent}{}\cdot x^2 -
+            sin(x)\cdot 2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Moltiplico per il denominatore.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\color{blue}{}\cdot x^2\color{transparent}{} -
+            sin(x)\cdot 2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Moltiplico per il denominatore.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\cdot x^2 \color{red}{}-
+            \color{transparent}{}sin(x)\cdot 2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                \(\,\)
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\cdot x^2 - \color{transparent}{}sin(x)\cdot
+            2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Riporto il numeratore così com'è.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{\color{blue}{}sin(x)}{x^2}\right]' = \dfrac{cos(x)\cdot x^2 -
+            \color{transparent}{}sin(x)\cdot 2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Riporto il numeratore così com'è.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\cdot x^2 -
+            \color{blue}{}sin(x)\color{transparent}{}\cdot 2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Riporto il numeratore così com'è.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\cdot x^2 - sin(x)\color{transparent}{}\cdot
+            2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                E lo moltiplico per la derivata del denominatore.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{\color{blue}{}x^2}\right]' = \dfrac{cos(x)\cdot x^2 -
+            sin(x)\color{transparent}{}\cdot 2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                E lo moltiplico per la derivata del denominatore.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\cdot x^2 - sin(x)\color{blue}{}\cdot
+            (x^2)'}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                E lo moltiplico per la derivata del denominatore.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\cdot x^2 - sin(x)\color{blue}{}\cdot
+            2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                E lo moltiplico per la derivata del denominatore.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\cdot x^2 - sin(x)\cdot
+            2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Al denominatore del risultato scrivo il quadrato del denominatore della frazione.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{\color{blue}{}x^2}\right]' = \dfrac{cos(x)\cdot x^2 - sin(x)\cdot
+            2x}{\color{transparent}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Al denominatore del risultato scrivo il quadrato del denominatore della frazione.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\cdot x^2 - sin(x)\cdot 2x}{\color{blue}{}(x^2)^2}
+            \]
+            <div class="gray">
+                Al denominatore del risultato scrivo il quadrato del denominatore della frazione.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\cdot x^2 - sin(x)\cdot 2x}{\color{blue}{}x^4}
+            \]
+            <div class="gray">
+                Al denominatore del risultato scrivo il quadrato del denominatore della frazione.
+            </div>
+        </div>
+        <div class="slideFsadFDQqjO formula">
+            \[
+            \left[\dfrac{sin(x)}{x^2}\right]' = \dfrac{cos(x)\cdot x^2 - sin(x)\cdot 2x}{x^4}
+            \]
+            <div class="gray">
+                \(\)
+            </div>
+        </div>
+
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+        <button id="previousSlide-buttonFsadFDQqjO" onclick="previousSlide(`FsadFDQqjO`)">Indietro</button>
+        <button onclick="toggleFullscreen('FsadFDQqjO')">⛶</button>
+        <button id="nextSlide-buttonFsadFDQqjO" onclick="nextSlide(`FsadFDQqjO`)">Avanti</button>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <div id="slide-containeroFwDJnREvP" class="slide-container oFwDJnREvP grayBorder">
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \color{transparent}{}\dfrac{(3x^2)' \cdot (2x + 1) - 3x^2 \cdot
+            (2x
+            + 1)'}{(2x + 1)^2}
+            \]
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{\color{transparent}{}(3x^2)' \cdot (2x + 1) - 3x^2 \cdot
+            (2x
+            + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                \(\)
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{\color{transparent}{}(3x^2)' \cdot (2x + 1) - 3x^2 \cdot
+            (2x
+            + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Deriviamo il numeratore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{\color{blue}{}3x^2}{2x + 1}\right)' = \dfrac{\color{transparent}{}(3x^2)' \cdot (2x +
+            1) -
+            3x^2 \cdot (2x + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Deriviamo il numeratore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{\color{blue}{}(3x^2)'\color{transparent}{} \cdot (2x +
+            1) -
+            3x^2 \cdot (2x + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Deriviamo il numeratore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{\color{blue}{}3 \cdot 2x\color{transparent}{} \cdot (2x
+            + 1)
+            - 3x^2 \cdot (2x + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Deriviamo il numeratore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{\color{blue}{}6x\color{transparent}{} \cdot (2x + 1) -
+            3x^2
+            \cdot (2x + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Deriviamo il numeratore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x\color{transparent}{} \cdot (2x + 1) - 3x^2 \cdot (2x
+            +
+            1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Moltiplichiamo per il denominatore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{\color{blue}{}2x + 1}\right)' = \dfrac{6x\color{transparent}{} \cdot (2x + 1) -
+            3x^2
+            \cdot (2x + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Moltiplichiamo per il denominatore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x \color{blue}{}\cdot (2x + 1)\color{transparent}{} -
+            3x^2
+            \cdot (2x + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Moltiplichiamo per il denominatore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) \color{red}{}-
+            \color{transparent}{}3x^2
+            \cdot (2x + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) - \color{transparent}{}3x^2 \cdot (2x
+            +
+            1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Scriviamo il numeratore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{\color{blue}{}3x^2}{2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) -
+            \color{transparent}{}3x^2
+            \cdot (2x + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Scriviamo il numeratore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) - \color{blue}{}3x^2
+            \color{transparent}{}\cdot (2x + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Scriviamo il numeratore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) - 3x^2 \color{transparent}{}\cdot (2x
+            +
+            1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                E la moltiplichiamo per la derivata del denominatore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{\color{blue}{}2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) - 3x^2
+            \color{transparent}{}\cdot (2x + 1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                E la moltiplichiamo per la derivata del denominatore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) - 3x^2 \color{blue}{}\cdot (2x +
+            1)'}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                E la moltiplichiamo per la derivata del denominatore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) - 3x^2 \color{blue}{}\cdot
+            2}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                E la moltiplichiamo per la derivata del denominatore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) - 3x^2 \cdot
+            2}{\color{transparent}{}(2x +
+            1)^2}
+            \]
+            <div class="gray">
+                E la moltiplichiamo per la derivata del denominatore.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) - 3x^2 \cdot
+            2}{\color{transparent}{}(2x +
+            1)^2}
+            \]
+            <div class="gray">
+                Al denominatore del risultato scriviamo il quadrato del denominatore della frazione.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{\color{blue}{}2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) - 3x^2 \cdot
+            2}{\color{transparent}{}(2x + 1)^2}
+            \]
+            <div class="gray">
+                Al denominatore del risultato scriviamo il quadrato del denominatore della frazione.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) - 3x^2 \cdot 2}{\color{blue}{}(2x +
+            1)^2}
+            \]
+            <div class="gray">
+                Al denominatore del risultato scriviamo il quadrato del denominatore della frazione.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x \cdot (2x + 1) - 3x^2 \cdot 2}{(2x + 1)^2}
+            \]
+            <div class="gray">
+                Ora che abbiamo finito di applicare la formula di derivazione sistemiamo i calcoli al
+                numeratore.
+                Il denominatore lo lasciamo così com'è.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{\color{blue}{}6x \cdot (2x + 1)\color{black}{} - 3x^2
+            \cdot
+            2}{(2x + 1)^2}
+            \]
+            <div class="gray">
+                Ora che abbiamo finito di applicare la formula di derivazione sistemiamo i calcoli al
+                numeratore.
+                Il denominatore lo lasciamo così com'è.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{\color{blue}{}12x^2 + 6x\color{black}{} - 3x^2 \cdot
+            2}{(2x
+            + 1)^2}
+            \]
+            <div class="gray">
+                Ora che abbiamo finito di applicare la formula di derivazione sistemiamo i calcoli al
+                numeratore.
+                Il denominatore lo lasciamo così com'è.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{12x^2 + 6x - \color{blue}{}3x^2 \cdot 2}{(2x + 1)^2}
+            \]
+            <div class="gray">
+                Ora che abbiamo finito di applicare la formula di derivazione sistemiamo i calcoli al
+                numeratore.
+                Il denominatore lo lasciamo così com'è.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{12x^2 + 6x - \color{blue}{}6x^2}{(2x + 1)^2}
+            \]
+            <div class="gray">
+                Ora che abbiamo finito di applicare la formula di derivazione sistemiamo i calcoli al
+                numeratore.
+                Il denominatore lo lasciamo così com'è.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{\color{blue}{}12x^2\color{black}{} + 6x -
+            \color{blue}{}6x^2}{(2x + 1)^2}
+            \]
+            <div class="gray">
+                Ora che abbiamo finito di applicare la formula di derivazione sistemiamo i calcoli al
+                numeratore.
+                Il denominatore lo lasciamo così com'è.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{\color{blue}{}6x^2\color{black}{} + 6x}{(2x + 1)^2}
+            \]
+            <div class="gray">
+                Ora che abbiamo finito di applicare la formula di derivazione sistemiamo i calcoli al
+                numeratore.
+                Il denominatore lo lasciamo così com'è.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{\color{blue}{}6x\color{black}{}^2 +
+            \color{blue}{}6x}{(2x +
+            1)^2}
+            \]
+            <div class="gray">
+                Ora che abbiamo finito di applicare la formula di derivazione sistemiamo i calcoli al
+                numeratore.
+                Il denominatore lo lasciamo così com'è.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{\color{blue}{}6x\color{black}{} \left(x + 1\right)}{(2x
+            +
+            1)^2}
+            \]
+            <div class="gray">
+                Ora che abbiamo finito di applicare la formula di derivazione sistemiamo i calcoli al
+                numeratore.
+                Il denominatore lo lasciamo così com'è.
+            </div>
+        </div>
+        <div class="slideoFwDJnREvP formula">
+            \[
+            \left(\dfrac{3x^2}{2x + 1}\right)' = \dfrac{6x\color{black}{} \left(x + 1\right)}{(2x + 1)^2}
+            \]
+            <div class="gray">
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+        <button id="previousSlide-buttonoFwDJnREvP" onclick="previousSlide(`oFwDJnREvP`)">Indietro</button>
+        <button onclick="toggleFullscreen('FwDJnREvP')">⛶</button>
+        <button id="nextSlide-buttonoFwDJnREvP" onclick="nextSlide(`oFwDJnREvP`)">Avanti</button>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <div>
+        \[
+        \left(\dfrac{x}{ln(x)}\right)'
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Soluzione</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">     
+            <b class="gray">Soluzione</b>: \(\,\,\, \dfrac{ln(x) - 1}{ln^2(x)}\)
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
