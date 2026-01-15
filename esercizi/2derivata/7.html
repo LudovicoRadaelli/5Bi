@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+<h3 class="green">Esercizio</h3>
+    <div>
+        Dopo averne individuato il dominio, studiare gli intervalli di monotonia della funzione
+        \[
+        f(x) = \dfrac{x + 2}{x}
+        \]
+    </div>
+
+    <br>
+
+    <div class="gray">
+        <b>Soluzione:</b>
+        <br>
+        La funzione è decrescente per \(x \in (-\infty\,,\,\,+\infty)\)
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+    <h3 class="green">Esercizio</h3>
+    <div>
+        \[
+        \left[\dfrac{x^2 -3}{x^2 + 4}\right]'
+        \]
+    </div>
+
+    <br>
+
+    <div class="gray">
+        <b>Soluzione</b>: \(\,\,\, \dfrac{14x}{(x^2 + 4)^2}\)
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Calcolare la derivata della funzione
+        \[
+        f(x) = \dfrac{1 + \sqrt{x}}{1 - \sqrt{x}}
+        \]
+    </div>
+
+    <br>
+    <br>
+
+    <div class="gray">
+        <b>Svolgimento</b>
+        <br>
+        <br>
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/A8YL1sY67_4?si=-V_DgA3Z91OvQZnn"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Calcolare la derivata seconda della funzione
+        \[
+        f(x) = 7x^2 \cdot sin(x)
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintmWpMkjQkwy-button" onclick="showHint(`mWpMkjQkwy`)">Svolgimento</button>
+    <div id="hintmWpMkjQkwy" class="hint" style="display: none;">
+        <b class="gray">Svolgimento</b>
+        <br>
+        <br>
+
+        Prima di tutto calcoliamo \(f'(x)\).
+        \[
+        \begin{align*}
+        f'(x) &amp;= \left[7x^2 \cdot sin(x)\right]' =
+        \\\\
+        &amp; = 14x \cdot sin(x) + 7x^2 \cdot cos(x)
+        \end{align*}
+        \]
+        Quindi di ha
+        \[
+        f'(x) = 14x\,sin(x) + 7x^2\,cos(x)
+        \]
+        Per calcolare \(f''(x) \) dobbiamo derivare la funzione \(f'(x)\):
+        <div class="formula">
+            \[
+            \begin{align*}
+            f''(x) &amp;= \left[f'(x)\right]' = \left[14x\,sin(x) + 7x^2\,cos(x)\right]' =
+            \\\\
+            &amp;= \left[14x\,sin(x)]' + [7x^2\,cos(x)\right]' =
+            \\\\
+            &amp;= 14\,\left[x\,sin(x)\right]' + 7\left[x^2\,cos(x)\right]' =
+            \\\\
+            &amp;= 14\,\left[sin(x) + x\,cos(x)\right] + 7\,\left[2x\,cos(x) + x^2\,(-sin(x))\right]
+            \\\\
+            &amp;= 14\,sin(x) + 14\,x\,cos(x) + 14\,x\,cos(x) -7\,x^2\,sin(x)
+            \\\\
+            &amp;= \left(14 - 7x^2\right)\,sin(x) + 28\,cos(x)
+            \end{align*}
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <div>
+        Rappresentare il grafico di una funzione \(f\) che abbia
+        <br>
+        <br>
+        <ul>
+            <li>
+                Derivata positiva se \(x \in (-\infty\,,\,\,0) \cup (4\,,\,\,+\infty)\)
+            </li>
+            <br>
+            <li>
+                Derivata negativa se \(x \in (0\,,\,\,4)\)
+            </li>
+            <br>
+            <li>
+                Derivata nulla se \(x = -3\), \(\,x = 0\,\) oppure \(\,x = 4\)
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
