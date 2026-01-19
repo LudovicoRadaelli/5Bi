@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+    <h3 class="yellow">Derivata di una funzione composta</h3>
+    <div class="esempi-container">
+
+        <div id="slide-containerYntCKOsYAr" class="slide-container YntCKOsYAr grayBorder">
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[f(g(x))\right]' = f'(g(x)) \cdot g'(x)
+                \]
+                La derivata di \(f\) di \(g\) è uguale alla derivata di \(f\) valutata in \(g\) per la derivata
+                di
+                \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \color{blue}{}\left[\color{black}{}f(g(x))\color{blue}{}\right]'\color{black}{} = f'(g(x)) \cdot
+                g'(x)
+                \]
+                <span style="color: blue">La derivata di</span> \(f\) di \(g\) è uguale alla derivata di \(f\)
+                valutata
+                in \(g\) per la derivata di \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[\color{blue}{}f(g(x))\color{black}{}\right]' = f'(g(x)) \cdot g'(x)
+                \]
+                La derivata di <span style="color: blue">\(f\) di \(g\)</span> è uguale alla derivata di \(f\)
+                valutata
+                in \(g\) per la derivata di \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[f(g(x))\right]' \color{blue}{}=\color{black}{} f'(g(x)) \cdot g'(x)
+                \]
+                La derivata di \(f\) di \(g\) <span style="color: blue">è uguale</span> alla derivata di \(f\)
+                valutata
+                in \(g\) per la derivata di \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[f(g(x))\right]' = \color{blue}{}f'(\color{black}{}g(x)\color{blue}{})\color{black}{} \cdot
+                g'(x)
+                \]
+                La derivata di \(f\) di \(g\) è uguale <span style="color: blue">alla derivata di \(f\)</span>
+                valutata
+                in \(g\) per la derivata di \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[f(g(x))\right]' = f'(\color{blue}{}g(x)\color{black}{}) \cdot g'(x)
+                \]
+                La derivata di \(f\) di \(g\) è uguale alla derivata di \(f\) <span style="color: blue">valutata
+                    in
+                    \(g\)</span> per la derivata di \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[f(g(x))\right]' = f'(g(x)) \color{blue}{}\cdot g'(x)
+                \]
+                La derivata di \(f\) di \(g\) è uguale alla derivata di \(f\) valutata in \(g\) <span
+                    style="color: blue">per la derivata di \(g\)</span>.
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-buttonYntCKOsYAr" onclick="previousSlide(`YntCKOsYAr`)">Indietro</button>
+            <button onclick="toggleFullscreen('YntCKOsYAr')">⛶</button>
+            <button id="nextSlide-buttonYntCKOsYAr" onclick="nextSlide(`YntCKOsYAr`)">Avanti</button>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        Questa legge porta a generalizzare le formule che abbiamo imparato fino a
+        questo momento:
+
+        <br>
+        <br>
+
+        <ul>
+            <li>
+                \(\Big[ln\left(f(x)\right)\Big]' = \dfrac{f'(x)}{f(x)}\,\,\,\,\)
+            </li>
+            <br>
+            <li>
+                \(\Big[sin\left(f(x)\right)\Big]' = cos\left(f(x)\right) \cdot f'(x) \,\,\,\,\)
+            </li>
+            <br>
+            <li>
+                \(\Big[cos\left(f(x)\right)\Big]' = -sin(f(x)) \cdot f'(x) \,\,\,\,\)
+            </li>
+            <br>
+            <li>
+                \(\left[e^{f(x)}\right]' = e^{f(x)} \cdot f'(x)\,\,\,\,\)
+            </li>
+            <br>
+            <li>
+                \(\left[f(x)^{\alpha}\right]' = \alpha\,f(x)^{\alpha - 1} \cdot f'(x)\,\,\,\) con \(\alpha \in
+                \mathbb{R}\,\,\,\,\,\)
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Calcolare la derivata della funzione
+        \[
+        f(x) = \left(\dfrac{2x - 1}{3x + 5}\right)^3
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            La derivata di \(f\) è
+            \[
+            f^{\prime }(x)=\frac{39(2x-1)^{2}}{(3x+5)^{4}}
+            \]
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Consideriamo la funzione
+        \[
+        f(x) = ln\left(\dfrac{x}{x - 1}\right)
+        \]
+        <ul>
+            <li>
+                Individuare il dominio di \(f\).
+            </li>
+            <br>
+            <li>
+                Studiare il segno della funzione al variare della \(x\).
+            </li>
+            <br>
+            <li>
+                Studiare il comportamento della funzione agli estremi del dominio.
+            </li>
+            <br>
+            <li>
+                Individuare gli intervalli di monotonia della funzione.
+            </li>
+        </ul>
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Soluzione</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+
+            <ul>
+                <li>
+                    Il dominio di \(f\) è
+                    \[
+                    D = (-\infty ,0)\cup (1,+\infty )
+                    \]
+                </li>
+                <br>
+                <li>
+                    La funzione assume segno positivo per \(x \in (1\,,\,\,+\infty)\), mentre è negativa per \(x \in
+                    (-\infty\,,\,\,0)\)
+                </li>
+                <br>
+                <li>
+                    Si ha che
+                    \[
+                    \lim _{x\rightarrow \pm \infty }\ln \left(\frac{x}{x-1}\right) = 0
+                    \]
+                    \[
+                    \lim _{x\rightarrow 0^{-}}\ln \left(\frac{x}{x-1}\right) = -\infty
+                    \]
+                    \[
+                    \lim _{x\rightarrow 1^{+}}\ln \left(\frac{x}{x-1}\right) = +\infty
+                    \]
+                </li>
+                <br>
+                <li>
+                    La derivata della funzione
+                    \[
+                    f^{\prime }(x)=-\frac{1}{x(x-1)}
+                    \]
+                    La funzione è decrescente negli intervalli che compongono il dominio.
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
