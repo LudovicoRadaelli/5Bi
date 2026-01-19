@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+    <h3 class="yellow">Derivata di una funzione composta</h3>
+    <div class="esempi-container">
+        
+        <div id="slide-containerYntCKOsYAr" class="slide-container YntCKOsYAr grayBorder">
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[f(g(x))\right]' = f'(g(x)) \cdot g'(x)
+                \]
+                La derivata di \(f\) di \(g\) è uguale alla derivata di \(f\) valutata in \(g\) per la derivata
+                di
+                \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \color{blue}{}\left[\color{black}{}f(g(x))\color{blue}{}\right]'\color{black}{} = f'(g(x)) \cdot
+                g'(x)
+                \]
+                <span style="color: blue">La derivata di</span> \(f\) di \(g\) è uguale alla derivata di \(f\)
+                valutata
+                in \(g\) per la derivata di \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[\color{blue}{}f(g(x))\color{black}{}\right]' = f'(g(x)) \cdot g'(x)
+                \]
+                La derivata di <span style="color: blue">\(f\) di \(g\)</span> è uguale alla derivata di \(f\)
+                valutata
+                in \(g\) per la derivata di \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[f(g(x))\right]' \color{blue}{}=\color{black}{} f'(g(x)) \cdot g'(x)
+                \]
+                La derivata di \(f\) di \(g\) <span style="color: blue">è uguale</span> alla derivata di \(f\)
+                valutata
+                in \(g\) per la derivata di \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[f(g(x))\right]' = \color{blue}{}f'(\color{black}{}g(x)\color{blue}{})\color{black}{} \cdot
+                g'(x)
+                \]
+                La derivata di \(f\) di \(g\) è uguale <span style="color: blue">alla derivata di \(f\)</span>
+                valutata
+                in \(g\) per la derivata di \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[f(g(x))\right]' = f'(\color{blue}{}g(x)\color{black}{}) \cdot g'(x)
+                \]
+                La derivata di \(f\) di \(g\) è uguale alla derivata di \(f\) <span style="color: blue">valutata
+                    in
+                    \(g\)</span> per la derivata di \(g\).
+            </div>
+            <div class="slideYntCKOsYAr formula">
+                \[
+                \left[f(g(x))\right]' = f'(g(x)) \color{blue}{}\cdot g'(x)
+                \]
+                La derivata di \(f\) di \(g\) è uguale alla derivata di \(f\) valutata in \(g\) <span
+                    style="color: blue">per la derivata di \(g\)</span>.
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-buttonYntCKOsYAr" onclick="previousSlide(`YntCKOsYAr`)">Indietro</button>
+            <button onclick="toggleFullscreen('YntCKOsYAr')">⛶</button>
+            <button id="nextSlide-buttonYntCKOsYAr" onclick="nextSlide(`YntCKOsYAr`)">Avanti</button>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        Questa legge porta a generalizzare le formule che abbiamo imparato fino a 
+        questo momento:
+
+        <br>
+        <br>
+
+        <ul>
+            <li>
+                \(\Big[ln\left(f(x)\right)\Big]' = \dfrac{f'(x)}{f(x)}\,\,\,\,\)🔥
+            </li>
+            <br>
+            <li>
+                \(\Big[sin\left(f(x)\right)\Big]' = cos\left(f(x)\right) \cdot f'(x) \,\,\,\,\)🔥
+            </li>
+            <br>
+            <li>
+                \(\Big[cos\left(f(x)\right)\Big]' = -sin(f(x)) \cdot f'(x) \,\,\,\,\)🔥
+            </li>
+            <br>
+            <li>
+                \(\left[e^{f(x)}\right]' = e^{f(x)} \cdot f'(x)\,\,\,\,\)🔥
+            </li>            
+            <br>
+            <li>
+                \(\left[f(x)^{\alpha}\right]' = \alpha\,f(x)^{\alpha - 1} \cdot f'(x)\,\,\,\) con \(\alpha \in
+                \mathbb{R}\,\,\,\,\,\)🔥
+            </li>            
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <div>
+        \[
+        \left[ln\left(3x - 1\right)\right]'
+        \]
+    </div>
+
+    <br>
+
+    <div class="gray">
+        <b>Soluzione</b>: \(\,\,\, \dfrac{3}{3x - 1}\)
+    </div>
+
+    <br>
+    <br>
+
+    <b class="gray">Svolgimento:</b>
+    <br>
+    <iframe style="width: 100%;" src="https://www.youtube.com/embed/ZZZk7nzPUDU?si=vn3a4xDgmfxnhQSt"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <div>
+        \[
+        \left[2cos\left(-3x^2 -6\right)\right]'
+        \]
+    </div>
+
+    <br>
+
+    <div class="gray">
+        <b>Soluzione</b>: \(\,\,\, 12x\,sin(-3x^2 -6)\)
+    </div>
+
+    <br>
+    <br>
+
+    <b class="gray">Svolgimento:</b>
+    <br>
+    <iframe style="width: 100%;" src="https://www.youtube.com/embed/Q8eZ3E-3Ap0?si=mhf-GEoK14SldbE0"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <div>
+        \[
+        \left[\sqrt[3]{x^2 -1}\right]'
+        \]
+    </div>
+
+    <br>
+
+    <div class="gray">
+        <b>Soluzione</b>: \(\,\,\, \dfrac{2x}{3\,\sqrt[3]{(x^2 - 1)^2}}\)
+    </div>
+
+    <b class="gray">Svolgimento:</b>
+    <br>
+    <iframe style="width: 100%;" src="https://www.youtube.com/embed/eOU1qU49xzE?si=nISgFgWqEydvBKz0"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <div>
+        \[
+        \left[e^{\frac{x + 1}{x - 1}}\right]'
+        \]
+    </div>
+
+    <br>
+
+    <div class="gray">
+        <b>Soluzione</b>: \(\,\,\, -\dfrac{2\,e^{\frac{x + 1}{x - 1}}}{(x - 1)^2}\)
+    </div>
+
+    <b class="gray">Svolgimento:</b>
+    <br>
+    <iframe style="width: 100%;" src="https://www.youtube.com/embed/ML_ikKs0Rxc?si=qadBoE6O_WwhpuuO"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe>    
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
