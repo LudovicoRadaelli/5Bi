@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <!-- TO DO -->
+
+
+    <h3 class="yellow"><b>Derivabilità \(\boldsymbol{\Rightarrow}\) continuità</b></h3>
+    <div class="esempi-container">
+        In questo paragrafetto vediamo un risultato che spiega la connessione tra la continutità e la derivabilità.
+        <br>
+        <br>
+        <div class="grayBorder">
+            <div class="grayBackground">
+                Se una funzione è derivabile in \(c\)
+                <br>
+                allora la funzione è continua in \(c\).
+            </div>
+            <b style="font-size: 1rem;">Dimostrazione</b>
+            <br>
+            <br>
+            Il nostro obiettivo è dimostrare che
+            <div class="formula">
+                \[
+                \lim_{x \to c} f(x) = f(c)
+                \]
+            </div>
+            a partire dall'informazione che la funzione è derivabile in \(c\), ovvero che
+            <div class="formula">\[
+                f'(c) = \lim_{h \to 0} \dfrac{f(c + h) - f(c)}{h}
+                \]
+            </div>
+            <br>
+            Consideriamo il termine
+            <div class="formula">
+                \[
+                \begin{align*}
+                f(c + h)\color{black}{} - f(c)
+                &= \Big[f(c + h) - f(c)\Big] \dfrac{h}{h} =
+                \\\\
+                &= \dfrac{f(c + h) - f(c)}{h} \cdot h
+                \end{align*}
+                \]
+            </div>
+
+            Passiamo al limite per \(h \to 0\) in entrambi i membri:
+            <div class="formula" style="font-size: 1rem;">
+                \[
+                \begin{align*}
+                \lim_{h \to 0} f(c + h)\color{black}{} - f(c)
+                &= \lim_{h \to 0} \underset{\to f'(c)}{\underbrace{\dfrac{f(c + h) - f(c)}{h}}} \cdot \underset{\to
+                0}{\underbrace{h}}
+                \\\\
+                &= f'(c) \cdot 0 = 0
+                \end{align*}
+                \]
+            </div>
+
+            Abbiamo quindi trovato che
+            <div class="formula">\[
+                \lim_{h \to 0} \, f(c + h) - f(c) = 0
+                \]
+            </div>
+            ovvero che 
+            <div class="formula">\[
+                \lim_{h \to 0} \, f(c + h) = f(c)  
+                \]
+            </div>
+            che a ben pensarci è proprio la definizione di continuità: per \(h \to 0\) l'argomento \(c + h\) della
+            funzione tende a \(c\) e di conseguenza il valore della funzione tende a \(f(c)\).
+            Il teorema è dimostrato.
+            <div style="width: 100%; text-align: right;">
+                \(\square\)
+            </div>
+
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="yellow">Punti di non derivabilità</h3>
+    <div class="esempi-container">
+        <b>Flesso a tangente verticale</b>
+        <br>
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/Vrkk5mP2Th0?si=lO9W6IS5iUntYdaP"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+        <br>
+        <br>
+        <b>Cuspidi</b>
+        <br>
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/Y8ctEN3hAnY?si=uz_rkY_ovFWuxbBP"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+        <br>
+        <br>
+        <b>Punti angolosi</b>
+        <br>
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/z8B6tnloFdA?si=g47cxUByuvSpiNeN"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+
+    <br>
+    <br>
+
+    ⚠️⚠️ Guardate i video, please! ⚠️⚠️
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
