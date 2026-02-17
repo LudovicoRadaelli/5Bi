@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Data la seguente funzione, stabilire se essa è derivabile nel punto \( x = 2 \)
+        e classificarne l'eventuale punto di non derivabilità.
+
+        <div class="formula">
+            \[
+            f(x) =
+            \begin{cases}
+            1 + \sqrt[3]{(x-2)^2} & \text{se } x \leq 2 \\\\
+            1 + \sqrt[3]{2-x} & \text{se } x > 2
+            \end{cases}
+            \]
+        </div>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            La funzione presenta un <b>punto di cuspide</b> in \( x = 2 \).
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="yellow">Derivata della funzione \(\boldsymbol{f(x) = \left|x\right|}\)</h3>
+    <div class="esempi-container">
+        Consideriamo la funzione
+        \[
+        f(x)= \left|x\right|
+        \]
+        Calcoliamone la derivata. Per farlo ricordiamo la definizione dell'operazione modulo:
+        \[
+        \left|x\right| =
+        \begin{cases}
+        x \quad &amp;se\,\,\, x \geq 0
+        \\\\
+        -x \quad &amp;se\,\,\, x \lt 0
+        \end{cases}
+        \]
+        Per calcolare la derivata distinguiamo i casi:
+        <br>
+        <br>
+        <ul>
+            <li>
+                se \(\,x \gt 0\,\) la funzione \(\left|x\right| = x\), quindi
+                \[
+                \left|x\right|' = (x)' = 1
+                \]
+            </li>
+            <br>
+            <li>
+                se \(\,x \lt 0\,\) la funzione \(\left|x\right| = -x\), quindi
+                \[
+                \left|x\right|' = (-x)' = -1
+                \]
+            </li>
+        </ul>
+        <br>
+        Quindi la derivata della funzione \(f(x)= \left|x\right|\) è
+        \[
+        f'(x) =
+        \begin{cases}
+        -1 \,\, &amp;se\,\,x \lt 0
+        \\\\
+        1 \,\, &amp;se\,\,x \gt 0
+        \end{cases}
+        \]
+        Osserviamo che esistono due modi più compatti di scrivere la derivata del modulo.
+        \[
+        f'(x) = \dfrac{\left|x\right|}{x} \qquad \text{oppure} \qquad f'(x) = \dfrac{x}{\left|x\right|}
+        \]
+
+        In conclusione
+
+        <br>
+        <br>
+
+        <div class="grayBackground">
+            La derivata della funzione \(f(x) = \left|x\right|\) è
+            \[
+            f'(x) = \dfrac{\left|x\right|}{x} \qquad \text{oppure} \qquad f'(x) = \dfrac{x}{\left|x\right|}
+            \]
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+    <h3 class="green">Esercizio </h3>
+    <br>
+    <div>
+        Studiare la derivabilità della funzione
+        \[
+        f(x) = \dfrac{x}{\left|x\right| - 1}
+        \]
+    </div>
+    <div class="gray">
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            La funzione è derivabile in tutto il suo dominio.
+        </div>
+
+        <br>
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Svolgimento</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">
+            <b>Svolgimento</b>
+            <br>
+            <iframe style="width: 100%;" src="https://www.youtube.com/embed/WGILEYdp8Vs?si=_ojjVgEWtM6kwUZg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <div>
+        Studiare la derivabilità della funzione
+        \[
+        f(x) = \left|ln \sqrt{x} \right|
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintImwpQqkLdl-button" onclick="showHint(`ImwpQqkLdl`)">Svolgimento</button>
+    <div id="hintImwpQqkLdl" class="hint grayBorder" style="display: none;">
+        \[
+        f(x) = \left|ln\sqrt{x}\right|
+        \]
+        <u><b>Dominio</b></u>
+        <br>
+        Nella espressione analitica di \(f\) sono presenti un logaritmo ed una radice. Imponiamo le
+        seguenti condizioni
+        \[
+        \begin{cases}
+        \sqrt{x} \gt 0 \qquad &amp;(condizione\,\,logaritmo)
+        \\\\
+        x \geq 0 &amp;(condizione\,\,radice)
+        \end{cases}
+        \]
+        La radice di \(x\) è sempre positiva, eccetto se \(x = 0\), perciò queste condizioni sono riassumibili
+        nell'unica condizione
+        \(x \gt 0\). Il dominio della funzione è
+        \[
+        D = (0\,,\,\,+\infty)
+        \]
+        <u><b>Continuità</b></u>
+        <br>
+        La funzione \(f\) è una funzione continua in \(D\), perché composizione di tre funzioni continue su \(D\) (il
+        modulo,
+        logaritmo e la radice).
+
+        <br>
+        <br>
+
+        <u><b>Derivabilità</b></u>
+        <br>
+        Calcoliamo la derivata di \(f\)
+        \[
+        f(x) = \left|ln\sqrt{x}\right|
+        \]
+        <div class="slide-container ImwpQqkLdl grayBorder">
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\sqrt{x}\Big|' = \)
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\color{blue}{}\Big|\color{red}{}ln\sqrt{x}\color{black}{}\color{blue}{}\Big|\color{black}{}' = \)
+                <br>
+                <br>
+                <span class="gray">Deriviamo la funzione <span style="color: blue">modulo</span> considerando il termine
+                    in
+                    <span style="color: red">rosso</span> come un'unica variabile.</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\sqrt{x}\Big|' =
+                \dfrac{\left|\color{red}{}ln\sqrt{x}\color{black}{}\right|}{\color{red}{}ln\sqrt{x}\color{black}{}}
+                \,\cdot\,\)
+                <br>
+                <br>
+                <span class="gray">Deriviamo la funzione <span style="color: blue">modulo</span> considerando il termine
+                    in
+                    <span style="color: red">rosso</span> come un'unica variabile.</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|\color{blue}{}ln\color{red}{}\sqrt{x}\color{black}{}\Big|' =
+                \dfrac{\left|ln\sqrt{x}\right|}{ln\sqrt{x}} \,\cdot\,\)
+                <br>
+                <br>
+                <span class="gray">Deriviamo la funzione <span style="color: blue">logaritmo</span> considerando il
+                    termine
+                    in <span style="color: red">rosso</span> come un'unica variabile.</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\sqrt{x}\Big|' = \dfrac{\left|ln\sqrt{x}\right|}{ln\sqrt{x}} \,\cdot\,
+                \dfrac{1}{\color{red}{}\sqrt{x}} \,\cdot\,\)
+                <br>
+                <br>
+                <span class="gray">Deriviamo la funzione <span style="color: blue">logaritmo</span> considerando il
+                    termine
+                    in <span style="color: red">rosso</span> come un'unica variabile.</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\color{blue}{}\sqrt{\color{red}{}x}\color{black}{}\Big|' =
+                \dfrac{\left|ln\sqrt{x}\right|}{ln\sqrt{x}} \,\cdot\, \dfrac{1}{\sqrt{x}} \,\cdot\,\)
+                <br>
+                <br>
+                <span class="gray">Deriviamo la funzione <span style="color: blue">radice</span>.</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\sqrt{x}\Big|' = \dfrac{\left|ln\sqrt{x}\right|}{ln\sqrt{x}} \,\cdot\, \dfrac{1}{\sqrt{x}}
+                \,\cdot\,\dfrac{1}{2\sqrt{x}}\)
+                <br>
+                <br>
+                <span class="gray">Deriviamo la funzione <span style="color: blue">radice</span>.</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\sqrt{x}\Big|' = \dfrac{\left|ln\sqrt{x}\right|}{ln\sqrt{x}} \,\cdot\, \dfrac{1}{\sqrt{x}}
+                \,\cdot\,\dfrac{1}{2\sqrt{x}}\)
+                <br>
+                <br>
+                <span class="gray">Moltiplichiamo il secondo ed il terzo fattore.</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\sqrt{x}\Big|' = \dfrac{\left|ln\sqrt{x}\right|}{ln\sqrt{x}} \dfrac{1}{2\sqrt{x}^2}\)
+                <br>
+                <br>
+                <span class="gray">Moltiplichiamo il secondo ed il terzo fattore.</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\sqrt{x}\Big|' = \dfrac{\left|ln\sqrt{x}\right|}{ln\sqrt{x}} \dfrac{1}{2\sqrt{x}^2}\)
+                <br>
+                <br>
+                <span class="gray">Semplifichiamo radice e quadrato lasiando traccia del modulo</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\sqrt{x}\Big|' = \dfrac{\left|ln\sqrt{x}\right|}{ln\sqrt{x}} \dfrac{1}{2\left|x\right|}\)
+                <br>
+                <br>
+                <span class="gray">Semplifichiamo radice e quadrato lasiando traccia del modulo</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\sqrt{x}\Big|' = \dfrac{\left|ln\sqrt{x}\right|}{2\left|x\right| \, ln\sqrt{x}}\)
+                <br>
+                <br>
+                <span class="gray">Moltiplichiamo le due frazioni</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\sqrt{x}\Big|' = \dfrac{\left|ln\sqrt{x}\right|}{2\left|x\right| \, ln\sqrt{x}}\)
+                <br>
+                <br>
+                <span class="gray">Per il dominio, stiamo considerando valori di \(x\) maggiori di \(0\), quindi \(|x| =
+                    x\)</span>
+            </div>
+            <div class="slideImwpQqkLdl">
+                \(\Big|ln\sqrt{x}\Big|' = \dfrac{\left|ln\sqrt{x}\right|}{2x \, ln\sqrt{x}}\)
+                <br>
+                <br>
+                <span class="gray">Per il dominio, stiamo considerando valori di \(x\) maggiori di \(0\), quindi \(|x| =
+                    x\)</span>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-buttonImwpQqkLdl" onclick="previousSlide(`ImwpQqkLdl`)">Inietro</button>
+            <button id="nextSlide-buttonImwpQqkLdl" onclick="nextSlide(`ImwpQqkLdl`)">Avanti</button>
+        </div>
+
+        <br>
+
+        Abbiamo così ottenuto
+        \[
+        f'(x) = \dfrac{\left|ln\sqrt{x}\right|}{2x \, ln\sqrt{x}}
+        \]
+        Individuiamo il dominio della derivata \(f'\).
+        <br>
+        Le condizioni per cui essa è definita sono le stesse della funzione \(f\), con l'aggiunta della seguente
+        \[
+        2x \, ln\sqrt{x} \neq 0
+        \]
+        Perché ciò sia vero, sia il primo che il secondo fattore (evidenziati attraverso le parentesi graffe) devono
+        essere diversi da \(0\):
+        \[
+        \underbrace{2x} \, \underbrace{ln\sqrt{x}} \neq 0
+        \]
+        \[
+        \begin{align*}
+        2x \neq 0 \qquad &amp;e \qquad ln\sqrt{x} \neq 0
+        \\\\
+        x \neq 0 \qquad &amp;e \qquad ln\sqrt{x} \neq ln(1)
+        \\\\
+        x \neq 0 \qquad &amp;e \qquad \sqrt{x} \neq 1
+        \\\\
+        x \neq 0 \qquad &amp;e \qquad x \neq 1
+        \end{align*}
+        \]
+        Siccome \(0 \notin D\), l'unico punto che ci interessa è \(x = 1\). Vediamo la funzione è derivabile in esso.
+        Siamo nelle ipotesi del criterio di derivabilità, quindi
+        \[
+        \begin{align*}
+        f'_{-}(1) &amp;=\lim_{x \to 1^{-}} f'(x) = \lim_{x \to 1^{-}}\dfrac{\left|ln\sqrt{x}\right|}{2x \, ln\sqrt{x}} =
+        \\\\
+        &amp;= \lim_{x \to 1^{-}}\dfrac{\left|ln\sqrt{x}\right|}{ln\sqrt{x}} \, \dfrac{1}{2x} =
+        \\\\
+        &amp;= \dfrac{\left|ln\sqrt{1^{^-}}\right|}{ln\sqrt{1^{^-}}} \, \dfrac{1}{2\cdot 1} =
+        \\\\
+        &amp;= \dfrac{\left|ln(1^{^-})\right|}{ln(1^{^-})} \, \dfrac{1}{2} =
+        \\\\
+        &amp;= \dfrac{\left|0^{^-}\right|}{0^{^-}} \, \dfrac{1}{2} =
+        \\\\
+        &amp;= -\dfrac{1}{2}
+        \end{align*}
+        \]
+        Un osservazione sul calcolo precedente: la quantità \(ln\sqrt{1^{^-}}\) è <b>negativa</b>. Per definizione di
+        modulo questo implica che
+        \(\frac{\left|ln\sqrt{1^{^-}}\right|}{ln\sqrt{1^{^-}}} = -1\).
+        <br>
+        Analogamente nel seguente calcolo usiamo il fatto che \(\frac{\left|ln\sqrt{1^{^+}}\right|}{ln\sqrt{1^{^+}}} =
+        +1\).
+        \[
+        \begin{align*}
+        f'_{+}(1) &amp;=\lim_{x \to 1^{+}} f'(x) = \lim_{x \to 1^{+}}\dfrac{\left|ln\sqrt{x}\right|}{2x \, ln\sqrt{x}} =
+        \\\\
+        &amp;= \lim_{x \to 1^{+}}\dfrac{\left|ln\sqrt{x}\right|}{ln\sqrt{x}} \, \dfrac{1}{2x} =
+        \\\\
+        &amp;= \dfrac{\left|ln\sqrt{1^{^+}}\right|}{ln\sqrt{1^{^+}}} \, \dfrac{1}{2\cdot 1} =
+        \\\\
+        &amp;= \dfrac{\left|ln(1^{^+})\right|}{ln(1^{^+})} \, \dfrac{1}{2} =
+        \\\\
+        &amp;= \dfrac{\left|0^{^+}\right|}{0^{^+}} \, \dfrac{1}{2} =
+        \\\\
+        &amp;= +\dfrac{1}{2}
+        \end{align*}
+        \]
+        Abbiamo così mostrato che la derivata sinistra a destra di \(f\) in \(x = 1\) esisono finite ma sono diverse.
+        La funzion non è derivabile in \(x = 1\), che è un punto angoloso.
+    </div>
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
