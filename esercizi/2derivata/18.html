@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Determinare l'insieme di derivabilità della funzione
+        \[
+        f(x) =
+        \begin{cases}
+        -x^2 -2x &amp;\,\,\,se\,\,x\leq 0
+        \\\\
+        \sqrt{x} &amp;\,\,\,se\,\,x\gt 0
+        \end{cases}
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintpyFcRDIJuU-button" onclick="showHint(`pyFcRDIJuU`)">Svolgimento</button>
+    <div id="hintpyFcRDIJuU" class="hint grayBorder" style="display: none;">
+        <b>Svolgimento</b>
+        \[
+        f(x) =
+        \begin{cases}
+        -x^2 -2x &amp;\,\,\,se\,\,x\leq 0
+        \\\\
+        \sqrt{x} &amp;\,\,\,se\,\,x\gt 0
+        \end{cases}
+        \]
+
+        <u><b>Dominio</b></u>
+        <br>
+        La funzione \(y = -x^2 -2x\), che definisce \(f\) nel tratto \((-\infty\,,\,\,0]\), è definita su tutto
+        \(\mathbb{R}\).
+        Di conseguenza \(f\) è definita su
+        \[
+        \mathbb{R} \cap (-\infty\,,\,\,0] = (-\infty\,,\,\,0]
+        \]
+        La funzione \(y = \sqrt{x}\), che definisce \(f\) nel tratto \((0\,,\,\,+\infty)\), è definita su
+        \([0\,\,,\,\,+\infty)\).
+        Di conseguenza \(f\) è definita su
+        \[
+        [0\,\,,\,\,+\infty) \cap (0\,,\,\,+\infty) = (0\,,\,\,+\infty)
+        \]
+        Concludiamo che il dominio di \(f\) è
+        \[
+        D = (-\infty\,,\,\,0] \cup (0\,,\,\,+\infty) = \mathbb{R}
+        \]
+
+        <u><b>Continuità</b></u>
+        <br>
+        La funzione che definisce \(f\) nel tratto sinistro è un polinomio, quindi è continua
+        in \(\mathbb{R}\), quindi in particolare in \((-\infty\,,\,\,0)\).
+        <br>
+        La funzione che definisce \(f\) nel tratto destro è continua in \([0\,,\,\,+\infty)\), quindi in particolare
+        in \((0\,,\,\,+\infty)\)
+        Rimane da controllare la continuità nel punto \(x = 0\) dove i due tratti si "incollano".
+        <div class="formula">
+            \[
+            \lim_{x \to 0^{-}} f(x) = \lim_{x \to 0^{-}} -x^2 -2x
+            = -0^2 -2\cdot 0 = 0
+            \]
+        </div>
+        <div class="formula">
+            \[
+            \lim_{x \to 0^{+}} f(x) = \lim_{x \to 0^{+}} \sqrt{x} = \sqrt{0} = 0
+            \]
+        </div>
+        Infine si ha \(f(0) = -0^2 -2\cdot 0 = 0\)
+        <br>
+        Segue che \(f\) è continua in \(x = 0\).
+
+        <br>
+        <br>
+        Possiamo concludere che la funzione è continua in tutto \(\mathbb{R}\).
+
+        <br>
+        <br>
+
+        <u><b>Calcolo derivata ed insieme di definizione della derivata</b></u>
+        <br>
+        Deriviamo la legge pertinente a ciascun tratto della derivata, tralasciando il punto \(x = 0\)
+        \[
+        f(x) =
+        \begin{cases}
+        -x^2 -2x &amp;\,\,\,se\,\,x\leq 0
+        \\\\
+        \sqrt{x} &amp;\,\,\,se\,\,x\gt 0
+        \end{cases}
+        \]
+        \[
+        f'(x) =
+        \begin{cases}
+        -2x -2 &amp;\,\,\,se\,\,x\lt 0
+        \\\\
+        \dfrac{1}{2\sqrt{x}} &amp;\,\,\,se\,\,x\gt 0
+        \end{cases}
+        \]
+        Questo calcolo mostra che \(f\) è derivabile in \(\mathbb{R} - {0}\).
+        Controlliamo la derivabilità in \(x = 0\) sfruttando il <a href="19.html">criterio di derivabilità</a>.
+        <div class="formula">
+            \[
+            f_{-}(0) = \lim_{x \to 0^{-}} f'(x) = \lim_{x \to 0^{-}} -x^2 -2 = -2
+            \]
+        </div>
+        <div class="formula">
+            \[
+            f_{+}(0) = \lim_{x \to 0^{+}} f'(x) = \lim_{x \to 0^{+}} \dfrac{1}{2\sqrt{x}} = \dfrac{1}{2\sqrt{0^{^+}}} =
+            \dfrac{1}{0^{^+}} = +\infty
+            \]
+        </div>
+        <br>
+
+        La derivata destra non è finita, ovvero la parte del grafico a destra di \(x = 0\) ha tangente verticale.
+        Siccome derivata destra è finita ed il tratto di grafico a sinistra \(x = 0\) ha una tangente non verticale.
+        Segue che \(f\) non è derivabile in \(x = 0\), che è un punto angoloso.
+        <br>
+        <br>
+        <img src="img/pyFcRDIJuU(1).png" style="border: 0;">
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Determinare l'insieme di derivabilità della funzione
+        \[
+        f(x) =
+        \begin{cases}
+        e^x - 1 &amp;\,\,\,se\,\,x\leq 0
+        \\\\
+        \ln(x+1) &amp;\,\,\,se\,\,x\gt 0
+        \end{cases}
+        \]
+    </div>
+
+    <br>
+
+    <button id="hintExSimile-button" onclick="showHint(`ExSimile`)">Svolgimento</button>
+    <div id="hintExSimile" class="hint grayBorder" style="display: none;">
+        <b>Svolgimento</b>
+        \[
+        f(x) =
+        \begin{cases}
+        e^x - 1 &amp;\,\,\,se\,\,x\leq 0
+        \\\\
+        \ln(x+1) &amp;\,\,\,se\,\,x\gt 0
+        \end{cases}
+        \]
+
+        <u><b>Dominio</b></u>
+        <br>
+        La funzione \(y = e^x - 1\), che definisce \(f\) nel tratto \((-\infty\,,\,\,0]\), è definita su tutto
+        \(\mathbb{R}\).
+        Di conseguenza \(f\) è definita su
+        \[
+        \mathbb{R} \cap (-\infty\,,\,\,0] = (-\infty\,,\,\,0]
+        \]
+        La funzione \(y = \ln(x+1)\), che definisce \(f\) nel tratto \((0\,,\,\,+\infty)\), richiede \(x+1 > 0
+        \Rightarrow x > -1\).
+        Di conseguenza \(f\) è definita su
+        \[
+        (-1\,\,,\,\,+\infty) \cap (0\,,\,\,+\infty) = (0\,,\,\,+\infty)
+        \]
+        Concludiamo che il dominio di \(f\) è
+        \[
+        D = (-\infty\,,\,\,0] \cup (0\,,\,\,+\infty) = \mathbb{R}
+        \]
+
+        <u><b>Continuità</b></u>
+        <br>
+        La funzione che definisce \(f\) nel tratto sinistro è un'esponenziale traslata, quindi è continua
+        in \(\mathbb{R}\), quindi in particolare in \((-\infty\,,\,\,0)\).
+        <br>
+        La funzione che definisce \(f\) nel tratto destro è logaritmica continua per \(x > -1\), quindi in particolare
+        in \((0\,,\,\,+\infty)\)
+        Rimane da controllare la continuità nel punto \(x = 0\) dove i due tratti si "incollano".
+        <div class="formula">
+            \[
+            \lim_{x \to 0^{-}} f(x) = \lim_{x \to 0^{-}} e^x - 1
+            = e^0 - 1 = 0
+            \]
+        </div>
+        <div class="formula">
+            \[
+            \lim_{x \to 0^{+}} f(x) = \lim_{x \to 0^{+}} \ln(x+1) = \ln(1) = 0
+            \]
+        </div>
+        Infine si ha \(f(0) = e^0 - 1 = 0\)
+        <br>
+        Segue che \(f\) è continua in \(x = 0\).
+
+        <br>
+        <br>
+        Possiamo concludere che la funzione è continua in tutto \(\mathbb{R}\).
+
+        <br>
+        <br>
+
+        <u><b>Calcolo derivata ed insieme di definizione della derivata</b></u>
+        <br>
+        Deriviamo la legge pertinente a ciascun tratto della derivata, tralasciando il punto \(x = 0\)
+        \[
+        f(x) =
+        \begin{cases}
+        e^x - 1 &amp;\,\,\,se\,\,x\leq 0
+        \\\\
+        \ln(x+1) &amp;\,\,\,se\,\,x\gt 0
+        \end{cases}
+        \]
+        \[
+        f'(x) =
+        \begin{cases}
+        e^x &amp;\,\,\,se\,\,x\lt 0
+        \\\\
+        \dfrac{1}{x+1} &amp;\,\,\,se\,\,x\gt 0
+        \end{cases}
+        \]
+        Questo calcolo mostra che \(f\) è derivabile in \(\mathbb{R} - {0}\).
+        Controlliamo la derivabilità in \(x = 0\) sfruttando il <a href="19.html">criterio di derivabilità</a>.
+        <div class="formula">
+            \[
+            f_{-}(0) = \lim_{x \to 0^{-}} f'(x) = \lim_{x \to 0^{-}} e^x = e^0 = 1
+            \]
+        </div>
+        <div class="formula">
+            \[
+            f_{+}(0) = \lim_{x \to 0^{+}} f'(x) = \lim_{x \to 0^{+}} \dfrac{1}{x+1} = \dfrac{1}{0+1} = 1
+            \]
+        </div>
+        <br>
+
+        Siccome il limite sinistro e il limite destro della derivata sono uguali e finiti, la funzione è derivabile
+        anche in \(x = 0\).
+        <br>
+        <br>
+        Segue che l'insieme di derivabilità è tutto \(\mathbb{R}\).
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Effettuare lo studio della funzione
+        \[
+        f(x) = \dfrac{ln(x)}{x}
+        \]
+        seguendo la seguente scaletta
+
+        <br>
+        <br>
+        <ul>
+            <li>
+                <u><b>Dominio</b></u>
+                <br>
+                Individuare i valori per i quali la funzione è definita.
+            </li>
+            <br>
+            <li>
+                <u><b>Segno</b></u>
+                <br>
+                Stabilire per quali valori la funzione è positiva, negativa o nulla.
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Comportamento in prossimità degli estremi del dominio - ricerca asintoti</b></u>
+                <br>
+                Calcolare i limiti per \(x\) che tente agli estremi del dominio.
+                <br>
+                Se ad esempio
+                \[
+                D = (1\,,\,\,2] \cup (3\,,\,\,+\infty)
+                \]
+                calcoliamo i limiti per
+                \[
+                x \to 1^{+}\quad x \to 3^{+}\quad x \to +\infty
+                \]
+                Il valore \(x = 2\) appartiene al dominio, quindi non è di nostro interesse.
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Continuità</b></u>
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        Individuare l'insieme \(C\) in cui la funzione è continua.
+                    </li>
+                    <br>
+                    <li>
+                        Classificare evenutali punti di discontinuità (che sono automanticamente anche
+                        punti di non derivabilità)
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Derivabilità</b></u>
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        Calcolare la derivata della funzione.
+                    </li>
+                    <br>
+                    <li>
+                        Studiare il dominio \(D'\) della derivata \(f'\) e confrontarlo con \(C\).
+                        <br>
+                        La funzione sarà derivabile in \(D'\). Eventuali valori "persi" da \(C\) a \(D'\) sono
+                        punti di non derivabilità per la funzione.
+                    </li>
+                    <br>
+                    <li>
+                        Classificare evenutali punti di non derivabilità.
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Studio intervalli di monotonia</b></u>
+                <br>
+                Studiare il segno della derivata e stabilire attraverso il grafico delle freccete gli intervalli
+                nei quali la funzione è crescente e decrescnte
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Grafico</b></u>
+                <br>
+                Riassumere tutte le informazioni raccolte nei punti precedenti in un grafico.
+            </li>
+        </ul>
+        <br>
+    </div>
+
+    <br>
+
+    <button id="hintbxcKmahjMC-button" onclick="showHint(`bxcKmahjMC`)">Soluzione</button>
+    <div id="hintbxcKmahjMC" class="hint gray" style="display: none;">
+        <b>Soluzione:</b>
+
+        <br>
+        <br>
+
+        <u><b>Dominio</b></u>: \(\,\,D = (0\,,\,\,+\infty)\)
+        <br>
+        <br>
+        <u><b>Segno</b></u>:
+        La funzione
+        <br>
+        <br>
+        <ul>
+            <li>
+                assume valore positivo se \(x \in (1\,,\,\,+\infty)\),
+            </li>
+            <br>
+            <li>
+                assume valore negativo se \(x \in (0\,,\,\,1)\),
+            </li>
+            <br>
+            <li>
+                vale zero se \(x = 1\).
+            </li>
+        </ul>
+
+        <br>
+        <br>
+
+        <u><b>Comportamento in prossimità degli estremi del dominio - ricerca asintoti</b></u>:
+        <br>
+        Si ha
+        \[
+        \lim_{x \to 0^{+}} f(x) = -\infty \quad \lim_{x \to +\infty} f(x) = 0
+        \]
+        quindi l'asse \(x\) e l'asse \(y\) sono asintoti per il grafico della funzione.
+
+        <br>
+        <br>
+
+        <u><b>Continuità</b></u>
+        <br>
+        La funzione è continua nel suo dominio.
+
+        <br>
+        <br>
+
+        <u><b>Derivabilità</b></u>
+        La derivata della funzione
+        \[
+        f'(x) = \dfrac{1 - ln(x)}{x^2}
+        \]
+        La funzione è derivabile in tutto il dominio \(D\).
+
+        <br>
+        <br>
+
+        <u><b>Studio intervalli di monotonia</b></u>: La funzione è
+        <br>
+        <br>
+        <ul>
+            <li>
+                crescente nell'intervallo \((0\,,\,\,e)\)
+            </li>
+            <br>
+            <li>
+                decrescente nell'intervallo \((e\,,\,\,+\infty)\)
+            </li>
+            <br>
+            <li>
+                stazionaria in \(x = e\).
+            </li>
+        </ul>
+
+        <br>
+        <br>
+
+        <u><b>Grafico</b></u>:
+        <br>
+        <br>
+        <img src="img/ByKpNGRjLi(1).png" alt="">
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
