@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+    <h3 class="yellow">Teorema degli zeri</h3>
+    <div class="esempi-container">
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/9J7r_uhP7-U?si=SxxjkavJYAtIBF5m"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""></iframe>
+        <br>
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/Z6RqqetC9pc?si=AMg5EHuX7DRfQfhx"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""></iframe>
+        <br>
+        <br>
+
+        <b>Teorema degli zeri</b>        
+        <div class="grayBackground">
+            Se \(f\) è una funzione continua in \([a\,,\,\,b]\) e negli estremi dell'intervallo
+            assume valori di segno opposto, allora esiste almeno una valore \(c \in (a\,,\,\,b)\) tale che \(f(c) = 0\)
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <h3 class="yellow">Il teorema di Rolle</h3>
+    <div class="esempi-container">
+        <b>Teorema di Rolle</b>
+        <div class="grayBackground">
+            Sia \(y = f(x)\) una funzione definita su un intervallo \([a\,,\,b]\)
+            <br>
+            <br>
+            <ol style="list-style: none">
+                <li>
+                    \(\boldsymbol{1})\,\,\) continua su un intervallo \([a\,,\,\,b]\).
+                </li>
+                <br>
+                <li>
+                    \(\boldsymbol{2})\,\,\) derivabile in \((a\,,\,\,b)\)
+                </li>
+                <br>
+                <li>
+                    \(\boldsymbol{3})\,\,\) \(f(a) = f(b)\)
+                </li>
+            </ol>
+            <br>
+            Allora \(\exists c \in (a\,,\,b)\) tale che \(f'(c) = 0\)
+        </div>
+        <br>
+        <br>
+        Interpretiamo cosa afferma il teorema
+        <br>
+        <br>
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/we8kKxKWq3o?si=a7zDBvQla3WC4cgv"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+        <!-- <br>
+        <br>
+        Di seguito viene fornita una dimostrazione del teorema.
+        <br>
+        <br>
+        <span style="font-size: 1rem;"><u><b>Dimostrazione</b></u></span>
+        <div class="grayBorder">
+            Per ipotesi la funzione  è continua sull'intervallo \([a\,,\,b]\). Segue per il teorema 
+            di Weierstrass che la funzione ammette (almeno) un minimo \(m\) ed un massimo \(M\), assunti
+            in corrispondenza dei valori \(x_{_{m}}, x_{_{M}} \in [a\,,\,b]\). 
+            <br>
+            Per ogni valore \(x \in [a\,,\,\,b]\) si ha 
+            \[
+                \underset{= m}{\underbrace{f(x_{_m})}} \leq f(x) \leq \underset{= M}{\underbrace{f(x_{_M})}} \quad (*)
+            \]
+            Distinguiamo tutte le situazioni possibili in due casi. 
+
+            <br>
+            <br>
+
+            <b>Primo caso</b>
+            <br>
+            Consideriamo il caso in cui il minimo \(m\) ed il massimo \(M\) della funzione coincidano, ovvero \(m = M\).
+            Questo caso si può verificare solo se la funzione è costante, infatti la diseguaglianza \((*)\) diventa l'uguaglianza            
+            \[
+                m = f(x) = M \qquad \forall x \in [a\,,\,b]
+            \]            
+            La funzione ha derivata uguale a \(0\) in tutto \((a\,,\,b)\) in quanto costante.
+            <br>
+            <br>
+            <img src="" alt="">
+            <br>
+            <br>
+
+            <b>Secondo caso</b>
+            <br>
+            Supponiamo che il minimo \(m\) sia strettamente miniore del massimo \(M\), ovvero \(m \lt M\).
+            Questo implica che la funzione non è costante ed almeno uno dei due estremi vengono assunti internamente all'intervallo.
+            Supponiamo che il minimo \(m\) venga assunto internamente all'intervallo, ovvero \(x_{_m} \in (a\,,\,b)\).
+
+            <br>
+            <br>
+            <img src="" alt="">
+            <br>
+
+            Discostandoci di un incremento \(h\) rispetto al valore \(x_{_m}\) si ha che
+            \[
+                f(x_{_m} + h) \geq f(x_{_m})                 
+            \]
+            \[
+                \Downarrow
+            \]
+            \[
+                f(x_{_m} + h)  - f(x_{_m}) \geq 0
+            \]
+            Consideriamo i rapporti incrementali da sinistra e da destra
+            \[
+                \dfrac{f(x_{_m} + h)  - f(x_{_m})}{h} \geq 0  \,\,\,\,se\,\,h \gt 0
+            \]
+            \[
+                \dfrac{f(x_{_m} + h)  - f(x_{_m})}{h} \leq 0  \,\,\,\,se\,\,h \lt 0
+            \]
+            passando al limiti per \(h\)
+
+
+
+        </div> -->
+
+        <br>
+        <br>
+
+        Per la dimostrazione del teorema fate rifermento al libro di testo.
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
