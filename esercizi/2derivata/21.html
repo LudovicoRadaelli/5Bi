@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+    <h3 class="yellow">Teorema degli zeri</h3>
+    <div class="esempi-container">
+
+        Nei seguenti video viene introdotto informalmente il teorema degli zeri e l'idea alla base della sua
+        dimostrazione.
+
+        <br>
+        <br>
+
+        <iframe style="width: 100%" src="https://www.youtube.com/embed/9J7r_uhP7-U?si=SxxjkavJYAtIBF5m"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""></iframe>
+        <br>
+        <iframe style="width: 100%; border: 0.01rem solid lightgray;"
+            src="https://www.youtube.com/embed/Z6RqqetC9pc?si=AMg5EHuX7DRfQfhx" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""></iframe>
+
+        <br>
+        <br>
+        <br>
+
+
+        <b>Teorema degli zeri</b>
+        <div class="grayBackground">
+            Se \(f:\,[a\,,\,\,b] \longrightarrow \mathbb{R}\) è una funzione continua in \([a\,,\,\,b]\) e negli estremi
+            dell'intervallo
+            assume valori di segno opposto, allora esiste almeno una valore \(c \in (a\,,\,\,b)\) tale che \(f(c) = 0\)
+        </div>
+
+        <br>
+
+        <!-- 
+        <div>
+            <b style="font-size: 1.1rem;">dimostrazione</b>
+            <br>
+            Supponiamo di essere nel caso \(f(a) \lt 0\), \(f(b) \gt 0\).
+            <br>
+            <br>
+            <b style="font-size: 1rem;"><u>Passo 1</u></b>
+            <br>
+            Consideriamo il punto \(\,\,c = \dfrac{b + a}{2}\), punto medio del segmento \([a\,,\,\,b]\).
+            Distinguiamo tre casi:
+            <br>
+            <br>
+            <ul>
+                <li>
+                    se \(f(c) = 0\), allora abbiamo trovato il punto in cui si annulla la funzione e la tesi è
+                    dimostrata.
+                </li>
+                <br>
+                <li>
+                    se \(f(c) \lt 0\), allora definiamo \(a_1 := c\), \(b_1 := b\).
+                </li>
+                <br>
+                <li>
+                    se \(f(c) \gt 0\), allora definiamo \(a_1 := a\), \(b_1 := c\).
+                </li>
+            </ul>
+
+            <br>
+
+            In entambi i casi, l'intervallo \([a_1\,,\,\,b_1]\) soddisfa ancora l'ipotesi del teorema, si ha
+            \[
+            f(a_1) \lt 0 \qquad f(b_1) \gt 0
+            \]
+            Osserviamo anche che l'intervallo \([a_1\,,\,\,b_1]\) è contenuto in quello di partenza,
+            ovvero
+            \[
+            a \leq a_1 \lt b_1 \leq b
+            \]
+            Infine l'ampiezza dell'intervallo \([a_1\,,\,\,b_1]\) è la metà dell'ampiezza dell'intervallo
+            \([a\,,\,\,b]\).
+            \[
+            b_1 - a_1 = \dfrac{b - a}{2}
+            \]
+            Questo procedimento può essere ripetuto in modo iterativo:
+            <br>
+            <br>
+
+            <div id="slide-containeruMoiJJuaYx" class="slide-container uMoiJJuaYx grayBorder">
+                <div class="slideuMoiJJuaYx">
+                    <b style="font-size: 1rem;"><u>Passo 2</u></b>
+                    <br>
+                    seleziono \(c_1 := \dfrac{a_1 + b_1}{2}\), il punto medio tra \(a_1\) e \(b_1\). Controllo che segno
+                    ha la funzione in questo punto e di conseguenza definisco l'intervallo \([a_2\,,\,\,b_2]\), che
+                    sarà ampio la metà di \([a_1\,,\,\,b_1]\), ovvero un quarto di \([a\,,\,\,b]\).
+                </div>
+                <div class="slideuMoiJJuaYx">
+                    <b style="font-size: 1rem;"><u>Passo 3</u></b>
+                    <br>
+                    seleziono \(c_2 := \dfrac{a_2 + b_2}{2}\), il punto medio tra \(a_2\) e \(b_2\). Controllo che segno
+                    ha la funzione in questo punto e di conseguenza definisco l'intervallo \([a_3\,,\,\,b_3]\), che
+                    sarà ampio la metà di \([a_2\,,\,\,b_2]\), ovvero un ottavo di \([a\,,\,\,b]\).
+                </div>
+                <div class="slideuMoiJJuaYx">
+                    <b style="font-size: 1rem;"><u>Passo 4</u></b>
+                    <br>
+                    seleziono \(c_3 := \dfrac{a_3 + b_3}{2}\), il punto medio tra \(a_3\) e \(b_3\). Controllo che segno
+                    ha la funzione in questo punto e di conseguenza definisco l'intervallo \([a_4\,,\,\,b_4]\), che
+                    sarà ampio la metà di \([a_3\,,\,\,b_3]\), ovvero un sedicesimo di \([a\,,\,\,b]\).
+                </div>
+                <div class="slideuMoiJJuaYx">
+                    ...
+                </div>
+
+            </div>
+            <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+                <button id="previousSlide-buttonuMoiJJuaYx" onclick="previousSlide(`uMoiJJuaYx`)">Indietro</button>
+                <button onclick="toggleFullscreen('uMoiJJuaYx')">⛶</button>
+                <button id="nextSlide-buttonuMoiJJuaYx" onclick="nextSlide(`uMoiJJuaYx`)">Avanti</button>
+            </div>
+
+
+            <br>
+            <br>
+
+            <b style="font-size: 1rem;"><u>Passo \(n\)</u></b>
+            <br>
+            Arrivati al passo \(n\)-esimo, definiremo un intervallo \([a_n\,,\,\,b_n]\) con le
+            seguenti proprietà.
+            <br>
+            <br>
+
+            \(\color{red}{\boxed{1}}\,\,\)L'intervallo \([a_{n}\,,\,\,b_{n}]\) soddisfa ancora l'ipotesi del teorema, si
+            ha
+            \[
+            f(a_{n}) \lt 0 \qquad f(b_{n}) \gt 0 \qquad
+            \]
+            \(\color{red}{\boxed{2}}\,\,\) Osserviamo anche che l'intervallo \([a_{n}\,,\,\,b_{n}]\) è contenuto
+            nell'intervallo precedente,
+            \([a_{n-1}\,,\,\,b_{n- 1}]\), che a sua volta
+            è contenuto nel precedente, e così via fino all'intervallo di partenza \([a\,,\,\,b]\).
+            In termini algebrici possiamo scrivere
+            <div class="formula" style="font-size: 0.9rem;">
+                \[
+                a \leq a_1 \leq a_2 \leq \cdots \leq a_{n} \lt b_{n} \leq \cdots \leq b_2 \leq b_1 \leq b
+                \]
+            </div>
+            \(\color{red}{\boxed{3}}\,\,\) Infine l'ampiezza dell'intervallo \([a_{n}\,,\,\,b_{n}]\) si ottiene
+            dimezzando \(n\) volte l'ampiezza
+            dell'intervallo
+            \([a\,,\,\,b]\). Possiamo quindi scrivere che
+            \[
+            b_{n} - a_{n} = \dfrac{b - a}{2^{n}}
+            \]
+
+            La successione di estremi sinistri \(a_n\) è <b>crescente</b> (per la proprietà \(\color{red}{\boxed{1}}\,\)).
+            Per la stessa proprietà, la successione \(a_n\) è <b>limitata</b>, perché tutti gli estremi sinistri sono
+            più piccoli di \(b\). 
+            <br>
+            Questo implica che \(a_n\) <b>converge</b> ad un valore \(L\).            
+            <br>
+            <br>
+            <div style="text-align: center;">
+                \(a_n \longrightarrow L \,\,\) per \(n \longrightarrow +\infty\)
+            </div>            
+
+            <br>
+
+            Analogamente la successione di estremi destri \(b_n\) è <b>decrescente</b> (per la proprietà \(\color{red}{\boxed{1}}\,\)).
+            Per la stessa proprietà, la successione \(b_n\) è <b>limitata</b>, perché tutti gli estremi sinistri sono
+            più grandi di \(a\). 
+            <br>
+            Questo implica che \(b_n\) <b>converge</b> ad un valore \(M\).            
+            <br>
+            <br>
+            <div style="text-align: center;">
+                \(b_n \longrightarrow M \,\,\) per \(n \longrightarrow +\infty\)
+            </div>         
+            <br>
+
+            Vogliamo dimostrare che i valori \(L\) ed \(M\) sono uguali e che sono proprio il punto dove la funzione 
+            \(f\) si annulla, ovvero \(f(L) = f(M) = 0\).
+            <br>
+            Siccome l'estremo sinistro \(a_n\) è più piccolo di quello destro \(b_n\), si ha \(a_n \lt b_n\), ovvero \(0 \lt b_n - a_n\). 
+            Concatenando questa diseguaglianza alla proprietà \(\color{red}{\boxed{3}}\) abbiamo
+            \[
+                0 \lt b_n - a_n = \dfrac{b - a}{2^n}
+            \]
+            Usiamo il teorema del confronto: la successione \(b_n - a_n\) è schiacciata tra la successione costante \(0\) e 
+            la successione \(\dfrac{b - a}{2^n}\). Ma entrambe queste successioni tendono a \(0\) per \(n \to +\infty\). Questo costringe 
+            la successione \(b_n - a_n\) a tendere a \(|)
+        </div> -->
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3 class="yellow">Teorema dei valori intermedi</h3>
+    <div class="esempi-container">
+
+        <b>Teorema dei valori intermedi</b>
+        <div class="grayBackground">
+            Sia \(f:\,[a\,,\,\,b] \longrightarrow \mathbb{R}\).
+            <br>
+            Se \(f\) è continua in \([a\,,\,\,b]\) allora assume
+            tutti i valori compresi tra \(f(a)\) ed \(f(b)\).
+        </div>
+
+        <br>
+
+        <b style="font-size: 1rem;">dimostrazione</b>
+        <br>
+        Supponiamo di essere nel caso in cui la funzione nell'estremo sinistro \(a\)
+        assume un valore più piccolo di quello assunto nell'estremo destro \(b\), ovvero
+        \[f(a) \lt f(b)\]
+        Scegliamo un valore \(v\) compreso tra questi due, ovvero
+        \[
+        f(a) \lt v \lt f(b) \qquad \color{red}{}\boxed{1}
+        \]
+        Il nostro obiettivo è dimostrare che esiste \(z \in (a\,,\,\,b)\) tale che \(f(z) = v\).
+        <br>
+        <br>
+        Consideriamo la funzione \(g(x) := f(x) - v\), che ha il grafico traslato di \(v\) unità rispetto
+        a quello di \(f\). Perché abbiamo considerato questa funzione? Perché se troviamo un punto in cui \(g\) si
+        azzera,
+        in quel punto \(f\) assumerà proprio valore \(v\).
+        Infatti
+        \[
+        \begin{align*}
+        g(z) = 0
+        &\Longleftrightarrow f(z) - v = 0
+        \\\\
+        &\Longleftrightarrow f(z) = v \qquad \color{red}{}\boxed{2}
+        \end{align*}
+        \]
+        Osserviamo che \(g\) soddisfa le ipotesi del teorema degli zeri.
+        <br>
+        <br>
+        <ul>
+            <li>
+                Per prima cosa \(g(a) = f(a) - v \lt 0\) per la prima diseguaglianza scritta nella proprietà
+                \(\color{red}{}\boxed{1}\).
+            </li>
+            <br>
+            <li>
+                Inoltre si ha \(g(b) = f(b) - v \gt 0\) per la seconda diseguaglianza scritta nella proprietà
+                \(\color{red}{}\boxed{1}\)
+            </li>
+            <br>
+            <li>
+                Per ipotesi la funzione \(f\) è continua su \([a\,,\,\,b]\), quindi anche la funzione \(g\) lo è.
+            </li>
+        </ul>
+
+
+        <br>
+
+        Possiamo quindi applicare il teorema degli zeri, per il quale esiste un valore \(z \in (a\,,\,\,b)\) tale che
+        \(g(z) = 0\).
+        Per quanto visto in \(\color{red}{}\boxed{2}\), in tale punto la funzione \(f\) assume valore \(v\), ovvero
+        \(f(z) = v\).\(\qquad\boxed{}\)
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+
+
+    <h3 class="yellow">Teorema di Weierstrass</h3>
+    <div class="esempi-container">
+
+        <b>Teorema di Weierstrass</b>
+        <div class="grayBackground">
+            Se \(f\) è una funzione
+            <br>
+            \(\triangleright\,\,\) definita su \([a\,,\,\,b]\)
+            <br>
+            \(\triangleright\,\,\) continua su \([a\,,\,\,b]\),
+            <br>
+            allora ammette sia massimo che minimo.
+        </div>
+
+        <br>
+
+        Siccome la dimostrazione richiede alcuni elementi più tecnici che non abbiamo affrontato,
+        viene omessa.
+
+        <br>
+        <br>
+
+        <b>Osservazione (sulla necessità delle ipotesi)</b>
+        <br>
+        <div class="grayBorder">
+            Proviamo a rilassare le ipotesi e vediamo se il teorema rimane ancora valido.
+            <br>
+            <br>
+            \(\boxed{1}\,\,\,\,\)Proviamo ad abolire l'ipotesi di continuità.
+            <br>
+            Prendiamo ad esempio la funzione
+            \[
+            f(x) =
+            \begin{cases}
+            x \quad &\text{se} \,\, 0 \leq x \lt 1
+            \\\\
+            -2 \quad &\text{se} \,\, x = 1
+            \end{cases}
+            \]
+
+            che è definita su \([0\,,\,\,1]\) ma ha una discontinutà eliminabile in \(x = 1\).
+            <br>
+            <br>
+            La funzione non soddisfa la proprietà affermata in tesi, cioè non ammette massimo.
+            Infatti considerando input sempre più vicini ad \(1\), otteniamo output sempre più grandi.
+            Ma in \(x = 1\), dove ci aspettiamo di vedere raggiunto l'agognato massimo, la funzione assume
+            improvvisamente valore \(-2\).
+
+            <br>
+            <br>
+
+            \(\boxed{2}\,\,\,\,\)Proviamo a modificare la forma dell'intervallo. Consideriamo ad esempio la funzione
+            \(f(x) = x\) definita su \([0\,,\,\,1)\).
+            <br>
+            Anche in questo caso la funzione non ammette un massimo, quindi non è valida la proprietà affermata
+            nella tesi.
+
+            <br>
+            <br>
+
+            Morale della favola: le ipotesi del teorema di Weierstrass sono <u>strettamente indispensabili</u>. Non
+            appena
+            proviamo a modificarne qualcuna, la tesi non è più garantita.
+        </div>
+
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3 class="yellow">Teorema di Fermat</h3>
+    <div class="esempi-container">
+
+        <b>Teorema di Fermat</b>
+        <div class="grayBackground">
+            Sia \(f:[a\,,\,\,b] \longrightarrow \mathbb{R}\). Se
+            <br>
+            <br>
+            \(\triangleright\,\,\,\) \(c \in (a\,,\,\,b)\) un punto di massimo (oppure minimo) relativo per \(f\),
+            <br>
+            <br>
+            \(\triangleright\,\,\,\) \(f\) derivabile in \(c\),
+            <br>
+            <br>
+            allora \(f'(c) = 0\).
+        </div>
+
+        <br>
+
+        <b style="font-size: 1rem;">dimostrazione</b>
+        <br>
+        Svolgiamo la dimostrazione nel caso in cui \(c\) sia un punto di massimo relativo. L'altro caso
+        si dimostra in modo del tutto analogo.
+        <br>
+
+        Il nostro obiettivo è far vedere che
+        \[
+        f'(c) = 0
+        \]
+        Per farlo useremo una tecnica standard: dimostreremo separatamente che
+        \[
+        f'(c) \leq 0 \quad \text{e} \quad f'(c) \geq 0
+        \]
+        Questo ci permetterà di concludere che \(f'(c)\) è proprio uguale a \(0\).
+        <br>
+        <br>
+        <b style="font-size: 1rem;">Caso \(\boldsymbol{h} \gt 0\)</b>
+        <br>
+        Siccome per ipotesi \(c\) è un massimo relativo, abbiamo che per valori abbastanza piccoli di \(h\) si ha
+        \[
+        f(c + h) \leq f(c)
+        \]
+        Infatti, appena ci discostiamo da \(c\) di un incremento \(h\), la funzione assume valore più piccolo
+        di \(f(c)\). Portando \(f(c)\) al primo membro otteniamo
+        \[
+        f(c + h) - f(c) \leq 0
+        \]
+        Dividiamo entrambi i membrie per un incremento \(h\) <u>positivo</u>.
+        \[
+        \begin{align*}
+        \dfrac{f(c + h) - f(c)}{h} &\leq \dfrac{0}{h}
+        \\\\
+        \dfrac{f(c + h) - f(c)}{h} &\leq 0
+        \end{align*}
+        \]
+        Passiamo al limite per \(h \to 0^{+}\) nella diseguaglianza appena scritta
+        \[
+        \lim_{h \to 0^{+}} \, \dfrac{f(c + h) - f(c)}{h} \leq \lim_{h \to 0^{+}} \, 0
+        \]
+        Per ipotesi, la derivata di \(f\) in \(x = c\) esiste, ovvero il membro sinistro della diseguaglianza
+        tende a \(f'(c)\). Il membro destro invece tende chiaramente a \(0\). Possiamo quindi riscrivere
+        \[
+        f'(c) \leq 0 \qquad \color{red}{}\boxed{1}
+        \]
+        Abbiamo così scoperto che la derivata \(f'(c)\) è un numero negativo o uguale a \(0\).
+        <br>
+        <br>
+
+        <b style="font-size: 1rem;">Caso \(\boldsymbol{h \lt 0}\)</b>
+        <br>
+        Come prima, per ipotesi \(c\) è un massimo relativo, abbiamo che per valori abbastanza piccoli di \(h\) si ha
+        \[
+        f(c + h) \leq f(c)
+        \]
+        e di conseguenza
+        \[
+        f(c + h) - f(c) \leq 0
+        \]
+        Dividiamo entrambi i membrie per un incremento \(h\) <u>negativo</u>. Siccome stiamo
+        dividendo entrambi i membri di una diseguaglianza per un numero negativo, si ribalta il verso
+        della diseguaglianza.
+        \[
+        \begin{align*}
+        \dfrac{f(c + h) - f(c)}{h} &\geq \dfrac{0}{h}
+        \\\\
+        \dfrac{f(c + h) - f(c)}{h} &\geq 0
+        \end{align*}
+        \]
+        Passiamo al limite per \(h \to 0^{-}\) nella diseguaglianza appena scritta
+        \[
+        \lim_{h \to 0^{-}} \, \dfrac{f(c + h) - f(c)}{h} \geq \lim_{h \to 0^{-}} \, 0
+        \]
+        Per ipotesi, la derivata di \(f\) in \(x = c\) esiste, ovvero il membro sinistro della diseguaglianza
+        tende a \(f'(c)\). Il membro destro invece tende chiaramente a \(0\). Possiamo quindi riscrivere
+        \[
+        f'(c) \geq 0 \qquad \color{red}{}\boxed{2}
+        \]
+        Abbiamo così scoperto che la derivata \(f'(c)\) è un numero positivo o uguale a \(0\).
+        <br>
+        <br>
+        Mettiamo insieme i tasselli:
+        \[
+        f'(c) \overset{\color{red}{}\boxed{1}}{\leq} 0 \quad \text{e contemporaneamente} \quad f'(c)
+        \overset{\color{red}{}\boxed{2}}{\geq} 0
+        \]
+        Ma allora dovrà essere \(f'(c) = 0\). Abbiamo così dimostrato la tesi. \(\,\,\, \boxed{}\)
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+    <h3 class="yellow">Teorema di Rolle</h3>
+    <div class="esempi-container">
+        Vediamo in questo video introduttivo l'enunciato e l'interpretazione del teorema di Rolle
+
+    <br>
+    <br>
+
+        <iframe style="width: 100%;" src="https://www.youtube.com/embed/we8kKxKWq3o?si=a7zDBvQla3WC4cgv"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="" loading="lazy"></iframe>
+
+        <br>
+        <br>
+
+
+        <b>Teorema di Rolle</b>
+        <div class="grayBackground">
+            Sia \(f:[a\,,\,\,b] \longrightarrow \mathbb{R}\) una funzione.
+            Se
+            <br>
+            <br>
+            \(\triangleright\,\,\)\(f\) è continua su \([a\,,\,\,b]\)
+            <br>
+            <br>
+            \(\triangleright\,\,\) \(f\) è derivabile su \((a\,,\,\,b)\).
+            <br>
+            <br>
+            \(\triangleright\,\,\) \(f(a) = f(b)\),
+            <br>
+            <br>
+            allora esiste un punto \(c \in (a\,,\,\,b)\) tale che \(f'(c) = 0\).
+        </div>
+
+        <br>
+
+        <b style="font-size: 1rem;">dimostrazione</b>
+        <br>
+        Le ipotesi del teorema di Weierstrass sono verificate, poiché \(f\) è continua su \([a\,,\,\,b]\).
+        Di conseguenza, la funzione \(f\) assume massimo e minimo sull'intervallo \([a\,,\,\,b]\), ovvero
+        esistono due punti \(x_{min},\,x_{max} \in [a\,\,\,b]\) tali che
+        \[
+        f(x_{min}) \leq f(x) \leq f(x_{max}) \quad \text{per ogni} \,\, x \in [a\,,\,\,b]
+        \]
+        Se almeno uno tra \(x_{min}\) ed \(x_{max}\) cade internamente all'intervallo \([a\,,\,\,b]\), allora
+        per il teorema di Fermat si ha che la derivata di \(f\) si annulla in tale punto, ovvero la tesi.
+        <br>
+        <br>
+        Considerimo invece il caso in cui sia il massimo che il minimo della funzione sono assunti negli estremi \(a\) e
+        \(b\) dell'intervallo.
+        Siccome per ipotesi \(f(a) = f(b)\) si ha che \(f(x_{min}) = f(x_{max})\), ovvero il massimo assunto dalla
+        funzione coincide con il valore minimo. Ma allora la funzione deve essere costante. Sappiamo che la derivata di una 
+        funzione costante è ovunque \(0\), il che dimostra la tesi.
+        \(\,\,\boxed{}\)
+
+    </div>
+
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
