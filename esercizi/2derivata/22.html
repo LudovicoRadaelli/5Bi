@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+    <h3 class="yellow">Studio della concavità di una funzione</h3>
+    <div class="esempi-container">
+        Il seguente teorema fornisce uno strumento pratico per lo studio della concavità di una
+        funzione.
+
+        <br>
+        <br>
+
+        <b>Teorema</b>
+        <div class="grayBackground" style="margin-top: 0;">
+            Consideriamo \(f: I(x_0) \longrightarrow \mathbb{R}\), continua e derivabile su un intorno \(I(x_0)\) di
+            \(x_0\).
+            <br>
+            <br>
+            <ul>
+                <li>
+                    Se \(f''(x_0) \lt 0\) la funzione ha concavità in \(x_0\) rivolta verso il basso.
+                </li>
+                <br>
+                <li>
+                    Se \(f''(x_0) \gt 0\) la funzione ha concavità in \(x_0\) rivolta vers l'alto.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Studiare gli intervalli di concavità della funzione
+        \[
+        f(x) = \dfrac{x}{e^x}
+        \]
+
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            Il dominio \(D = \mathbb{R}\).
+            <br>
+            La concavità è
+            <br>
+            <br>
+            <ul>
+                <li>
+                    rivolta verso l'alto per \(x \in (2\,,\,\,+\infty)\).
+                </li>
+                <br>
+                <li>
+                    rivolta verso l'alto per \(x \in (-\infty\,,\,\,2)\).
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Studiare gli intervalli di concavità della funzione
+        \[
+        f(x) = ln(x^2 -5x + 6)
+        \]
+
+        <br>
+
+
+        <button id="hintAAAAAAA(2)-button" onclick="showHint(`AAAAAAA(2)`)">Soluzione</button>
+        <div id="hintAAAAAAA(2)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            Il dominio è \(D = (-\infty\,,\,\,2) \cup (3\,,\,\,+\infty)\).
+            <br>
+            La concavità ha concavità rivolta verso il basso in tutto il suo dominio.            
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Studiare gli intervalli di concavità della funzione
+        \[
+        f(x) = x\,ln(x) - \dfrac{1}{x}
+        \]
+        
+        <br>
+
+        <button id="hintAAAAAAA(1)-button" onclick="showHint(`AAAAAAA(1)`)">Soluzione</button>
+        <div id="hintAAAAAAA(1)" class="hint gray" style="display: none;">
+            <b class="gray">Soluzione</b>
+            <br>
+            Il dominio \(D = (0\,,\,\,+\infty)\).
+            <br>
+            La concavità è
+            <br>
+            <br>
+            <ul>
+                <li>
+                    rivolta verso l'alto per \(x \in (\sqrt{2}\,,\,\,+\infty)\).
+                </li>
+                <br>
+                <li>
+                    rivolta verso l'alto per \(x \in (0\,,\,\,\sqrt{2})\).
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
