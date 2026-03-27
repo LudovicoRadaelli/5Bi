@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Studiare la seguente funzione
+        \[
+        f(x) = \dfrac{3x^2 + 3}{x}
+        \]
+        seguendo la seguente scaletta
+        <br>
+        <br>
+        <ul>
+            <li>
+                <u><b>Dominio</b></u>
+                <br>
+                Individuare i valori per i quali la funzione è definita.
+            </li>
+            <br>
+            <li>
+                <u><b>Segno</b></u>
+                <br>
+                Stabilire per quali valori la funzione è positiva, negativa o nulla.
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Comportamento in prossimità degli estremi del dominio - ricerca asintoti</b></u>
+                <br>
+                Calcolare i limiti per \(x\) che tente agli estremi del dominio.
+                <br>
+                Se ad esempio
+                \[
+                D = (1\,,\,\,2] \cup (3\,,\,\,+\infty)
+                \]
+                calcoliamo i limiti per
+                \[
+                x \to 1^{+}\quad x \to 3^{+}\quad x \to +\infty
+                \]
+                Il valore \(x = 2\) appartiene al dominio, quindi non è di nostro interesse.
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Continuità</b></u>
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        Individuare l'insieme \(C\) in cui la funzione è continua.
+                    </li>
+                    <br>
+                    <li>
+                        Classificare evenutali punti di discontinuità (che sono automanticamente anche
+                        punti di non derivabilità)
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Derivabilità</b></u>
+                <br>
+                <br>
+                <ul>
+                    <li>
+                        Calcolare la derivata della funzione.
+                    </li>
+                    <br>
+                    <li>
+                        Studiare il dominio \(D'\) della derivata \(f'\) e confrontarlo con \(C\).
+                        <br>
+                        La funzione sarà derivabile in \(D'\). Eventuali valori "persi" da \(C\) a \(D'\) sono
+                        punti di non derivabilità per la funzione.
+                    </li>
+                    <br>
+                    <li>
+                        Classificare evenutali punti di non derivabilità.
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Studio intervalli di monotonia</b></u>
+                <br>
+                <ul>
+                    <li>
+                        Studiare il segno della derivata e stabilire attraverso il grafico delle freccete gli intervalli
+                        nei quali la funzione è crescente e decrescente;
+                    </li>
+                    <br>
+                    <li>
+                        Individuazione di massimi relativi, minimi relativi e flessi a tangente orizzontale.
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Schema concavità</b></u>
+                <br>
+                <ul>
+                    <li>
+                        Calcolare la derivata seconda;
+                    </li>
+                    <br>
+                    <li>
+                        Studiare il segno della derivata seconda e stabilire gli intervalli
+                        nei quali la funzione ha concavità verso l'alto o verso il basso.
+                    </li>
+                    <br>
+                    <li>
+                        Individuazione dei flessi.
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <u><b>Grafico</b></u>
+                <br>
+                Riassumere tutte le informazioni raccolte nei punti precedenti in un grafico.
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+
+    <button id="hintVihyKSMhZP-button" onclick="showHint(`VihyKSMhZP`)">Svolgimento</button>
+    <div id="hintVihyKSMhZP" class="hint" style="display: none;">
+        <b class="gray">Svolgimento</b>
+        <br>
+        <div class="grayBorder">
+            \[
+            f(x) = \dfrac{3x^2 + 3}{x}
+            \]
+            <u><b>Dominio</b></u>
+            <br>
+            La funzione è definita se il denominatore della frazione è diverso da \(0\), quindi il
+            dominio è
+            \[
+            D = (-\infty\,,\,\,0) \cup (0\,,\,\,+\infty)
+            \]
+
+            <u><b>Segno</b></u>
+            <br>
+            Studiamo per quali valori \(x \in D\) si ha \(f(x) \gt 0\), ovvero
+            \[
+            \dfrac{3x^2 + 3}{x} \gt 0
+            \]
+            Osserviamo che il numeratore è sempre positivo in quanto somma tra la quantità positiva o nulla \(3x^2\) e
+            \(3\).
+            Allora la frazione è positiva se il denominatore è positivo
+            \[
+            \dfrac{3x^2 + 3}{x} \gt 0 \,\,\Leftrightarrow\,\, x \gt 0
+            \]
+            <br>
+            La funzione è
+            <br>
+            <br>
+            <ul>
+                <li>
+                    positiva per \(x \in (0\,,\,\,+\infty)\)
+                </li>
+                <br>
+                <li>
+                    negativa per \(x \in (-2\,,\,\,2)\)
+                </li>
+            </ul>
+
+            <br>
+            <br>
+
+
+            <u><b>Comportamento in prossimità degli estremi del dominio - ricerca asintoti</b></u>
+            <br>
+            Ricordiamo che il dominio è \(D = (-\infty\,,\,\,0) \cup (0\,,\,\,+\infty)\).
+            Calcoliamo quindi i limiti per
+            \[
+            x \to -\infty \quad x \to 0^{\pm} \quad x \to +\infty
+            \]
+
+            <b style="font-size: 1rem;">\(\boxed{\boldsymbol{x \to -\infty}}\)</b>
+            \[
+            \begin{align*}
+            \lim_{x \to -\infty} \dfrac{3x^2 + 3}{x}
+            &amp;= \lim_{x \to -\infty} \dfrac{3x^2}{x}
+            \\\\
+            &amp;= \lim_{x \to -\infty} \dfrac{3x^\cancel{2}}{\cancel{x}}
+            \\\\
+            &amp;= \lim_{x \to -\infty} 3x = -\infty
+            \end{align*}
+            \]
+            La funzione <b>potrebbe</b> avere un asintoto obliquo. Verifichiamolo
+            \[
+            \begin{align*}
+            \lim_{x \to -\infty} \dfrac{f(x)}{x}
+            &amp;= \lim_{x \to -\infty} \dfrac{\dfrac{3x^2 + 3}{x}}{x}
+            \\\\
+            &amp;= \lim_{x \to -\infty} \dfrac{1}{x}\,\,\dfrac{3x^2 + 3}{x}
+            \\\\
+            &amp;= \lim_{x \to -\infty} \dfrac{3x^2 + 3}{x^2}
+            \\\\
+            &amp;= \lim_{x \to -\infty} \dfrac{3x^2}{x^2} = 3
+            \end{align*}
+            \]
+            Effettivamente esiste un asintoto obliquo, avente coefficiente angolare \(m = 3\). Individuiamo il termine
+            noto
+            \[
+            \begin{align*}
+            \lim_{x \to -\infty} f(x) - mx
+            &amp;= \lim_{x \to -\infty} \dfrac{3x^2 + 3}{x} - 3x
+            \\\\
+            &amp;= \lim_{x \to -\infty} \dfrac{3x^2 + 3- 3x^2}{x}
+            \\\\
+            &amp;= \lim_{x \to -\infty} \dfrac{3}{x} = \dfrac{1}{-\infty} = 0
+            \end{align*}
+            \]
+            Quindi l'asintoto obliquo per \(x \to -\infty\) è la retta di equazione \(y = 3x\)
+            <br>
+            <br>
+            <b style="font-size: 1rem;">\(\boxed{\boldsymbol{x \to +\infty}}\)</b>
+            <br>
+            Con calcoli del tutto analoghi otteniamo l'asintoto per \(x \to +\infty\).
+            <br>
+            <br>
+            <b style="font-size: 1rem;">\(\boxed{\boldsymbol{x \to 0^{\pm}}}\)</b>
+            \[
+            \begin{align*}
+            \lim_{x \to 0} \dfrac{3x^2 + 3}{x}
+            &amp;= \dfrac{3}{0} = \infty
+            \end{align*}
+            \]
+            Concludiamo che \(x = 0\) è un asintoto vertiale per la funzione.
+            <br>
+            <br>
+
+            <u><b>Continuità</b></u>
+            <br>
+            La funzione è continua in tutto il suo dominio, poiché rapporto tra funzioni continue.
+            \[
+            C = D = (-\infty\,,\,\,0) \cup (0\,,\,\,+\infty)
+            \]
+
+
+            <u><b>Derivabilità</b></u>
+            <br>
+            Calcoliamo la derivata della funzione
+            \[
+            \begin{align*}
+            \Big[\dfrac{3x^2 + 3}{x} \Big]'
+            &amp;= \dfrac{6x \cdot x - (3x^2 + 3) \cdot 1}{x^2}
+            \\\\
+            &amp;= \dfrac{3x^2 - 3}{x^2}
+
+            \end{align*}
+            \]
+            La derivata della funzione è
+            \[
+            f'(x) = \dfrac{3x^2 - 3}{x^2}
+            \]
+            ed è definita su tutto \(C\).
+            \[
+            D' = C = D = (-\infty\,,\,\,0) \cup (0\,,\,\,+\infty)
+            \]
+
+            <u><b>Studio intervalli di monotonia</b></u>
+            <br>
+            Studiamo per quali valori di \(x \in D\) si ha \(f'(x) \gt 0\).
+            \[
+            \begin{align*}
+            \dfrac{3x^2 - 3}{\underset{+}{\underbrace{x^2}}} \gt 0 \,\,\,\Leftrightarrow\,\,\, 3x^2 - 3 \gt 0
+            \end{align*}
+            \]
+            Usiamo il metodo della parabola. Risolviamo l'equazione associata
+            \[
+            \begin{align*}
+            &amp;3x^2 - 3 = 0
+            \\\\
+            &amp;x = \pm1
+            \end{align*}
+            \]
+            <img src="img/VihyKSMhZP(1).png" style="width: 70%; border: 0;">
+            <br>
+            <br>
+
+            Realizziamo lo schema di monotonia
+            <br>
+            <br>
+            <img src="img/VihyKSMhZP(2).png" style="width: 100%; border: 0;">
+            <br>
+            La funzione è
+            <br>
+            <br>
+            <ul>
+                <li>
+                    crescente negli intervalli \((-\infty\,,\,\, -1)\) e\((2\,,\,\,+\infty)\)
+                </li>
+                <br>
+                <li>
+                    decrescente negli intervalli \((-1\,,\,\, 0)\) e \((0\,,\,\,1)\)
+                </li>
+                <br>
+                <li>
+                    ha un massimo relativo in \(x = -1\)
+                </li>
+                <br>
+                <li>
+                    ha un minimo relativo in \(x = 1\)
+                </li>
+            </ul>
+            <br>
+            <br>
+            <u><b>Studio della concavità</b></u>
+            <br>
+            Calcoliamo la derivata seconda
+            \[
+            \begin{align*}
+            f''(x)
+            &amp;= \Big[\dfrac{3x^2 - 3}{x^2}\Big]'
+            \\\\
+            &amp;= \dfrac{6x \cdot x^2 - (3x^2 -3) \cdot 2x}{(x^2)^2}
+            \\\\
+            &amp;= \dfrac{6x^3 -6x^3 +6x}{x^4}
+            \\\\
+            &amp;= \dfrac{6\cancel{x}}{x^\cancel{4}3}
+            \\\\
+            &amp;= \dfrac{6}{x^3}
+            \end{align*}
+            \]
+
+            Studiamo il segno della derivata seconda
+            \[
+            \begin{align*}
+            f''(x) \gt 0
+            \\\\
+            \dfrac{6}{x^3} \gt 0
+            \\\\
+            x^3 \gt 0
+            \\\\
+            x \gt 0
+            \end{align*}
+            \]
+
+            Scriviamo lo schema di concavità
+            <br>
+            <br>
+            <img src="img/VihyKSMhZP(3).png" style="width: 100%; border: 0;">
+
+            <br>
+            <br>
+
+            <u><b>Grafico</b></u>
+            <br>
+            Riassumiamo in un grafico le informazioni ottenute fino a questo momento
+            <br>
+            <br>
+            <div id="slide-containerVihyKSMhZP" class="slide-container VihyKSMhZP grayBorder">
+                <div class="slideVihyKSMhZP">
+                    <img src="img/VihyKSMhZP(4).png" style="width: 100%; border: 0;">
+                    <br>
+                    <span class="gray">
+
+                    </span>
+                </div>
+                <div class="slideVihyKSMhZP">
+                    <img src="img/VihyKSMhZP(4).png" style="width: 100%; border: 0;">
+                    <br>
+                    <span class="gray">
+                        Il dominio è
+                        \[
+                        D = (-\infty\,,\,\,0) \cup (0\,,\,\,+\infty)
+                        \]
+                    </span>
+                </div>
+                <div class="slideVihyKSMhZP">
+                    <img src="img/VihyKSMhZP(5).png" style="width: 100%; border: 0;">
+                    <br>
+                    <span class="gray">
+                        Il dominio è
+                        \[
+                        D = (-\infty\,,\,\,0) \cup (0\,,\,\,+\infty)
+                        \]
+                    </span>
+                </div>
+                <div class="slideVihyKSMhZP">
+                    <img src="img/VihyKSMhZP(5).png" style="width: 100%; border: 0;">
+                    <br>
+                    <span class="gray">
+                        La funzione è
+                        <br>
+                        <br>
+                        <ul>
+                            <li>
+                                positiva per \(x \in (0\,,\,\,+\infty)\)
+                            </li>
+                            <br>
+                            <li>
+                                negativa per \(x \in (-\infty\,,\,\,0)\)
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="slideVihyKSMhZP">
+                    <img src="img/VihyKSMhZP(6).png" style="width: 100%; border: 0;">
+                    <br>
+                    <span class="gray">
+                        La funzione è
+                        <br>
+                        <br>
+                        <ul>
+                            <li>
+                                positiva per \(x \in (0\,,\,\,+\infty)\)
+                            </li>
+                            <br>
+                            <li>
+                                negativa per \(x \in (-\infty\,,\,\,0)\)
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="slideVihyKSMhZP">
+                    <img src="img/VihyKSMhZP(6).png" style="width: 100%; border: 0;">
+                    <br>
+                    <span class="gray">
+                        La funzione ha
+                        <br>
+                        <br>
+                        <ul>
+                            <li>
+                                l'asse \(y\) come asintoto verticale;
+                            </li>
+                            <br>
+                            <li>
+                                le rette \(y = 3x\) come asintoto obliquo, sia per \(x \to -\infty\) che per \(x \to
+                                +\infty\)
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="slideVihyKSMhZP">
+                    <img src="img/VihyKSMhZP(7).png" style="width: 100%; border: 0;">
+                    <br>
+                    <span class="gray">
+                        La funzione ha
+                        <br>
+                        <br>
+                        <ul>
+                            <li>
+                                l'asse \(y\) come asintoto verticale;
+                            </li>
+                            <br>
+                            <li>
+                                le rette \(y = 3x\) come asintoto obliquo, sia per \(x \to -\infty\) che per \(x \to
+                                +\infty\)
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="slideVihyKSMhZP">
+                    <img src="img/VihyKSMhZP(7).png" style="width: 100%; border: 0;">
+                    <br>
+                    <span class="gray">
+                        La funzione è continua e derivabile in tutto il dominio, quindi non ci sono
+                        punti di discontinuità o di non derivabilità da evidenziare nel grafico.
+                    </span>
+                </div>
+                <div class="slideVihyKSMhZP">
+                    <img src="img/VihyKSMhZP(7).png" style="width: 100%; border: 0;">
+                    <br>
+                    <span class="gray">
+                        La funzione è
+                        <br>
+                        <br>
+                        <ul>
+                            <li>
+                                crescente negli intervalli \((-\infty\,,\,\, -1)\) e\((1\,,\,\,+\infty)\)
+                            </li>
+                            <br>
+                            <li>
+                                decrescente negli intervalli \((-1\,,\,\, 0)\) e \((0\,,\,\,1)\)
+                            </li>
+                            <br>
+                            <li>
+                                ha un massimo relativo in \(x = -1\)
+                            </li>
+                            <br>
+                            <li>
+                                ha un minimo relativo in \(x = 1\)
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="slideVihyKSMhZP">
+                    <img src="img/VihyKSMhZP(8).png" style="width: 100%; border: 0;">
+                    <br>
+                    <span class="gray">
+                        La funzione è
+                        <br>
+                        <br>
+                        <ul>
+                            <li>
+                                crescente negli intervalli \((-\infty\,,\,\, -1)\) e\((1\,,\,\,+\infty)\)
+                            </li>
+                            <br>
+                            <li>
+                                decrescente negli intervalli \((-1\,,\,\, 0)\) e \((0\,,\,\,1)\)
+                            </li>
+                            <br>
+                            <li>
+                                ha un massimo relativo in \(x = -1\)
+                            </li>
+                            <br>
+                            <li>
+                                ha un minimo relativo in \(x = 1\)
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="slideVihyKSMhZP">
+                    <img src="img/VihyKSMhZP(8).png" style="width: 100%; border: 0;">
+                    <br>
+                    <span class="gray">
+                        La funzione ha concavità rivolta
+                        <br>
+                        <br>
+                        <ul>
+                            <li>
+                                verso il basso in \((-\infty\,,\,\, 0)\)
+                            </li>
+                            <br>
+                            <li>
+                                verso l'alto \((0\,,\,\,+\infty)\)
+                            </li>
+                            <br>
+                            <li>
+                                non presenta flessi
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+
+
+            </div>
+            <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+                <button id="previousSlide-buttonVihyKSMhZP" onclick="previousSlide(`VihyKSMhZP`)">Indietro</button>
+                <button id="nextSlide-buttonVihyKSMhZP" onclick="nextSlide(`VihyKSMhZP`)">Avanti</button>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Effettuare lo studio della funzione
+        \[
+        f(x) = \dfrac{e^{x} }{x^2 + 1}
+        \]
+
+        (non è richiesto lo studio della concavità)
+    </div>
+
+    <br>
+
+    <button id="hintooHaoXrFFc-button" onclick="showHint(`ooHaoXrFFc`)">Soluzione</button>
+    <div id="hintooHaoXrFFc" class="hint gray" style="display: none;">
+        <b>Soluzione:</b>
+
+        <br>
+        <br>
+
+        <u><b>Dominio</b></u>:
+        <br>
+        \[
+        D = (-\infty\,,\,\,+\infty)
+        \]
+
+        <u><b>Segno</b></u>:
+        <br>
+        La funzione assume segno positivo per ogni valore \(x \in D\)
+
+
+        <br>
+        <br>
+
+        <u><b>Comportamento in prossimità degli estremi del dominio - ricerca asintoti</b></u>:
+        <br>
+        Si ha
+        \[
+        \lim_{x \to -\infty} f(x) = 0 \quad \lim_{x \to +\infty} f(x) = +\infty
+        \]
+        A motivo del primo limite, l'asse \(x\) è asintoto per il grafico della funzione.
+
+        <br>
+        <br>
+
+        <u><b>Continuità</b></u>
+        <br>
+        La funzione è continua nel suo dominio.
+
+        <br>
+        <br>
+
+        <u><b>Derivabilità</b></u>
+        <br>
+        La derivata della funzione
+        \[
+        f'(x) = \dfrac{e^x \, (x - 1)^2}{(x^2 + 1)^2}
+        \]
+        La funzione è derivabile in tutto il dominio \(D\).
+
+        <br>
+        <br>
+
+        <u><b>Studio intervalli di monotonia</b></u>:
+        <br>
+        La funzione è
+        <br>
+        <br>
+        <ul>
+            <li>
+                crescente negli intervalli \((-\infty\,,\,\,0)\) e \((0\,,\,\,+infty)\)
+            </li>
+            <br>
+            <li>
+                stazionaria in \(x = 1\). In corrispondenza ti tale valore la funzione possiede
+                un <b>flesso a tangente orizzontale</b>
+            </li>
+        </ul>
+
+        <br>
+        <br>
+
+        <u><b>Grafico</b></u>:
+        <br>
+        <br>
+        <img src="img/ljdgFOrBus(1).png" alt="">
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
