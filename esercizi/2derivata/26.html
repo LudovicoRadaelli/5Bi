@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+
+<body>
+    <h1>Compiti per casa</h1>
+
+    <br>
+
+
+
+    <h3 class="green">Esercizio</h3>
+    <br>
+    <div>
+        Studiare la seguente funzione
+        \[
+        f(x) = \dfrac{1 + \sqrt{x}}{1 - \sqrt{x}}
+        \]
+        seguendo la seguente scaletta
+        <br>
+        <br>
+        <ul>
+            <li>
+                <u><b>Dominio</b></u>
+                <br>
+                Individuare i valori per i quali la funzione è definita.
+            </li>
+            <br>
+            <li>
+                <u><b>Segno</b></u>
+                <br>
+                Stabilire per quali valori la funzione è positiva, negativa o nulla.
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Comportamento in prossimità degli estremi del dominio - ricerca asintoti</b></u>
+                <br>
+                Calcoliamo i limiti per \(x\) che tente agli estremi del dominio.
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Continuità</b></u>
+                <br>
+                <ul>
+                    <li>Individuare l'insieme \(C\) in cui la funzione è continua.</li>
+                    <br>
+                    <li>Classificare evenutali punti di discontinuità</li>
+                </ul>
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Derivabilità</b></u>
+                <br>
+                <ul>
+                    <li>Calcolare la derivata della funzione.</li>
+                    <br>
+                    <li>Studiare il dominio \(D'\) della derivata.</li>
+                </ul>
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Studio intervalli di monotonia</b></u>
+                <br>
+                <ul>
+                    <li>Studio del segno della derivata e individuazione di massimi e minimi.</li>
+                </ul>
+            </li>
+            <br>
+            <br>
+            <li>
+                <u><b>Schema concavità</b></u>
+                <br>
+                <ul>
+                    <li>Calcolo della derivata seconda e individuazione dei flessi.</li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <u><b>Grafico</b></u>
+                <br>
+                Riassumere le informazioni in un grafico.
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+
+    <button id="hintAAAAAAAAAA-button" onclick="showHint(`AAAAAAAAAA`)">Soluzione</button>
+    <div id="hintAAAAAAAAAA" class="hint gray" style="display: none;">
+        <b class="gray">Svolgimento</b>
+        <br>
+        <div class="grayBorder">
+            <b class="gray">Svolgimento</b>
+            <br>
+            \[
+            f(x) = \dfrac{1 + \sqrt{x}}{1 - \sqrt{x}}
+            \]
+            <u><b>Dominio</b></u>
+            <br>
+            La funzione è definita se l'argomento della radice è non negativo e il denominatore è diverso da \(0\)
+            <div class="formula">
+                \[
+                \begin{cases}
+                x \geq 0
+                \\\\
+                1 - \sqrt{x} \neq 0
+                \end{cases}
+                \,\,\Longrightarrow\,\,
+                \begin{cases}
+                x \geq 0
+                \\\\
+                1 \neq \sqrt{x}
+                \end{cases}
+                \,\,\Longrightarrow\,\,
+                \begin{cases}
+                x \geq 0
+                \\\\
+                x \neq 1
+                \end{cases}
+                \]
+            </div>
+            <br>
+            <br>
+            Quindi il dominio è:
+            \[
+            D = [0\,,\,\,1) \cup (1\,,\,\,+\infty)
+            \]
+
+            <u><b>Segno</b></u>
+            <br>
+            Studiamo per quali valori si ha \(f(x) \gt 0\).
+            <br>
+            Il numeratore \(1 + \sqrt{x}\) è positivo per ogni \(x \in D\).
+            <br>
+            Di conseguenza
+            <div class="formula">
+                \[
+                \dfrac{1 + \sqrt{x}}{1 - \sqrt{x}} \gt 0 \,\,\Leftrightarrow\,\, 1 - \sqrt{x} \gt 0 \Rightarrow 0 \leq x
+                \lt 1
+                \]
+            </div>
+            La funzione è positiva in \([0, 1)\) e negativa in \((1, +\infty)\). Si annulla in nessun punto poiché il
+            numeratore è mai zero.
+
+            <br>
+            <br>
+
+            <u><b>Comportamento negli estremi del dominio</b></u>
+            <br>
+            Il dominio è \(D = [0\,,\,\,1) \cup (1\,,\,\,+\infty)\).
+            Calcoliamo i limiti per:
+            \[
+            x \to 1^{\pm} \quad x \to +\infty
+            \]
+
+            <b style="font-size: 1rem;">\(\boxed{\boldsymbol{x \to +\infty}}\)</b>
+            \[
+            \lim_{x \to +\infty} \dfrac{1 + \sqrt{x}}{1 - \sqrt{x}} = \lim_{x \to +\infty} \dfrac{\sqrt{x}}{-\sqrt{x}} =
+            -1
+            \]
+            La funzione ha la retta \(y = -1\) come asintoto orizzontale.
+
+            <br>
+            <br>
+
+            <b style="font-size: 1rem;">\(\boxed{\boldsymbol{x \to 1^{-}}}\)</b>
+            <div class="formula">
+                \[
+                \lim_{x \to 1^{\pm}} \dfrac{1 + \sqrt{x}}{1 - \sqrt{x}} = \lim_{x \to 1^{\pm}} \dfrac{1 + \sqrt{1}}{1 -
+                \sqrt{\pm1}} = \dfrac{2}{1 - 1^{\pm}} = \dfrac{2}{0^{\pm}} = -\mp\infty
+                \]
+            </div>
+
+            <b style="font-size: 1rem;">\(\boxed{\boldsymbol{x \to 1^{+}}}\)</b>
+            \[
+            \lim_{x \to 1^{+}} \dfrac{1 + \sqrt{x}}{1 - \sqrt{x}} = \dfrac{2}{0^{-}} = -\infty
+            \]
+            La retta \(x = 1\) è un asintoto verticale.
+
+            <br>
+            <br>
+
+            <u><b>Continuità</b></u>
+            <br>
+            La funzione è continua in tutto il suo dominio \(D\), perché rapporto di funzioni continue.
+            \[
+            C = D = [0\,,\,\,1) \cup (1\,,\,\,+\infty)
+            \]
+
+            <u><b>Derivabilità</b></u>
+            <br>
+            Calcoliamo la derivata della funzione:
+            <br>
+            <br>
+
+            <div class="formula">
+                \(
+                \begin{align*}
+                f'(x) &= \dfrac{(1 + x^{\frac{1}{2}})'(1-\sqrt{x}) - (1+\sqrt{x})(1 - x^{\frac{1}{2}})'}{(1-\sqrt{x})^2}
+                \\\\
+                &= \dfrac{\frac{1}{2\sqrt{x}}(1-\sqrt{x}) - (1+\sqrt{x})(-\frac{1}{2\sqrt{x}})}{(1-\sqrt{x})^2}
+                \\\\
+                &= \dfrac{\frac{1}{2\sqrt{x}} - \frac{1}{2} + \frac{1}{2\sqrt{x}} + \frac{1}{2}}{(1-\sqrt{x})^2}
+                \\\\
+                &= \dfrac{\frac{1}{\sqrt{x}}}{(1-\sqrt{x})^2}
+                \\\\
+                &= \dfrac{1}{\sqrt{x}(1-\sqrt{x})^2}
+                \end{align*}
+                \)
+            </div>
+
+            <br>
+            <br>
+
+            Il dominio della derivata è \(D' = (0, 1) \cup (1, +\infty)\). In \(x=0\) la funzione non è
+            derivabile.
+            Siccome
+            \[
+            \lim_{x \to 0^{+}} \dfrac{1}{\sqrt{x}(1-\sqrt{x})^2} = \dfrac{1}{0^{+}} = +\infty
+            \]
+            il punto \(x= 0\) ha tangente verticale.
+
+            <br>
+            <br>
+
+            <u><b>Studio intervalli di monotonia</b></u>
+            <br>
+            Notiamo che sia il numeratore che tutti i fattori del denominatore sono positivi, quindi \(f'(x) \gt 0\) per
+            ogni \(x \in D'\).
+            Di conseguenza, la funzione è sempre crescente nei singoli intervalli del dominio.
+
+            <br>
+            <br>
+            <u><b>Schema concavità</b></u>
+            <br>
+            Calcolando la derivata seconda:
+            \[
+            \begin{align*}
+            f''(x)
+            &= \left(\dfrac{1}{\sqrt{x}(1-\sqrt{x})^2}\right)' =
+            \\\\
+            &= \dfrac{0 \cdot \sqrt{x}(1-\sqrt{x})^2 - 1 \cdot
+            \left(\sqrt{x}(1-\sqrt{x})^2\right)'}{\left(\sqrt{x}(1-\sqrt{x})^2\right)^2} =
+            \\\\
+            &= - \dfrac{(\sqrt{x})' \cdot (1-\sqrt{x})^2 + \sqrt{x} \cdot \left((1-\sqrt{x})^2\right)'}{x(1-\sqrt{x})^4}
+            =
+            \\\\
+            &= - \dfrac{\frac{1}{2\sqrt{x}}(1-\sqrt{x})^2 + \sqrt{x} \left[ 2(1-\sqrt{x}) \cdot
+            \left(-\frac{1}{2\sqrt{x}}\right) \right]}{x(1-\sqrt{x})^4} =
+            \\\\
+            &= - \dfrac{\frac{(1-\sqrt{x})^2}{2\sqrt{x}} - (1-\sqrt{x})}{x(1-\sqrt{x})^4} =
+            \\\\
+            &= - \dfrac{\frac{(1-\sqrt{x})^2 - 2\sqrt{x}(1-\sqrt{x})}{2\sqrt{x}}}{x(1-\sqrt{x})^4} =
+            \\\\
+            &= - \dfrac{(1-\sqrt{x}) \left[ (1-\sqrt{x}) - 2\sqrt{x} \right]}{2x\sqrt{x}(1-\sqrt{x})^4} =
+            \\\\
+            &= - \dfrac{1 - 3\sqrt{x}}{2x\sqrt{x}(1-\sqrt{x})^3} =
+            \\\\
+            &= \dfrac{3\sqrt{x}-1}{2x\sqrt{x}(1-\sqrt{x})^3}
+            \end{align*}
+            \]
+
+            <u><b>Schema concavità</b></u>
+            <br>
+            Studiamo il segno della derivata seconda per individuare la concavità e gli eventuali flessi:
+            \[
+            f''(x) = \dfrac{3\sqrt{x}-1}{2x\sqrt{x}(1-\sqrt{x})^3} \ge 0
+            \]
+
+            Analizziamo i singoli termini nel dominio \(D = (0, 1) \cup (1, +\infty)\):
+            <br>
+            <br>
+            <ul>
+                <li>
+                    <b>Numeratore:</b> \(3\sqrt{x} - 1 \ge 0 \Rightarrow \sqrt{x} \ge \frac{1}{3} \Rightarrow x \ge
+                    \frac{1}{9}\)
+                </li>
+                <br>
+                <li>
+                    <b>Denominatore:</b> Il termine \(2x\sqrt{x}\) è sempre positivo nel dominio.
+                    Il segno dipende quindi dal fattore \((1 - \sqrt{x})^3\):
+                    <br>
+                    \((1 - \sqrt{x})^3 \gt 0 \Rightarrow 1 - \sqrt{x} \gt 0 \Rightarrow x \lt 1\)
+                </li>
+            </ul>
+
+            <br>
+            Combinando i segni otteniamo:
+            <br>
+            <br>
+            <div class="grayBorder">
+                <ul>
+                    <li>
+                        \(0 \lt x \lt \frac{1}{9}\): Segno complessivo negativo (\(-\)). La funzione ha <b>concavità
+                            verso il basso</b>.
+                    </li>
+                    <br>
+                    <li>
+                        \(x = \frac{1}{9}\): La derivata seconda si annulla. Abbiamo un <b>punto di flesso</b>.
+                    </li>
+                    <br>
+                    <li>
+                        \(\frac{1}{9} \lt x \lt 1\): Segno complessivo positivo (\(+\)). La funzione ha <b>concavità
+                            verso l'alto</b>.
+                    </li>
+                    <br>
+                    <li>
+                        \(x \gt 1\): Segno complessivo negativo (\(-\)). La funzione ha <b>concavità verso il basso</b>.
+                    </li>
+                </ul>
+            </div>
+
+            <br>
+            Il punto di flesso si trova in \(x = \frac{1}{9}\).                         
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
